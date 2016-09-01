@@ -22,12 +22,10 @@ Most of the time we played in the dirt for fun: tic-tac-toe, hopscotch, ratalla.
 I was officially the master artist of our neighborhood, because I had beaten [[Bobby]] in our last two etching contests. 
 
 :: Bobby
-Robert Franklin Marshall [[Jr. III]]. He had won seven straight contests in a row before I put an end to his streak. //He// maintained that the title of Master Artist was still undetermined, because Kitty had been sick on the day of our last tournament, which had [[tipped the votes]] in my favor. 
+Robert Franklin Marshall [[Jr. III]]. He had won seven straight contests in a row before I put an end to his streak. //He// maintained that the title of Master Artist was still up in the air, because Kitty had been sick on the day of our last tournament, which had [[tipped the votes]] in my favor. 
 
 :: Jr. III
-Jr. the Third?
-
-[[I'm not really sure how that happened.|Bobby]]
+[[Jr. the Third?|Bobby]]
 
 :: tipped the votes
 I told him that was bull, that Kitty would have voted for me because she was still upset at Bobby about the bumble bee incident. And besides, the rules were very clear that anyone to win two etching contests in a row was to obtain the title of Master Artist: no ifs, ands, or buts about it. 
@@ -45,7 +43,7 @@ Father thought so too, apparently, because when I returned home that evening he 
 [[What about the puppet show?]]
 
 :: What about the puppet show?
-I asked about the puppet show then, and Father turned and looked at me quickly, and asked me if I couldn't think about anything but that show. He was a bit angry, because this gathering was about more than puppets. But then he got happy again, and just smiled and said yes, yes, there would be a puppet show as promised. 
+I asked about the puppet show then, and Father turned and looked at me quickly, and asked me if I couldn't think about anything but that show. He was a bit angry, because this gathering was about more than puppets. But then he got happy again, and smiled and said yes, yes, there would be a puppet show as promised. 
 
 [[I cheered]]
 [[I pondered]]
@@ -130,7 +128,7 @@ Tommy had gotten upset at that idea because, he said, it was just wishful thinki
 [[That's not what I meant]]
 
 :: That's not what I meant
-Mother told him she meant that if the Valley were like it used to be before the enemy came, and you didn't have to worry about getting shot, that then things might have been different. Tommy said she should be more clear when she talked, and anyway we were going to reclaim the valley—for Joseph and all our people who had died. 
+Mother told him she meant that if the Valley were like it used to be before the enemy came, and you didn't have to worry about getting shot, that //then// things might have been different. Tommy said she should be more clear when she talked, and anyway we were going to reclaim the valley—for Joseph and for all our people who had died. 
 
 [[I weep for you, oh I weep for you, my son]]
 
@@ -142,33 +140,162 @@ Then Mother had started crying. I think it was because she missed Joseph so much
 :: That was Thursday
 Friday went by awfully slowly.
 
-[[Hang out with friends]]
+[[Play by yourself]]
+[[Play with your friends]]
+
+:: Play by yourself
+TODO
 
 :: Hang out with friends 
 I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, as usual, but we didn’t have much fun.
 
+<<display 'Play Options'>>
+
+:: Play Options
 [[Play tic-tac-toe]]
 [[Play ratalla]]
 [[Play kickball]]
+[[Watch flies]]
+[[Etching contest]]
 
 /% TODO: "as usual" ends sentence above, but clicking on it opens to "but we didn't have much fun" and reveals options. The following sequence requires some coding and world-modeling, so that what the player has and has not done are kept track of, with additional options appearing. %/
 
 :: Play tic-tac-toe
 Nobody wanted to play tic-tac-toe, so that was out from the beginning.
 
+<<display 'Play Options'>>
+
 :: Play kickball
 TODO: If *has ball* play. Otherwise:
 
-I thought of playing kickball, but the older boys were using it for their weekly soccer tournament. 
+I thought of playing kickball, but the older boys were using our ball for their weekly soccer tournament. 
+
+<<display 'Play Options'>>
 
 :: Play ratalla
 We got some rocks together and played ratalla for a while, but Joe had decided that ratalla was the boringest game in the world, and Harriet had sliced her shooting finger the day before, so she definitely couldn't play, she said. That left me and Bobby and Kitty and Ryan, and the game isn't really meant for four people. After a while Ryan suggested that we might get one or two of our kid brothers or sisters to play, but Bobby gave him the look when he said that, and I thought that it was a pretty silly idea myself. 
 
+<<display 'Play Options'>>
+
 :: Watch flies
 So we stopped playing and just sat around for a bit, watching the flies crawl around on the dead carcass in front of Mr. Gumingway's shack. One of his goats had gotten infected with some kind of disease a while back and died suddenly. It was about half gone now, and consisted mainly of ribs and bloated intestines. 
+
+<<display 'Play Options'>>
 
 :: Play kickball
 That's when I got the idea of taking one of the intestines and tying up the ends and using it as a kickball. Everyone agreed to that immediately, and we managed to pass the next hour and a half pretty quickly. Then the intestine popped, and we were back where we started. 
 
+<<display 'Play Options'>>
+
 :: Etching contest
-And that's how the day went by, generally, except for one decidedly low point when Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes? 
+And that's how the day went by, generally, except for one decidedly low point when Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes.
+
+[[That was Friday, the boringest day in the world]]
+TODO: have link text changed from "That was Friday" to "the boringest day in the world" when clicked the first time, then take to passage on second click.
+
+:: That was Friday, the boringest day in the world
+Finally [[Saturday]] did come.
+
+:: Saturday
+The day of the [[get-together]].
+
+:: get-together
+The day of [[remembering]].
+
+:: remembering
+The day of the [[puppet show]].
+
+:: puppet show
+There was whooping in our alley when I woke up, and that made me smile: today would not be boring. 
+
+[[Look outside]]
+
+:: Look outside
+Everyone was out there. Waving and shouting and banging on drums, and holding the flags of our nation. I thought how it would be nice if we had some large space that we could all go to and gather in, but the biggest space in the compound was the main alley which ran down its center from north to south.
+
+TODO: How to create the intensity of what's going on here, for the reader?
+
+[[Look around]]
+
+:: Look around
+I looked around and noticed Joe riding up on top of a bigger boy's shoulders, screaming and waving his flag. He saw me and let out a whoop. I smiled and waved back at him. 
+
+Father came to the door then and put his hand on my shoulder. 
+
+[[Ishmael, this is a great day]]
+
+:: Ishmael, this is a great day
+He had said that many times already, but I didn't mind. He told me that the leaders of our people were visiting us. Not our greatest leader—who was too busy fighting our war to come to the compound—but some of his lieutenants. 
+
+[[Were they the ones who would put on the puppet show?]]
+
+:: Were they the ones who would put on the puppet show?
+Yes, father said.
+
+[[...]]
+
+:: ...
+We paraded through the streets for a while, just hollering and waving our flags and being patriotic. Eventually we managed to squeeze into the central alleyway where everyone was gathered. The visitors were up on a rooftop looking down at the crowd and shouting about hope and God and reclaiming Peach Valley. They were wearing guns, and every once in a while one of them would fire a volley up into the air, which made everyone cheer especially loud. They shouted and we cheered, and they shouted and we cheered, until the sun started to set. 
+
+[[Then one of the soldiers raised his arms]]
+
+TODO: "they shouted and we cheered" reveals link to another "they shouted and we cheered" a couple of times (sentence expanding). Then auto advance?
+
+:: Then one of the soldiers raised his arms
+Then one of the soldiers raised his arms and declared that they had a special treat for us: a puppet show. Would the younger ones please come forward to the front of the crowd so as to see and hear the presentation better. 
+
+[[A beam and some clothesline]]
+
+:: A beam and some clothesline
+They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began]]. 
+
+:: began
+It told the story of a little boy named Ishmael who lived in Old Peach Valley despite the occupation of the enemy. 
+
+Ishmael was a good boy: he obeyed his father, and he loved his mother, and he was an example to his brothers and sisters. He was a loyal boy: he made friends for keeps, and he would defend them when they needed him. He was also an intelligent boy: he wished to learn, and had a special love for mathematics: he dreamed of attending university some day in the future, and becoming a doctor. One day, however, Ishmael's father had to explain to Ishmael that he would never be able to attend university, or be a doctor, because the enemy controlled their country and would not allow people like Ishmael to go to the schools of higher education. 
+
+Ishmael was disappointed to hear what his father had to tell him, but he was stout of heart, and determined that he would live a happy life in spite of his inability to fulfill his dreams: after all, he had his friends to play with, and his family to love. 
+
+But one day the enemy came with a bulldozer and told Ishmael's family that they would have to leave their home, because the land was no longer theirs. Ishmael's father asked how this could be, since their family had deeds that went back three-hundred years. The enemy would not answer him, and only asked that they step aside so that the house could be bulldozed. Ishmael's mother would not step aside, and so they bulldozed her into the ground with the house. Ishmael observed all of this and wondered why it was happening. His mother was gone, and his house was gone, and he learned that his friends' houses were gone too. 
+
+Now Ishmael, above all else, was a brave boy, and he determined that the only purpose left in his life was to fight the enemy however he could: in this way he could live out his love for his mother, and his loyalty to his friends. So he threw rocks at the tanks of the enemy. And the enemy shot him, and he died. 
+
+That was the end of the puppet show.
+
+[[...|martyr]]
+
+:: martyr
+"A martyr!" 
+
+[[A martyr!]]
+
+:: A martyr!
+The people in the alley cheered.
+
+The sun was low in the sky now, and the world was glowing orange around us. The soldiers fired their guns, and the people cheered louder. I noticed tears on the face of an old man in the crowd.
+
+[[A martyr!|Nudge]]
+
+:: Nudge
+I felt a nudge behind me, and then my father was lifting me up for the people to see. "Here is Ishmael!" he shouted. "My son! His name is Ishmael, like the boy in the story! He is strong and brave and intelligent just like that boy!"
+
+[[My son]]
+
+:: My son
+He was up on top of a barrel now, holding me, and the people were taking notice. They were shouting. A soldier from the rooftop peered down at us, and he was yelling and motioning with his arm. 
+
+[[Bring him up, bring the boy up!]]
+
+:: Bring him up, bring the boy up!
+I was on the rooftop then, and the soldiers had me on their shoulders. "Here is the hope of our nation!" they shouted. "Here is Ishmael, son of Peach Valley. Brave Ishmael, who will defy the enemy!"
+
+I felt metal against my skin, and then I saw that they had put a gun in my hands. It was a large gun, and very heavy. Too heavy for me. 
+
+[[Put it down]]
+[[Hold it up]]
+
+:: Put it down
+But I could not put it down, because the eyes of my people were on me. 
+
+:: Hold it up
+But I held it up, because the eyes of my people were on me.
