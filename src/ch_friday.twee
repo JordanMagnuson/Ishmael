@@ -1,0 +1,67 @@
+:: ch_friday
+Friday went by awfully slowly.
+
+[[Play by yourself]]
+[[Play with your friends]]
+
+:: Play by yourself
+TODO
+
+:: Play with your friends
+I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, as usual, but we didn’t have much fun.
+
+<<display 'Play Options'>>
+
+:: Play Options
+[[Play tic-tac-toe]]
+[[Play ratalla]]
+[[Play kickball]]
+[[Watch flies]]
+[[Etching contest]]
+
+/% TODO: "as usual" ends sentence above, but clicking on it opens to "but we didn't have much fun" and reveals options. The following sequence requires some coding and world-modeling, so that what the player has and has not done are kept track of, with additional options appearing. %/
+
+:: Play tic-tac-toe
+Nobody wanted to play tic-tac-toe, so that was out from the beginning.
+
+<<display 'Play Options'>>
+
+:: Play kickball
+TODO: If *has ball* play. Otherwise:
+
+I thought of playing kickball, but the older boys were using our ball for their weekly soccer tournament. 
+
+<<display 'Play Options'>>
+
+:: Play ratalla
+We got some rocks together and played ratalla for a while, but Joe had decided that ratalla was the boringest game in the world, and Harriet had sliced her shooting finger the day before, so she definitely couldn't play, she said. That left me and Bobby and Kitty and Ryan, and the game isn't really meant for four people. After a while Ryan suggested that we might get one or two of our kid brothers or sisters to play, but Bobby gave him the look when he said that, and I thought that it was a pretty silly idea myself. 
+
+<<display 'Play Options'>>
+
+:: Watch flies
+So we stopped playing and just sat around for a bit, watching the flies crawl around on the dead carcass in front of Mr. Gumingway's shack. One of his goats had gotten infected with some kind of disease a while back and died suddenly. It was about half gone now, and consisted mainly of ribs and bloated intestines. 
+
+<<display 'Play Options'>>
+
+:: Play kickball
+That's when I got the idea of taking one of the intestines and tying up the ends and using it as a kickball. Everyone agreed to that immediately, and we managed to pass the next hour and a half pretty quickly. Then the intestine popped, and we were back where we started. 
+
+<<display 'Play Options'>>
+
+:: Etching contest
+And that's how the day went by, generally, except for one decidedly low point when Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes.
+
+[[That was Friday, the boringest day in the world]]
+TODO: have link text changed from "That was Friday" to "the boringest day in the world" when clicked the first time, then take to passage on second click.
+
+:: That was Friday, the boringest day in the world
+Finally [[Saturday]] did come.
+
+:: Saturday
+The day of the [[get-together]].
+
+:: get-together
+The day of [[remembering]].
+
+:: remembering
+The day of the [[puppet show|ch_saturday]].
