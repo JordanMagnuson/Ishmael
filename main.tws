@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V<<display 'ch_thursday'>>
+V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2016
 I9
-I6
-I10
-I38
-I37
-I1
-I250
+I7
+I7
+I16
+I42
+I2
+I251
 I1
 tp27
 (dp28
@@ -193,7 +193,7 @@ Tiddler
 p70
 (dp71
 g21
-Vsrc/ch_thursday.twee\u000asrc/ch_friday.twee\u000asrc/ch_saturday.twee
+Vsrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee\u000asrc/stylesheet.twee
 p72
 sg23
 VStoryIncludes
@@ -203,9 +203,9 @@ g26
 ((I2016
 I9
 I6
-I10
-I37
-I36
+I17
+I9
+I47
 I1
 I250
 I1
