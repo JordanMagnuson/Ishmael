@@ -1,0 +1,62 @@
+:: stylesheet [stylesheet]
+
+/*
+COLOR CONSTANTS
+
+blood red: #810000
+*/
+
+/* Embedded typewriter font. */
+@font-face {
+    font-family: 'MyTyped';
+    src: url('assets/SpecialElite.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+	height: 100%;
+	position: relative;
+}
+
+body { 
+	font-family: MyTyped,Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace; 
+	background-image: url('assets/ground.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	/* Cover the whole screen. */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.passage {
+    position: absolute;
+    bottom: 10%;
+    width: 60%;
+	min-height: 14em;
+	left: 50%;
+	margin-left: -30%;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: black;
+	/*text-shadow: 100px 100px 12px black;*/
+	background-color:rgba(255, 255, 255, 0.8);
+	padding: 1.4em;
+}
+
+.passage a {
+	color: black;	
+	border-bottom: 1px dashed black;
+}
+
+.passage a:hover, .passage a:active {
+	text-decoration: none;
+	color: #810000;
+	border-bottom: 1px solid #810000;
+}
+
+.passage a:active {
+	border-bottom: 1px solid #810000;
+}
