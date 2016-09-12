@@ -1,0 +1,29 @@
+:: Popup [script]
+
+/* See: https://twinery.org/forum/discussion/2613/sugarcube-how-to-using-themadexile-popup-macro 
+   And: http://twinery.org/forum/discussion/comment/10126/#Comment_10126 */
+
+Macro.add("popup", {
+	version : { major: 1, minor: 0, revision: 0 },
+	handler : function () {
+		if (this.args.length < 2) {
+			var errors = [];
+			if (this.args.length < 1) { errors.push("link text"); }
+			if (this.args.length < 2) { errors.push("passage name"); }
+			return this.error("no " + errors.join(" or ") + " specified");
+		}
+
+		var	el      = document.createElement("a"),
+			passage = this.args[1],
+			title;
+		el.innerHTML = this.args[0];
+		el.className = "link-internal macro-popup";
+		el.setAttribute("data-passage", passage);
+		title = el.textContent;
+		UI.addClickHandler(el, null, function (evt) {
+			var	dialog = UI.setup(title, "popup");
+			new Wikifier(dialog, tale.get(passage).processText().trim());
+		});
+		this.output.appendChild(el);
+	}
+});
