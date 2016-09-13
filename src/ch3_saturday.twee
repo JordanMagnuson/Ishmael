@@ -84,11 +84,52 @@ I was on the rooftop then, and the soldiers had me on their shoulders. "Here is 
 
 I felt metal against my skin, and then I saw that they had put a gun in my hands. It was a large gun, and very heavy. Too heavy for me. 
 
-[[Put it down]]
-[[Hold it up]]
+[[...|The Choice]]
+
+:: The Choice [nobr]
+
+<<script>>
+	postdisplay.testing = function() {
+		var upDownCount = 0;
+	    $('#put_down').click(function() {
+	        $('#the_choice').animate({ marginTop : "+=1em" }, 500, 'swing');
+	        upDownCount -= 1;
+	        console.log(upDownCount);
+		    if (upDownCount <= -5) {
+		    	alert('all down');
+		    }		        
+	    });
+	    $('#hold_up').click(function() {
+	        $('#the_choice').animate({ marginTop : "-=1em" }, 500, 'swing');
+	        upDownCount += 1;
+	        console.log(upDownCount);
+		    if (upDownCount >= 5) {
+		    	alert('all up');
+		    }	        
+	    });	        
+	}
+<</script>>
+
+<div id="the_choice">
+	<span id="put_down">Put it down</span><br>
+	<span id="hold_up">Hold it up</span>
+</div>
+
+
+
 
 :: Put it down
+I put it down because ____________ . 
+
+CHANGES TO:
+
+I thought about putting it down because _______________ .
+
+THEN TYPEWRITER IN: 
+
 But I could not put it down, because the eyes of my people were on me. 
+
+The story was already written, just like the puppet show.
 
 :: Hold it up
 But I held it up, because the eyes of my people were on me.
