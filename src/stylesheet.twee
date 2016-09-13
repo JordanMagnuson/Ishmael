@@ -80,6 +80,10 @@ body {
     animation: fadein 1s ease;
 }
 
+.fadein-slow {
+    animation: fadein 4s ease;
+}
+
 @keyframes fadein {
  	from { opacity: 0 }
   	to { opacity: 1 }
