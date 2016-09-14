@@ -3,3 +3,7 @@ I have $num_rocks rocks, a piece of string, and some imaginary rules in my pocke
 
 :: unrecognized verb
 That's not a verb I recognize.
+
+:: test
+<<set $next_passage = "puppets">>
+<span class="typed">This is a test.<<print $next_passage>></span>

@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a\u000a<<set $good_at = 'hopscotch'>>\u000a<<set $num_rocks = 2>>
+V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a[[puppet_1]]\u000a[[test]]\u000a\u000a<<set $good_at = 'hopscotch'>>\u000a<<set $num_rocks = 2>>
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2016
 I9
-I7
-I11
-I3
-I30
+I14
+I10
+I4
+I46
 I2
-I251
+I258
 I1
 tp27
 (dp28

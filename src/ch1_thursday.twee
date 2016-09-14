@@ -3,8 +3,6 @@ The treat would involve [[puppets]]. That's what they had been telling us.
 * <<linkreplace "examine me" transition>>I am Ishmael, son of Peach Valley.<</linkreplace>>
 * <<linkreplace "inventory" transition>>I had $num_rocks rocks and a piece of string in my pocket.<</linkreplace>>
 
-<<popup "test" "Bobby">>
-
 :: puppets
 I was excited, because I had never seen a real puppet show before.  
 * <<linkreplace "x puppets" transition>>There are no puppets here.<</linkreplace>>
