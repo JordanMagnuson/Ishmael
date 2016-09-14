@@ -1,5 +1,5 @@
 :: ch3_saturday
-There was whooping in our alley when I woke up, and that made me smile: today would not be boring. 
+There was whooping in our alley when I woke up, and that made me smile: today would not be boring.
 
 [[Look outside]]
 
@@ -40,19 +40,52 @@ Then one of the soldiers raised his arms and declared that they had a special tr
 [[A beam and some clothesline]]
 
 :: A beam and some clothesline
-They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began]]. 
+They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began|puppet_1]]. 
 
-:: began
-It told the story of a little boy named Ishmael who lived in Old Peach Valley despite the occupation of the enemy. 
+:: puppet_1 [nobr]
+<<set $next_passage = 'puppet_2'>>
+<span class="typed">
+It told the story of a little boy named Ishmael who lived in Old Peach Valley despite the occupation of the enemy.
+</span>
 
-Ishmael was a good boy: he obeyed his father, and he loved his mother, and he was an example to his brothers and sisters. He was a loyal boy: he made friends for keeps, and he would defend them when they needed him. He was also an intelligent boy: he wished to learn, and had a special love for mathematics: he dreamed of attending university some day in the future, and becoming a doctor. One day, however, Ishmael's father had to explain to Ishmael that he would never be able to attend university, or be a doctor, because the enemy controlled their country and would not allow people like Ishmael to go to the schools of higher education. 
+:: puppet_2 [nobr]
+<<set $next_passage = 'puppet_3'>>
+<span class="typed">
+Ishmael was a good boy: he obeyed his father, and he loved his mother, and he was an example to his brothers and sisters. He was a loyal boy: he made friends for keeps, and he would defend them when they needed him. He was also an intelligent boy: he wished to learn, and had a special love for mathematics: he dreamed of attending university some day in the future, and becoming a doctor.
+</span>
 
-Ishmael was disappointed to hear what his father had to tell him, but he was stout of heart, and determined that he would live a happy life in spite of his inability to fulfill his dreams: after all, he had his friends to play with, and his family to love. 
+:: puppet_3 [nobr]
+<<set $next_passage = 'puppet_4'>>
+<span class="typed">
+One day, however, Ishmael's father had to explain to Ishmael that he would never be able to be a doctor, because the enemy controlled their country and had barred the routes that would allow Ishmael to travel to university. 
+</span>
 
-But one day the enemy came with a bulldozer and told Ishmael's family that they would have to leave their home, because the land was no longer theirs. Ishmael's father asked how this could be, since their family had deeds that went back three-hundred years. The enemy would not answer him, and only asked that they step aside so that the house could be bulldozed. Ishmael's mother would not step aside, and so they bulldozed her into the ground with the house. Ishmael observed all of this and wondered why it was happening. His mother was gone, and his house was gone, and he learned that his friends' houses were gone too. 
 
-Now Ishmael, above all else, was a brave boy, and he determined that the only purpose left in his life was to fight the enemy however he could: in this way he could live out his love for his mother, and his loyalty to his friends. So he threw rocks at the tanks of the enemy. And the enemy shot him, and he died. 
+:: puppet_4 [nobr]
+<<set $next_passage = 'puppet_5'>>
+<span class="typed">
+Ishmael was disappointed to hear what his father had to tell him, but he was stout of heart, and determined that he would live a happy life in spite of his inability to fulfill his dreams: after all, he had his friends to play with, and his family to love.
+</span>
 
+:: puppet_5 [nobr]
+<<set $next_passage = 'puppet_6'>>
+<span class="typed">
+But one day the enemy came with a bulldozer and told Ishmael's family that they would have to leave their home, because the land was no longer theirs. Ishmael's father asked how this could be, since their family had deeds that went back three-hundred years. The enemy would not answer him, and only asked that they step aside so that the house could be bulldozed. Ishmael's mother would not step aside, and so they bulldozed her into the ground with the house.
+</span>
+
+:: puppet_6 [nobr]
+<<set $next_passage = 'puppet_7'>>
+<span class="typed">
+Ishmael observed all of this and wondered why it was happening. His mother was gone, and his house was gone, and he learned that his friends' houses were gone too.
+</span>
+
+:: puppet_7 [nobr]
+<<set $next_passage = 'puppet_8'>>
+<span class="typed">
+Now Ishmael, above all else, was a brave boy, and he determined that the only purpose left in his life was to fight the enemy however he could: in this way he could live out his love for his mother, and his loyalty to his friends. So he threw rocks at the bulldozer of the enemy. And the enemy shot him, and he died.
+</span>
+
+:: puppet_8
 That was the end of the puppet show.
 
 [[...|martyr]]
