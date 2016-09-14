@@ -32,7 +32,8 @@
                 $source = $outer.children('[class|="typed"]'),
                 options = jQuery.extend({
                     typeSpeed: 40,
-                    startDelay: 400
+                    startDelay: 400,
+                    showCursor: false,
                 }, getInlineOptions($source.attr("class")), {
                     strings: [$source.html()]
                 });
@@ -219,7 +220,44 @@
 
 					// strip out the escape character and pause value so they're not printed
 					curString = curString.substring(0, curStrPos) + curString.substring(curStrPos + skip);
-				}					
+				}
+
+				// ------------- BEGIN HACK ------------- //
+				// Auto pause for punctuation.
+				// -------------------------------------- //
+				var multiplier = Math.random() * (1.2 - 0.5) + 0.5;	// Create some varation with random multiplier between 0.5 and 1.5.
+				if (curString.charAt(curStrPos - 1) === '.') {
+					if (curString.charAt(curStrPos) !== '.') {			// For multiple periods in a row only pause for the last one.
+						if (curString.charAt(curStrPos - 3) === 'M' && curString.charAt(curStrPos - 2) === 's') { // Don't pause for period in "Ms. Lojka"
+							charPause = 0;
+						}
+						else {
+							charPause = 1000;							// Default pause for this character.
+						}
+					}
+				}
+				else if (curString.charAt(curStrPos - 1) === '?') {
+					charPause = 1000;									// Default pause for this character.
+				}
+				else if (curString.charAt(curStrPos - 1) === '…') {
+					charPause = 1000;									// Default pause for this character.
+				}
+				else if (curString.charAt(curStrPos - 1) === '—') {
+					charPause = 1000;									// Default pause for this character.
+				}
+				else if (curString.charAt(curStrPos - 1) === ':') {
+					charPause = 1000;									// Default pause for this character.
+				}
+				else if (curString.charAt(curStrPos - 1) === ';') {
+					charPause = 700;									// Default pause for this character.
+				}
+				else if (curString.charAt(curStrPos - 1) === ',') {
+					charPause = 100;									// Default pause for this character.
+				}
+				charPause = Math.round(charPause * multiplier);		
+				// -------------- END HACK -------------- //
+				// Auto pause for punctuation.
+				// -------------------------------------- //						
 
 				if (self.contentType === 'html') {
 					// skip over html tags while typing
