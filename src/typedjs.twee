@@ -32,10 +32,19 @@
             var $outer = jQuery(el),
                 $inner = jQuery('<div class="typedjs-text-wrapper" style="display:block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),
                 $source = $outer.children('[class|="typed"]'),
+                
+                // Edit these options to tweak typedjs settings. 
                 options = jQuery.extend({
-                    typeSpeed: 40,
-                    startDelay: 400,
+                    typeSpeed: 20,
+                    startDelay: 500,
                     showCursor: false,
+                    callback: function() {
+                    	// Display the "next passage" (custom set variable) when typings ends (after a delay).
+                    	setTimeout(function() { 
+                    		State.play(State.variables['next_passage']); 
+                    	}, 1000);
+                    	
+                    }
                 }, getInlineOptions($source.attr("class")), {
                     strings: [$source.html()]
                 });
