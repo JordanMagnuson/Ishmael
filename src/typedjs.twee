@@ -266,9 +266,29 @@
 					charPause = 100;									// Default pause for this character.
 				}
 				charPause = Math.round(charPause * multiplier);		
-				// -------------- END HACK -------------- //
-				// Auto pause for punctuation.
-				// -------------------------------------- //						
+
+				// ------------- ADDED HACK ------------- //
+				// Fade certain images in with specific timings.
+				// (^ is regex for "starts with")
+				// -------------------------------------- //
+				/**if (State.passage == 'Lojka') {
+					if (substr.match("^tower")) {
+						$('#bgmask2').fadeIn(0).fadeOut(100).fadeIn(0).fadeOut(100).delay(200).fadeIn(0);
+					}
+				}**/
+				if (State.passage == 'puppet_1') {
+					if (substr.match("^Ishmael")) {
+						$("#puppet-boy").fadeIn(3000);
+					}
+				}
+				else if (State.passage == 'puppet_2') {
+					if (substr.match("^fathe")) {
+						$("#puppet-father").fadeIn(3000);
+					}
+				}				
+
+				// -------------- END HACKS -------------- //
+				// --------------------------------------- //						
 
 				if (self.contentType === 'html') {
 					// skip over html tags while typing

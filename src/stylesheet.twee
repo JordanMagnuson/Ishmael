@@ -38,15 +38,6 @@ body {
  * PASSAGES
  *********************************************************************/
 
-#puppetbg .puppet {
-	display: block;
- 	position: absolute;
- 	top: 10%;
- 	right: 0;
- 	height: 75%;
- 	width: auto;
- }
-
 .passage {
     position: absolute;
     bottom: 10%;
@@ -120,6 +111,7 @@ body {
     height: 50%;
 	left: 0;
 	background-color:orange;
+	z-index: 9;
 }
 
 #puppetsheet {
@@ -139,8 +131,24 @@ body {
 }
 
 #puppetbg .puppet {
-	z-index: 10;
-}
+	display: block;
+ 	position: absolute;
+ 	z-index: 10;
+ }
+
+ #puppet-boy {
+ 	bottom: 10%;
+ 	right: -10%;
+ 	height: 60%;
+ 	width: auto;
+ }
+
+ #puppet-father {
+ 	bottom: 10%;
+ 	right: 20%;
+ 	height: 75%;
+ 	width: auto;
+ }
 
 /*********************************************************************
  * <<SHAKE>> MACRO SET CSS

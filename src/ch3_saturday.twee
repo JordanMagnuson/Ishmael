@@ -48,11 +48,6 @@ They draped a sheet over a wooden beam suspended between two clotheslines, and t
 
 :: puppet_1 [nobr puppet-show]
 <<set $next_passage = 'puppet_2'>>
-
-<<script>>
-	$("#puppetbg #boy").fadeIn(3000);
-<</script>>
-
 <span class="typed">
 It told the story of a little boy named Ishmael who lived in Old Peach Valley despite the occupation of the enemy.
 </span>

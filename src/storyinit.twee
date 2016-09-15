@@ -5,7 +5,8 @@ $('body').prepend('<div id="puppetsheet"></div>');
 $('body').prepend('<div id="puppetbg"></div>');
 
 // Add the puppets.
-$('#puppetbg').append('<img class="puppet" id="boy" src="assets/puppet_boy.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-boy" src="assets/puppet_boy.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-father" src="assets/puppet_father.png" />');
 
 $("#puppetsheet").hide();
 $(".puppet").hide();
