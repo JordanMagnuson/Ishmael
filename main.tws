@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a[[puppet_1]]\u000a[[test]]\u000a\u000a<<set $good_at = 'hopscotch'>>\u000a<<set $num_rocks = 2>>
+V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a[[puppet show|A beam and some clothesline]]\u000a[[test]]\u000a\u000a<<set $good_at = 'hopscotch'>>\u000a<<set $num_rocks = 2>>
 p22
 sS'title'
 p23
@@ -51,9 +51,9 @@ p26
 ((I2016
 I9
 I14
-I10
+I12
+I18
 I4
-I46
 I2
 I258
 I1
@@ -193,7 +193,7 @@ Tiddler
 p70
 (dp71
 g21
-Vsrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee\u000asrc/global.twee\u000asrc/stylesheet.twee\u000asrc/macros.twee\u000asrc/typedjs.twee
+Vsrc/storyinit.twee\u000asrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee\u000asrc/global.twee\u000asrc/stylesheet.twee\u000asrc/macros.twee
 p72
 sg23
 VStoryIncludes
@@ -203,9 +203,9 @@ g26
 ((I2016
 I9
 I14
-I8
-I7
-I38
+I12
+I16
+I58
 I2
 I258
 I1
