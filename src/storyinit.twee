@@ -1,0 +1,11 @@
+:: StoryInit [script]
+
+// Add a div beneath body that we will use to handle our puppets.
+$('body').prepend('<div id="puppetsheet"></div>');
+$('body').prepend('<div id="puppetbg"></div>');
+
+// Add the puppets.
+$('#puppetbg').append('<img class="puppet" id="boy" src="assets/puppet_boy.png" />');
+
+$("#puppetsheet").hide();
+$(".puppet").hide();
