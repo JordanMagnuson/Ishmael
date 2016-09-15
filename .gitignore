@@ -1,3 +1,13 @@
+# Windows image file caches.
+Thumbs.db
+ehthumbs.db
+
+# Folder config file.
+Desktop.ini
+
+# Twine story builds.
 /build/
 *.html
+
+# Working directory.
 /working/
