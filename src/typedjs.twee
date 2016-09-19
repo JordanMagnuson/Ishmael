@@ -1,4 +1,4 @@
-:: TypedJS [script]
+:: typedjs [script]
 
 /*********************************************************************
  * TYPEDJS INTEGRATION MODULE FOR SUGARCUBE
@@ -62,7 +62,7 @@
 
 
 /*********************************************************************
- * TYPEDJS LIBRARY ITSELF
+ * TYPEDJS LIBRARY ITSELF (WITH HACKS)
  *********************************************************************/
 
 // The MIT License (MIT)
