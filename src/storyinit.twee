@@ -42,3 +42,47 @@ window.sndMachinegunLoop = new Howl({
 	loop: true,
 	volume: 0.5
 });
+
+window.sndBreathing = new Howl({
+	src: ['assets/54776__bevangoldswain__heavy-breathing-off-mic-loop.mp3'],
+	loop: true,
+	volume: 0.5
+});
+
+window.sndHeartbeat = new Howl({
+	src: ['assets/250845__niedec__heartbeat.mp3'],
+	loop: true,
+	volume: 0.5
+});
+
+/*********************************************************************
+ * UTILITY FUNCTIONS
+ *********************************************************************/
+window.flashImage = function(length) {		
+	// Initialize image array.
+	if (typeof photoArray == 'undefined' || photoArray.length < 1) {
+		window.photoArray = Array(
+			'3286256664_0fac09c4e0_o.jpg',
+			'4742026797_dbfb4c57e0_o.jpg'
+		);		
+	}
+
+	// Get a random image from the array.
+	var randomImage = photoArray.splice(Math.floor(Math.random()*photoArray.length), 1);
+	console.log(photoArray);	
+	
+	// Prepend the image to the body with a random div id so that we can access it / fade it out. 
+	var randomID = idGenerator();
+	$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/' + randomImage + '"></div>');
+	$('#' + randomID).fadeOut(3000);
+};
+
+/*
+ * Generate a random ID (for a div)
+ */
+window.idGenerator = function() {
+    var S4 = function() {
+       return (((1+Math.random())*0x10000)|0).toString(16).substring(1);
+    };
+    return (S4()+S4()+"-"+S4()+"-"+S4()+"-"+S4()+"-"+S4()+S4()+S4());
+}

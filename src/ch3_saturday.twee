@@ -163,7 +163,7 @@ That was the end of the puppet show.
 		} 
 	}, 3000);
 	setTimeout(function() { 
-		if (!sndMachinegunLoop.playing()) {
+		if (!sndMachinegunLoop.playing() && (State.passage != 'The Choice')) {
 			sndMachinegunLoop.play();
 		} 
 	}, 5000);	
@@ -199,11 +199,52 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 [[...|The Choice]]
 
 :: The Choice [nobr]
+/% SOUNDS %/
+<<script>>
+	var currentVol = sndCelebration.volume();
+	sndCelebration.fade(currentVol, 0, 10000);
+
+	var currentVol = sndHollering.volume();
+	sndHollering.fade(currentVol, 0, 10000);
+
+	var currentVol = sndShouting.volume();
+	sndShouting.fade(currentVol, 0, 10000);
+
+	var currentVol = sndMachinegunLoop.volume();
+	sndMachinegunLoop.fade(currentVol, 0, 10000);
+
+	if (!sndBreathing.playing()) {
+		sndBreathing.play();
+	} 
+	if (!sndHeartbeat.playing()) {
+		sndHeartbeat.play();
+	} 	
+<</script>>
+
+
 /%TODO: maybe replace shake effect with jRumble to shake whole screen: https://jackrugile.com/jrumble/%/
 
+/% SCRIPT TO MOVE GUN UP/DOWN %/
 <<script>>
 	postdisplay.testing = function() {
 		var upDownCount = 0;
+	    $('#hold-up').click(function() {
+	    	flashImage();
+	        $('#passage-the-choice').animate({ marginTop : "-=2em" }, 500, 'swing');
+	        upDownCount += 1;
+	        console.log(upDownCount);
+		    if (upDownCount >= 20) {
+		    	State.play("Put it down");
+		    }	        
+		    var currentVol = sndBreathing.volume();
+		    currentVol += .1;
+		    if (currentVol <= 1)
+		    	sndBreathing.volume(currentVol);
+		    var currentVol = sndHeartbeat.volume();
+		    currentVol += .1;
+		    if (currentVol <= 1)
+		    	sndHeartbeat.volume(currentVol);			    
+	    });	    		
 	    $('#put-down').click(function() {
 	        $('#passage-the-choice').animate({ marginTop : "+=2em" }, 500, 'swing');
 	        upDownCount -= 1;
@@ -211,23 +252,23 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 		    if (upDownCount <= -20) {
 		    	State.play("Put it down");
 		    }		        
-	    });
-	    $('#hold-up').click(function() {
-	        $('#passage-the-choice').animate({ marginTop : "-=2em" }, 500, 'swing');
-	        upDownCount += 1;
-	        console.log(upDownCount);
-		    if (upDownCount >= 20) {
-		    	State.play("Put it down");
-		    }	        
-	    });	        
+		    var currentVol = sndBreathing.volume();
+		    currentVol -= .1;
+		    if (currentVol >= 0.1)
+		    	sndBreathing.volume(currentVol);
+		    var currentVol = sndHeartbeat.volume();
+		    currentVol -= .1;
+		    if (currentVol >= 0.1)
+		    	sndHeartbeat.volume(currentVol);		    
+	    });    
 	}
 <</script>>
 
 
 <div id="the-choice">
 <<shake>>
-	<span id="put-down">Put it down</span><br>
-	<span id="hold-up">Hold it up</span>
+	<span id="hold-up">Hold it up</span><br>
+	<span id="put-down">Put it down</span>
 <</shake>>	
 	<<shake>><img id="gun" src="assets/gun.png" /><</shake>>	
 </div>
