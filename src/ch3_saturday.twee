@@ -1,11 +1,21 @@
-:: ch3_saturday
+:: ch3_saturday [nobr]
+<<script>>
+	if (!sndCelebration.playing()) {
+		sndCelebration.play();
+	}
+<</script>>
+
 There was whooping in our alley when I woke up, and that made me smile: today would not be boring.
 
 [[Look outside]]
 
-:: Look outside
-Everyone was out there. Waving and shouting and banging on drums, and holding the flags of our nation. I thought how it would be nice if we had some large space that we could all go to and gather in, but the biggest space in the compound was the main alley which ran down its center from north to south.
+:: Look outside [nobr]
+<<script>>
+	sndCelebration.volume(1);
+<</script>>
 
+Everyone was out there. Waving and shouting and banging on drums, and holding the flags of our nation. I thought how it would be nice if we had some large space that we could all go to and gather in, but the biggest space in the compound was the main alley which ran down its center from north to south.
+<br>
 TODO: How to create the intensity of what's going on here, for the reader?
 
 [[Look around]]
@@ -27,14 +37,47 @@ Yes, father said.
 
 [[...]]
 
-:: ...
+:: ... [nobr]
+<<script>>
+	setTimeout(function() { 
+		if (!sndHollering.playing() && (State.passage == '...')) {
+			sndHollering.play();
+			sndHollering.fade(0, 0.5, 2000);
+		} 
+	}, 1000);
+
+
+	setTimeout(function() { 
+		if (!sndMachinegunLoop.playing() && (State.passage == '...')) {
+			sndMachinegunLoop.play();
+		}	
+	}, 5000);		
+<</script>>
+
 We paraded through the streets for a while, just hollering and waving our flags and being patriotic. Eventually we managed to squeeze into the central alleyway where everyone was gathered. The visitors were up on a rooftop looking down at the crowd and shouting about hope and God and reclaiming Peach Valley. They were wearing guns, and every once in a while one of them would fire a volley up into the air, which made everyone cheer especially loud. They shouted and we cheered, and they shouted and we cheered, until the sun started to set. 
 
 [[Then one of the soldiers raised his arms]]
 
 TODO: "they shouted and we cheered" reveals link to another "they shouted and we cheered" a couple of times (sentence expanding). Then auto advance?
 
-:: Then one of the soldiers raised his arms
+:: Then one of the soldiers raised his arms [nobr]
+<<script>>
+	if (sndCelebration.playing()) {
+		var currentVol = sndCelebration.volume();
+		sndCelebration.fade(currentVol, 0, 10000);
+	} 
+
+	if (sndHollering.playing()) {
+		var currentVol = sndHollering.volume();
+		sndHollering.fade(currentVol, 0, 3000);
+	} 
+
+	if (sndMachinegunLoop.playing()) {
+		var currentVol = sndMachinegunLoop.volume();
+		sndMachinegunLoop.fade(currentVol, 0, 1000);
+	} 	
+<</script>>
+
 Then one of the soldiers raised his arms and declared that they had a special treat for us: a puppet show. Would the younger ones please come forward to the front of the crowd so as to see and hear the presentation better. 
 
 [[A beam and some clothesline]]
@@ -107,9 +150,28 @@ That was the end of the puppet show.
 
 [[...|martyr]]
 
-:: martyr
-"A martyr!" 
+:: martyr [nobr]
+<<script>>
+	if (!sndShouting.playing()) {
+		sndShouting.play();
+		sndShouting.fade(1, 0.5, 1000);
+	} 
+	setTimeout(function() { 
+		if (!sndCelebration.playing()) {
+			sndCelebration.play();
+			sndCelebration.fade(0, 0.3, 3000);
+		} 
+	}, 3000);
+	setTimeout(function() { 
+		if (!sndMachinegunLoop.playing()) {
+			sndMachinegunLoop.play();
+		} 
+	}, 5000);	
 
+<</script>>
+"A martyr!" 
+<br>
+<br>
 [[A martyr!]]
 
 :: A martyr!

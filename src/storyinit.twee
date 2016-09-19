@@ -1,5 +1,9 @@
 :: StoryInit [script]
 
+/*********************************************************************
+ * DOM MODIFICATIONS
+ *********************************************************************/
+
 // Add a div beneath body that we will use to handle our puppets.
 $('body').prepend('<div id="puppetsheet"></div>');
 $('body').prepend('<div id="puppetbg"></div>');
@@ -10,3 +14,31 @@ $('#puppetbg').append('<img class="puppet" id="puppet-father" src="assets/puppet
 
 $("#puppetsheet").hide();
 $(".puppet").hide();
+
+
+/*********************************************************************
+ * LOAD SOUNDS
+ *********************************************************************/
+window.sndCelebration = new Howl({
+	src: ['assets/209982__yuval__distant-turkish-wedding.mp3'],
+	loop: true,
+	volume: 0.3
+});
+
+window.sndHollering = new Howl({
+	src: ['assets/17343__audiblepie-com__welcome-scream.mp3'],
+	loop: true,
+	volume: 0.1
+});
+
+window.sndShouting = new Howl({
+	src: ['assets/101871__dickblox__crowd-shouting.mp3'],
+	loop: true,
+	volume: 1
+});
+
+window.sndMachinegunLoop = new Howl({
+	src: ['assets/101961__cgeffex__heavy-machine-gun.mp3'],
+	loop: true,
+	volume: 0.5
+});

@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a[[puppet show|A beam and some clothesline]]\u000a[[test]]\u000a\u000a<<set $good_at = 'hopscotch'>>\u000a<<set $num_rocks = 2>>
+V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a[[puppet show|A beam and some clothesline]]\u000a[[puppet_8]]\u000a[[test]]\u000a\u000a<<set $good_at = 'hopscotch'>>\u000a<<set $num_rocks = 2>>
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2016
 I9
-I14
+I15
 I12
-I18
-I4
-I2
-I258
+I55
+I9
+I3
+I259
 I1
 tp27
 (dp28
@@ -182,7 +182,7 @@ tp66
 Rp67
 sbsa(dp68
 g14
-I00
+I01
 sg15
 (lp69
 I150
@@ -193,7 +193,7 @@ Tiddler
 p70
 (dp71
 g21
-Vsrc/storyinit.twee\u000asrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee\u000asrc/global.twee\u000asrc/stylesheet.twee\u000asrc/macros.twee
+Vsrc/storyinit.twee\u000asrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee\u000asrc/global.twee\u000asrc/stylesheet.twee\u000asrc/macros.twee\u000asrc/typedjs.twee\u000asrc/howlerjs.twee
 p72
 sg23
 VStoryIncludes
@@ -202,12 +202,12 @@ sg25
 g26
 ((I2016
 I9
-I14
-I12
-I16
-I58
-I2
-I258
+I15
+I13
+I6
+I51
+I3
+I259
 I1
 tp74
 (dp75
