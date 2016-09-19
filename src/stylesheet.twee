@@ -32,7 +32,15 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow: hidden;
 }
+
+/* SugarCube UI Bar */
+/**
+#ui-bar {
+	display: none;
+}
+**/
 
 /*********************************************************************
  * PASSAGES
@@ -110,7 +118,7 @@ body {
     width: 50%;
     height: 50%;
 	left: 0;
-	background-color:orange;
+	background-color: transparent;
 	z-index: 9;
 }
 
@@ -150,6 +158,45 @@ body {
  	width: auto;
  }
 
+ /*********************************************************************
+ * THE CHOICE
+ *********************************************************************/
+
+#passage-the-choice {
+	height: auto;
+	width: 100%;
+	top: 40%;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#the-choice {
+	height: 100%;
+	width: 100%;
+}
+
+#the-choice img {
+	width: 100%;
+	height: auto;
+	margin-top: 30%;
+}
+
+/**
+#passage-the-choice {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	background-image: url('assets/gun.png');
+}
+
+#the-choice {
+}
+**/
 /*********************************************************************
  * <<SHAKE>> MACRO SET CSS
  *********************************************************************/

@@ -199,37 +199,38 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 [[...|The Choice]]
 
 :: The Choice [nobr]
+/%TODO: maybe replace shake effect with jRumble to shake whole screen: https://jackrugile.com/jrumble/%/
 
 <<script>>
 	postdisplay.testing = function() {
 		var upDownCount = 0;
-	    $('#put_down').click(function() {
-	        $('#the_choice').animate({ marginTop : "+=1em" }, 500, 'swing');
+	    $('#put-down').click(function() {
+	        $('#passage-the-choice').animate({ marginTop : "+=2em" }, 500, 'swing');
 	        upDownCount -= 1;
 	        console.log(upDownCount);
-		    if (upDownCount <= -5) {
+		    if (upDownCount <= -20) {
 		    	State.play("Put it down");
 		    }		        
 	    });
-	    $('#hold_up').click(function() {
-	        $('#the_choice').animate({ marginTop : "-=1em" }, 500, 'swing');
+	    $('#hold-up').click(function() {
+	        $('#passage-the-choice').animate({ marginTop : "-=2em" }, 500, 'swing');
 	        upDownCount += 1;
 	        console.log(upDownCount);
-		    if (upDownCount >= 5) {
+		    if (upDownCount >= 20) {
 		    	State.play("Put it down");
 		    }	        
 	    });	        
 	}
 <</script>>
 
-TODO: maybe replace shake effect with jRumble to shake whole screen: https://jackrugile.com/jrumble/
 
+<div id="the-choice">
 <<shake>>
-<div id="the_choice">
-	<span id="put_down">Put it down</span><br>
-	<span id="hold_up">Hold it up</span>
+	<span id="put-down">Put it down</span><br>
+	<span id="hold-up">Hold it up</span>
+<</shake>>	
+	<<shake>><img id="gun" src="assets/gun.png" /><</shake>>	
 </div>
-<</shake>>
 
 :: Put it down
 Please complete the following sentence in first person, for Ishmael:
