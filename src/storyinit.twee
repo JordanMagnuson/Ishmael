@@ -56,6 +56,18 @@ window.sndHeartbeat = new Howl({
 });
 
 /*********************************************************************
+ * PRELOAD IMAGES
+ *********************************************************************/
+window.preloadImageArray = Array(
+	'3286256664_0fac09c4e0_o.jpg',
+	'4742026797_dbfb4c57e0_o.jpg'
+);	
+for(var i = preloadImageArray.length - 1; i >= 0; i--){
+	var preloadImage = preloadImageArray[i];
+	$('body').prepend('<div class="preload-image" id="preload-image-' + i + '" style="background-image: url(assets/' + preloadImage + '"></div>');
+}
+
+/*********************************************************************
  * UTILITY FUNCTIONS
  *********************************************************************/
 window.flashImage = function(length) {		
@@ -74,7 +86,9 @@ window.flashImage = function(length) {
 	// Prepend the image to the body with a random div id so that we can access it / fade it out. 
 	var randomID = idGenerator();
 	$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/' + randomImage + '"></div>');
-	$('#' + randomID).fadeOut(3000);
+	
+	// Fade out, and remove.
+	$('#' + randomID).fadeOut(3000, function() { $(this).remove(); });
 };
 
 /*

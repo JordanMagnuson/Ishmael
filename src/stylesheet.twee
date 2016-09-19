@@ -35,6 +35,11 @@ body {
     overflow: hidden;
 }
 
+.preload-image { 
+    background-repeat: no-repeat;
+    background-position: -9999px -9999px;
+}
+
 .background-image {
 	position: absolute;
 	left: 0;
