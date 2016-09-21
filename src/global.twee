@@ -7,3 +7,12 @@ That's not a verb I recognize.
 :: test
 <<set $next_passage = "puppets">>
 <span class="typed">This is a test.<<print $next_passage>></span>
+
+:: wait [nobr]
+<div class="waiting"></div>
+<<script>>
+	var waitTime = getRandomInt(3000, 6000);
+	setTimeout(function() { 
+		State.play(State.variables['next_passage']);
+	}, waitTime);	
+<</script>>
