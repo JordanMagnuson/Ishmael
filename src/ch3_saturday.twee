@@ -227,7 +227,7 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 /% SCRIPT TO MOVE GUN UP/DOWN %/
 <<script>>
 	postdisplay.testing = function() {
-		var upDownCount = 0;
+		$('body').append('<img class="macro-shake shake-block" id="gun" src="assets/gun.png" />');
 	    $('#hold-up').click(function() {
 	    	holdGunUp();		    
 	    });	    		
@@ -239,11 +239,10 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 
 
 <div id="the-choice">
-<<shake>>
-	<span id="hold-up">Hold it up</span><br>
-	<span id="put-down">Put it down</span>
-<</shake>>	
-	<<shake>><img id="gun" src="assets/gun.png" /><</shake>>	
+	<<shake>>
+		<span id="hold-up">Hold it up</span><br>
+		<span id="put-down">Put it down</span>
+	<</shake>>
 </div>
 
 :: Put it down

@@ -115,6 +115,7 @@ for(var i = facesImageArray.length - 1; i >= 0; i--){
 window.holdGunUp = function(length) {		
 	// Move the whole passage up (use % from top, so that movement is relative to window height)
 	$('.passage').animate({ top : "-=5%" }, 500, 'swing');
+	$('#gun').animate({ top : "-=12%" }, 500, 'swing');
 
 	// Initialize image array.
 	if (typeof violentImageArrayCopy == 'undefined' || violentImageArrayCopy.length < 1) {
@@ -167,6 +168,7 @@ window.holdGunUp = function(length) {
 window.putGunDown = function(length) {		
 	// Move the whole passage down (use % from top, so that movement is relative to window height)
 	$('.passage').animate({ top : "+=5%" }, 500, 'swing');
+	$('#gun').animate({ top : "+=12%" }, 500, 'swing');	
 
 	// Initialize image array.
 	if (typeof facesImageArrayCopy == 'undefined' || facesImageArrayCopy.length < 1) {

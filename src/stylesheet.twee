@@ -194,8 +194,8 @@ body {
  *********************************************************************/
 
 #passage-the-choice {
-	height: auto;
 	width: 100%;
+	height: auto;
 	top: 40%;
 	left: 0;
 	margin: 0;
@@ -210,10 +210,14 @@ body {
 	width: 100%;
 }
 
-#the-choice img#gun {
+#gun {
+	position: absolute;
 	width: 100%;
 	height: auto;
-	margin-top: 30%;
+	bottom: -100%;
+	left: 0;
+	background-color: transparent;
+	z-index: 900;
 }
 
 /**
