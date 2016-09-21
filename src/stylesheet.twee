@@ -56,14 +56,22 @@ body {
     background-size: cover;	
     margin: 0;
     padding: 0;
+    z-index: 20;
+}
+
+#blood-overlay {
+	background-image: url('assets/a-necessary-evil_4614659778_a93bef3820_o.jpg');
+	mix-blend-mode: multiply;
+	opacity: 0;
+	z-index: 10;
 }
 
 /* SugarCube UI Bar */
-/*
+
 #ui-bar {
-	display: none;
+	z-index: 9000;
 }
-*/
+
 
 /*********************************************************************
  * PASSAGES
@@ -82,7 +90,7 @@ body {
 	/*text-shadow: 100px 100px 12px black;*/
 	background-color:rgba(255, 255, 255, 0.8);
 	padding: 1.4em;
-	z-index: 100;
+	z-index: 900;
 }
 
 .passage a {
@@ -142,7 +150,7 @@ body {
     height: 50%;
 	left: 0;
 	background-color: transparent;
-	z-index: 9;
+	z-index: 90;
 }
 
 #puppetsheet {
@@ -164,7 +172,7 @@ body {
 #puppetbg .puppet {
 	display: block;
  	position: absolute;
- 	z-index: 10;
+ 	z-index: 100;
  }
 
  #puppet-boy {
@@ -193,6 +201,8 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
+	background-color: transparent;
+	font-size: 2em;
 }
 
 #the-choice {
@@ -200,7 +210,7 @@ body {
 	width: 100%;
 }
 
-#the-choice img {
+#the-choice img#gun {
 	width: 100%;
 	height: auto;
 	margin-top: 30%;

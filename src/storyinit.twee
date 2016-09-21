@@ -1,6 +1,11 @@
 :: StoryInit [script]
 
 /*********************************************************************
+ * INITIALIZE VARIABLES
+ *********************************************************************/
+window.upDownCount = 0;
+
+/*********************************************************************
  * DOM MODIFICATIONS
  *********************************************************************/
 
@@ -15,80 +20,191 @@ $('#puppetbg').append('<img class="puppet" id="puppet-father" src="assets/puppet
 $("#puppetsheet").hide();
 $(".puppet").hide();
 
+$('body').prepend('<div class="background-image" id="blood-overlay"></div>');
+
 
 /*********************************************************************
  * LOAD SOUNDS
  *********************************************************************/
 window.sndCelebration = new Howl({
-	src: ['assets/209982__yuval__distant-turkish-wedding.mp3'],
+	src: ['assets/sounds/209982__yuval__distant-turkish-wedding.mp3'],
 	loop: true,
 	volume: 0.3
 });
 
 window.sndHollering = new Howl({
-	src: ['assets/17343__audiblepie-com__welcome-scream.mp3'],
+	src: ['assets/sounds/17343__audiblepie-com__welcome-scream.mp3'],
 	loop: true,
 	volume: 0.1
 });
 
 window.sndShouting = new Howl({
-	src: ['assets/101871__dickblox__crowd-shouting.mp3'],
+	src: ['assets/sounds/101871__dickblox__crowd-shouting.mp3'],
 	loop: true,
 	volume: 1
 });
 
 window.sndMachinegunLoop = new Howl({
-	src: ['assets/101961__cgeffex__heavy-machine-gun.mp3'],
+	src: ['assets/sounds/101961__cgeffex__heavy-machine-gun.mp3'],
 	loop: true,
 	volume: 0.5
 });
 
 window.sndBreathing = new Howl({
-	src: ['assets/54776__bevangoldswain__heavy-breathing-off-mic-loop.mp3'],
+	src: ['assets/sounds/54776__bevangoldswain__heavy-breathing-off-mic-loop.mp3'],
 	loop: true,
 	volume: 0.5
 });
 
 window.sndHeartbeat = new Howl({
-	src: ['assets/250845__niedec__heartbeat.mp3'],
+	src: ['assets/sounds/250845__niedec__heartbeat.mp3'],
 	loop: true,
 	volume: 0.5
 });
 
+window.sndWar = new Howl({
+	src: ['assets/sounds/96533__omar-alvarado__modern-day-war_01.mp3'],
+	loop: false,
+	volume: 1
+});
+
+
 /*********************************************************************
  * PRELOAD IMAGES
  *********************************************************************/
-window.preloadImageArray = Array(
-	'3286256664_0fac09c4e0_o.jpg',
-	'4742026797_dbfb4c57e0_o.jpg'
+window.violentImageArray = Array(
+	"14107469954_b84973bf28_o.jpg",
+	"2190176602_9c4e70b78b.jpg",
+	"3298081311_d75e5d5c1f_o.jpg",
+	"Another_injury_caused_by_the_bombing_of_Israeli_Air_Forces_over_Gaza_Strip,_reached_the_hospital_unconscious.jpg",
+	"Chemical_burns_follwong_Israeli_bombings1.jpg",
+	"Fatally_wounded_Israeli_school_boy.jpg",
+	"Flickr_-_Israel_Defense_Forces_-_Bil-in_Riot,_Jan_2011_6.jpg",
+	"Gazaday14.jpg",
+	"n721725932_1613535_8023.jpg",
+	"Near_Beit_El_-_north_of_Ramallah_10.10.2015_10.jpg",
+	"Near_Beit_El_-_north_of_Ramallah_10.10.jpg",
+	"Palestinian_Demonstrator_picks_Tear_gas_grenade_to_throw_back_Kafr_Qaddum_August_2014_2.jpg",
+	"Palestinian_militant_with_rifle.jpg"
 );	
-for(var i = preloadImageArray.length - 1; i >= 0; i--){
-	var preloadImage = preloadImageArray[i];
-	$('body').prepend('<div class="preload-image" id="preload-image-' + i + '" style="background-image: url(assets/' + preloadImage + '"></div>');
+for(var i = violentImageArray.length - 1; i >= 0; i--){
+	var preloadImage = violentImageArray[i];
+	$('body').prepend('<div class="preload-image" id="preload-image-' + i + '" style="background-image: url(assets/photos/violence/' + preloadImage + '"></div>');
+}
+
+window.facesImageArray = Array(
+	"3202880684_763846e8f4_o.jpg",
+	"3286208380_176e6f164f_o.jpg",
+	"3286231988_ae66a85935_o.jpg",
+	"3286249224_6e31fba579_o.jpg",
+	"3286256664_0fac09c4e0_o.jpg",
+	"3286467903_1cf6aba0b7_o.jpg",
+	"4742026797_dbfb4c57e0_o.jpg",
+	"4991232884_ac841ee310_o.jpg",
+	"5513283076_05ec4fc98b_o.jpg",
+	"Shaymaa_al-Masri_five_years_old_at_a-Shifaa_Hospital_Gaza.jpg"
+);
+for(var i = facesImageArray.length - 1; i >= 0; i--){
+	var preloadImage = facesImageArray[i];
+	$('body').prepend('<div class="preload-image" id="preload-image-' + i + '" style="background-image: url(assets/photos/faces/' + preloadImage + '"></div>');
 }
 
 /*********************************************************************
  * UTILITY FUNCTIONS
  *********************************************************************/
-window.flashImage = function(length) {		
+window.holdGunUp = function(length) {		
+	// Move the whole passage up (use % from top, so that movement is relative to window height)
+	$('.passage').animate({ top : "-=5%" }, 500, 'swing');
+
 	// Initialize image array.
-	if (typeof photoArray == 'undefined' || photoArray.length < 1) {
-		window.photoArray = Array(
-			'3286256664_0fac09c4e0_o.jpg',
-			'4742026797_dbfb4c57e0_o.jpg'
-		);		
+	if (typeof violentImageArrayCopy == 'undefined' || violentImageArrayCopy.length < 1) {
+		console.log('reinitialize array');
+		window.violentImageArrayCopy = violentImageArray.slice(0);
 	}
+	console.log(violentImageArrayCopy);
 
 	// Get a random image from the array.
-	var randomImage = photoArray.splice(Math.floor(Math.random()*photoArray.length), 1);
-	console.log(photoArray);	
+	var randomImage = violentImageArrayCopy.splice(Math.floor(Math.random()*violentImageArrayCopy.length), 1);
+	console.log(randomImage);
+
+	// Move any existing background images down on the z-index, so that the new one will be on top.
+	$('.background-image').css('z-index', 19);
 	
 	// Prepend the image to the body with a random div id so that we can access it / fade it out. 
 	var randomID = idGenerator();
-	$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/' + randomImage + '"></div>');
+	$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/photos/violence/' + randomImage + '"></div>');
+	$('#' + randomID).fadeOut(5000, function() { $(this).remove(); });
+
+	// Increase blood overlay.
+	var bloodOverlayOpacity = $('#blood-overlay').css('opacity');
+	bloodOverlayOpacity = Number(bloodOverlayOpacity)
+	if (bloodOverlayOpacity < 1) {
+		bloodOverlayOpacity = bloodOverlayOpacity + 0.1;
+		console.log('bloodOverlayOpacity: ' + bloodOverlayOpacity);
+		$('#blood-overlay').css('opacity', bloodOverlayOpacity);
+	}
+
+	// Increase breathing and heartbeat volume.
+    var currentVol = sndBreathing.volume();
+    currentVol += .1;
+    if (currentVol <= 1)
+    	sndBreathing.volume(currentVol);
+    var currentVol = sndHeartbeat.volume();
+    currentVol += .1;
+    if (currentVol <= 1)
+    	sndHeartbeat.volume(currentVol);		
+
+	// War sounds.
+	//sndWar.play();
+
+	// Track where the gun is.
+	upDownCount += 1;
+	if (upDownCount >= 20) {
+		State.play("Put it down");
+	}	        
+};
+
+window.putGunDown = function(length) {		
+	// Move the whole passage down (use % from top, so that movement is relative to window height)
+	$('.passage').animate({ top : "+=5%" }, 500, 'swing');
+
+	// Initialize image array.
+	if (typeof facesImageArrayCopy == 'undefined' || facesImageArrayCopy.length < 1) {
+		console.log('reinitialize array');
+		window.facesImageArrayCopy = facesImageArray.slice(0);
+	}
+	console.log(facesImageArrayCopy);
+
+	// Get a random image from the array.
+	var randomImage = facesImageArrayCopy.splice(Math.floor(Math.random()*facesImageArrayCopy.length), 1);
+	console.log(randomImage);
+
+	// Move any existing background images down on the z-index, so that the new one will be on top.
+	$('.background-image').css('z-index', 19);
 	
-	// Fade out, and remove.
-	$('#' + randomID).fadeOut(3000, function() { $(this).remove(); });
+	// Prepend the image to the body with a random div id so that we can access it / fade it out. 
+	var randomID = idGenerator();
+	$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/photos/faces/' + randomImage + '"></div>');
+	$('#' + randomID).fadeOut(5000, function() { $(this).remove(); });
+
+	// Decrease breathing and heartbeat volume.
+    var currentVol = sndBreathing.volume();
+    currentVol -= .1;
+    if (currentVol >= 0.1)
+    	sndBreathing.volume(currentVol);
+    var currentVol = sndHeartbeat.volume();
+    currentVol -= .1;
+    if (currentVol >= 0.1)
+    	sndHeartbeat.volume(currentVol);	
+
+	// Stop war sounds.
+	sndWar.stop();	
+
+	// Track where the gun is.
+	upDownCount -= 1;
+	if (upDownCount <= -20) {
+		State.play("Put it down");
+	}	 	
 };
 
 /*
