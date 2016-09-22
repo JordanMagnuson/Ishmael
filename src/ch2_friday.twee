@@ -1,3 +1,5 @@
+/% TODO: Implement $good_at variable to change what happens depending on what game you are good at. %/
+
 :: ch2_friday
 [[Friday|wait]]
 <<set $next_passage = 'friday_2'>>
@@ -24,51 +26,67 @@ Friday went by awfully slowly.
 TODO
 
 :: Play with your friends
-I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, as usual, but we didn’t have much fun.
-
+I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, <<linkreplace "as usual" transition>>as usual, but we didn't have much fun<</linkreplace>>.
 <<display 'Play Options'>>
 
-:: Play Options
-[[Play tic-tac-toe]]
-[[Play ratalla]]
-[[Play kickball]]
-[[Watch flies]]
-[[Etching contest]]
+:: Play Options [nobr]
+<<script>>console.log(variables());<</script>>
+<ul id="choices">
+	<<if $can_play_tic_tac_toe>><li id="ch_play_tic_tac_toe">[[Play tic-tac-toe]]</li><</if>>
+	<<if $can_play_ratalla>><li id="ch_play_ratalla">[[Play ratalla]]</li><</if>>
+	<<if $can_play_kickball>><li id="ch_play_kickball">[[Play kickball]]</li><</if>>
+	<<if $hang_out_times < 2>><li id="ch_hang_out">[[Hang out]]</li><</if>>
+	<<if $can_have_etching>><li id="ch_etching_contest">[[Etching contest]]</li><</if>>
+</ul>
 
-/% TODO: "as usual" ends sentence above, but clicking on it opens to "but we didn't have much fun" and reveals options. The following sequence requires some coding and world-modeling, so that what the player has and has not done are kept track of, with additional options appearing. %/
+<<if !$can_play_tic_tac_toe && !$can_play_ratalla && !$can_play_kickball && !$can_have_etching && $hang_out_times >= 2>>
+<<linkreplace "That was Friday" transition>>[[The boringest day in the world]]<</linkreplace>>
+<</if>>
 
-:: Play tic-tac-toe
+:: Play tic-tac-toe [nobr]
+<<set $can_play_tic_tac_toe = false>>
+/%TODO: interactive tic-tac-toe (jQuery - see http://jsfiddle.net/nishacodes/2Jvtu/)%/
 Nobody wanted to play tic-tac-toe, so that was out from the beginning.
 
 <<display 'Play Options'>>
 
-:: Play kickball
-TODO: If *has ball* play. Otherwise:
-
-I thought of playing kickball, but the older boys were using our ball for their weekly soccer tournament. 
+:: Play kickball [nobr]
+<<set $can_play_kickball = false>>
+<<if $has_ball>>
+	That's when I got the idea of taking one of the intestines and tying up the ends and using it as a kickball. Everyone agreed to that immediately, and we managed to pass the next hour and a half pretty quickly. Then the intestine popped, and we were back where we started. 
+<<else>>
+	I thought of playing kickball, but the older boys were using our ball for their weekly soccer tournament.
+<</if>>
 
 <<display 'Play Options'>>
 
-:: Play ratalla
+:: Play ratalla [nobr]
+<<set $can_play_ratalla = false>>
 We got some rocks together and played ratalla for a while, but Joe had decided that ratalla was the boringest game in the world, and Harriet had sliced her shooting finger the day before, so she definitely couldn't play, she said. That left me and Bobby and Kitty and Ryan, and the game isn't really meant for four people. After a while Ryan suggested that we might get one or two of our kid brothers or sisters to play, but Bobby gave him the look when he said that, and I thought that it was a pretty silly idea myself. 
 
 <<display 'Play Options'>>
 
-:: Watch flies
-So we stopped playing and just sat around for a bit, watching the flies crawl around on the dead carcass in front of Mr. Gumingway's shack. One of his goats had gotten infected with some kind of disease a while back and died suddenly. It was about half gone now, and consisted mainly of ribs and bloated intestines. 
+:: Hang out [nobr]
+<<set $hang_out_times += 1>>
+<<if $hang_out_times == 1>>
+We stopped playing and just sat around for a bit, watching the flies crawl around on the dead carcass in front of Mr. Gumingway's shack. One of his goats had gotten infected with some kind of disease a while back and died suddenly. It was about half gone now, and consisted mainly of ribs and bloated intestines. 
+
+<ul id="choices">
+	<li id="ch_examine_intestines"><<linkreplace "Examine intestines" transition>><<removeclass ".needs_examine_intestines" "invisible">>One of those intestines looks awfully bloated and round...<</linkreplace>></li>
+	<li id="ch_play_kickball" class="needs_examine_intestines invisible fadein"><<link [[Play kickball]]>><<set $has_ball = true>><</link>></li>
+</ul>
+
+<<else>>
+"What do you wanna do?"<br>
+"I don't know, what do you wanna do?"
+<<display 'Play Options'>>
+<</if>>
+
+:: Etching contest [nobr]
+<<set $can_have_etching = false>>
+At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes.
 
 <<display 'Play Options'>>
-
-:: Play kickball
-That's when I got the idea of taking one of the intestines and tying up the ends and using it as a kickball. Everyone agreed to that immediately, and we managed to pass the next hour and a half pretty quickly. Then the intestine popped, and we were back where we started. 
-
-<<display 'Play Options'>>
-
-:: Etching contest
-And that's how the day went by, generally, except for one decidedly low point when Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes.
-
-<<linkreplace "That was Friday." transition>>[[The boringest day in the world]].<</linkreplace>>.
-
 
 /% TODO: Switch this sequence to be one passage, with sentence reveal links? %/
 :: The boringest day in the world

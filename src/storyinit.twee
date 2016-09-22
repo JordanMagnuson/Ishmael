@@ -7,3 +7,11 @@
 <<set $good_at = 'hopscotch'>>
 <<set $num_rocks = 2>>
 <<set $next_passage = 'ch2_friday'>>
+
+/% Friday variables (playing) %/
+<<set $can_play_tic_tac_toe = true>>
+<<set $can_play_ratalla = true>>
+<<set $can_play_kickball = true>>
+<<set $can_have_etching = true>>
+<<set $has_ball = false>>
+<<set $hang_out_times = 0>>
