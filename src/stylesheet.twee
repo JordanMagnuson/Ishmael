@@ -64,11 +64,31 @@ body {
     z-index: 20;
 }
 
+.fade-out {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	background-repeat: no-repeat;
+	background-position: center center;
+	/* Cover the whole screen. */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;	
+    margin: 0;
+    padding: 0;
+    z-index: 600;	
+}
+
 #blood-overlay {
 	background-image: url('assets/a-necessary-evil_4614659778_a93bef3820_o.jpg');
 	mix-blend-mode: multiply;
 	opacity: 0;
-	z-index: 10;
+	z-index: 10!important;
 }
 
 /* SugarCube UI Bar */
@@ -113,6 +133,14 @@ body {
 	border-bottom: 1px solid #810000;
 }
 
+.passage.nobg {
+	background-color: transparent;
+}
+
+.passage.white-text {
+	color: white;
+}
+
 /*********************************************************************
  * MISC
  *********************************************************************/
@@ -155,7 +183,7 @@ body {
     height: 50%;
 	left: 0;
 	background-color: transparent;
-	z-index: 90;
+	z-index: 10;
 }
 
 #puppetsheet {
@@ -207,12 +235,20 @@ body {
 	padding: 0;
 	text-align: center;
 	background-color: transparent;
-	font-size: 2em;
+	font-size: 3rem;
 }
 
 #the-choice {
 	height: 100%;
 	width: 100%;
+}
+
+#the-choice .choice {
+	cursor: pointer;	
+}
+
+#the-choice .choice:hover {
+	color: #810000;
 }
 
 #gun {
@@ -222,8 +258,10 @@ body {
 	bottom: -100%;
 	left: 0;
 	background-color: transparent;
-	z-index: 900;
+	z-index: 500;
 }
+
+
 
 /**
 #passage-the-choice {
@@ -379,10 +417,15 @@ body {
 
 iframe#tictactoe {
 	position: absolute;
-	min-height: 100%;
-	width: 100%;
+	height: 20em;
+	width: 80%;
 	margin: 0;
 	padding: 0;
-	top: -100%;
+	bottom: 100%;
 	left: 0;
+	overflow: hidden;
+}
+
+#passage-play-tic-tac-toe {
+	min-height: 6em;
 }

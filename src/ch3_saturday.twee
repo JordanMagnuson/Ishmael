@@ -238,16 +238,16 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 	    $('#put-down').click(function() {
 			putGunDown();    		    
 	    });    
-	    $('#the-choice').hide().delay(10000).fadeIn(5000);
-	    delete postdisplay[passageSetup2]
+	   	/*$('#the-choice').hide().delay(5000).fadeIn(5000);*/
+	    delete postdisplay[passageSetup2];
 	}
 <</script>>
 
 
 <div id="the-choice">
 	<<shake>>
-		<span id="hold-up">Hold it up</span><br>
-		<span id="put-down">Put it down</span>
+		<span class="choice" id="hold-up">Hold it up</span><br>
+		<span class="choice" id="put-down">Put it down</span>
 	<</shake>>
 </div>
 
@@ -263,5 +263,7 @@ I put the gun down because <<textbox "$put_down_why" "" "Can't put it down" auto
 
 TOOD: Have "could not put it down" come in with typewriter effect?
 
-:: Hold it up
-But I held it up, because the eyes of my people were on me.
+:: Hold it up [nobr nobg white-text]
+<<set $next_passage = ''>>
+<<script>>$('body').prepend('<div class="fade-out"></div>');<</script>>
+<span class="typed-speed80-delay6000">But I held the gun up, because the eyes of my people were on me.</span>

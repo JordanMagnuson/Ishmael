@@ -85,6 +85,12 @@ window.sndHeartbeat = new Howl({
 window.sndWar = new Howl({
 	src: ['assets/sounds/96533__omar-alvarado__modern-day-war_01.mp3'],
 	loop: false,
+	volume: 0.7
+});
+
+window.sndExplosion = new Howl({
+	src: ['assets/sounds/259300__unfa__huge-explosion.mp3'],
+	loop: false,
 	volume: 1
 });
 
@@ -133,6 +139,20 @@ for(var i = facesImageArray.length - 1; i >= 0; i--){
  * UTILITY FUNCTIONS
  *********************************************************************/
 window.holdGunUp = function(length) {		
+	// Track where the gun is.
+	upDownCount += 1;
+	console.log(upDownCount);	
+	if (upDownCount >= 8) {
+		$('#the-choice').hide();
+		$('#gun').hide();
+		sndWar.stop();
+		sndBreathing.stop();
+		sndHeartbeat.stop();
+		sndExplosion.play();
+		State.play("Hold it up");
+		return false;
+	}	     
+
 	// Move the whole passage up (use % from top, so that movement is relative to window height)
 	$('.passage').animate({ top : "-=5%" }, 500, 'swing');
 	$('#gun').animate({ top : "-=12%" }, 500, 'swing');
@@ -156,6 +176,9 @@ window.holdGunUp = function(length) {
 	$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/photos/violence/' + randomImage + '"></div>');
 	$('#' + randomID).fadeOut(5000, function() { $(this).remove(); });
 
+	// Fade link text out and prevent clicking temporarily. 
+	$('#the-choice').hide().fadeIn(5000);
+
 	// Increase blood overlay.
 	var bloodOverlayOpacity = $('#blood-overlay').css('opacity');
 	bloodOverlayOpacity = Number(bloodOverlayOpacity)
@@ -176,16 +199,18 @@ window.holdGunUp = function(length) {
     	sndHeartbeat.volume(currentVol);		
 
 	// War sounds.
-	sndWar.play();
-
-	// Track where the gun is.
-	upDownCount += 1;
-	if (upDownCount >= 20) {
-		State.play("Put it down");
-	}	        
+	sndWar.play();   
 };
 
 window.putGunDown = function(length) {		
+	// Track where the gun is.
+	upDownCount -= 1;
+	console.log(upDownCount);
+	if (upDownCount <= -20) {
+		State.play("Put it down");
+	}	 
+
+
 	// Move the whole passage down (use % from top, so that movement is relative to window height)
 	$('.passage').animate({ top : "+=5%" }, 500, 'swing');
 	$('#gun').animate({ top : "+=12%" }, 500, 'swing');	
@@ -220,13 +245,7 @@ window.putGunDown = function(length) {
     	sndHeartbeat.volume(currentVol);	
 
 	// Stop war sounds.
-	sndWar.stop();	
-
-	// Track where the gun is.
-	upDownCount -= 1;
-	if (upDownCount <= -20) {
-		State.play("Put it down");
-	}	 	
+	sndWar.stop();		
 };
 
 /*
