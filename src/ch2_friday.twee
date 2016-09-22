@@ -45,12 +45,9 @@ I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, <<linkreplace
 
 :: Play tic-tac-toe [nobr]
 <<set $can_play_tic_tac_toe = false>>
-/%TODO: interactive tic-tac-toe (jQuery - see http://jsfiddle.net/nishacodes/2Jvtu/)%/
+<iframe id="tictactoe" src="src/tictactoe/index.html" frameBorder="0" allowtransparency="true"></iframe>
 
-<iframe id="tictactoe" src="src/tictactoe/index.html" frameBorder="0"></iframe>
-
-
-<<display 'Play Options'>>
+[[Enough of this|Hang out]]
 
 :: Play kickball [nobr]
 <<set $can_play_kickball = false>>
@@ -90,9 +87,16 @@ At one point Joe asked if we might not have an etching contest, and everybody im
 
 <<display 'Play Options'>>
 
-/% TODO: Switch this sequence to be one passage, with sentence reveal links? %/
-:: The boringest day in the world
-Finally [[Saturday]] did come.
+/% TODO: Is this better with each sentence in its own passage, or as a chained link of sentences like this? %/
+:: The boringest day in the world [nobr]
+<<set $next_passage = 'ch3_saturday'>>
+<<linkreplace "Finally Saturday did come." transition>>Finally Saturday did come. 
+	<<linkreplace "The day of the get-together." transition>>The day of the get-together.
+		<<linkreplace "The day of remembering." transition>>The day of remembering.
+			[[The day of the puppet show.|wait]]
+		<</linkreplace>>
+	<</linkreplace>>
+<</linkreplace>>
 
 :: Saturday
 The day of the [[get-together]].
@@ -101,4 +105,5 @@ The day of the [[get-together]].
 The day of [[remembering]].
 
 :: remembering
-The day of the [[puppet show|ch3_saturday]].
+The day of the [[puppet show|wait]].
+<<set $next_passage = 'ch3_saturday'>>
