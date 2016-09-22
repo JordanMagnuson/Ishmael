@@ -371,3 +371,79 @@ body {
     width: 1.5em;    
   }
 }
+
+
+/*********************************************************************
+ * TIC-TAC-TOE STYLES
+ *********************************************************************/
+
+ /* UNIVERSAL STYLES */
+ #passage-tictactoe .center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#passage-tictactoe .italic {
+    font-style: italic;
+    text-decoration: underline;
+}
+/* ELEMENT STYLES */
+#passage-tictactoe h1, #passage-tictactoe h4 {
+    text-align: center;
+    font-family: sans-serif;
+    color: #666666;
+    border: 0;
+}
+#passage-tictactoe p {
+    text-align: center;
+    font-family: sans-serif;
+    line-height: 16pt;
+    color: #666666;
+}
+#passage-tictactoe .button {
+    margin-left:auto;
+    margin-right:auto;
+    text-align: center;
+}
+#passage-tictactoe #restart {
+    font-size: 12pt;
+    color: #666666;
+    background-color: #dedede;
+    padding: 5px 15px 5px 15px;
+}
+/* BOARD STYLES */
+ #passage-tictactoe #board-outer {
+    height: 350px;
+    width: 350px;
+    background-color:none;
+    overflow: hidden;
+}
+#passage-tictactoe #board {
+    width: 354px;
+    height: 354px;
+    background-color:none;
+    border-spacing:0;
+    margin-left: -2px;
+    margin-top: -2px;
+}
+#passage-tictactoe td {
+    height: 116px;
+    width: 116px;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 40pt;
+    border-collapse: collapse;
+    border: 2px solid #B9E9F0;
+    text-transform: uppercase;
+    color: #999999;
+}
+#passage-tictactoe .x {
+    width: 100%;
+    height: 100%;
+    background-color: blue;
+}
+#passage-tictactoe .o {
+    width: 100%;
+    height: 100%;
+    background-color: red;
+}
