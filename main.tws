@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a[[puppet show|younger ones]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a\u000a<em>[[the roof]]</em>\u000a[[wait]]
+V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[friday_5]]\u000a[[ch3_saturday]]\u000a[[puppet show|younger ones]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a\u000a<em>[[the roof]]</em>\u000a[[wait]]
 p22
 sS'title'
 p23
@@ -50,12 +50,12 @@ struct_time
 p26
 ((I2016
 I9
-I21
-I20
-I31
-I18
-I2
-I265
+I22
+I8
+I1
+I28
+I3
+I266
 I1
 tp27
 (dp28
@@ -193,7 +193,7 @@ Tiddler
 p70
 (dp71
 g21
-Vsrc/javascript.twee\u000asrc/storyinit.twee\u000asrc/macros.twee\u000asrc/global.twee\u000asrc/stylesheet.twee\u000asrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee
+Vsrc/howlerjs.twee\u000asrc/typedjs.twee\u000asrc/javascript.twee\u000asrc/macros.twee\u000asrc/storyinit.twee\u000asrc/global.twee\u000asrc/stylesheet.twee\u000asrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee
 p72
 sg23
 VStoryIncludes
@@ -202,12 +202,12 @@ sg25
 g26
 ((I2016
 I9
-I21
-I20
-I39
-I18
-I2
-I265
+I22
+I8
+I7
+I23
+I3
+I266
 I1
 tp74
 (dp75
