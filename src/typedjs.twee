@@ -43,10 +43,12 @@
                     startDelay: 500,
                     showCursor: false,
                     callback: function() {
-                    	// Display the "next passage" (custom set variable) when typings ends (after a delay).
-                    	setTimeout(function() { 
-                    		State.play(State.variables['next_passage']); 
-                    	}, 1000);
+                    	if (State.variables['next_passage']) {
+	                    	// Display the "next passage" (custom set variable) when typings ends (after a delay).
+	                    	setTimeout(function() { 
+	                    		State.play(State.variables['next_passage']); 
+	                    	}, 1000);
+	                    }
                     	
                     }
                 }, getInlineOptions($source.attr("class")), {
