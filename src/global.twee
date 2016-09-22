@@ -5,8 +5,7 @@ I have $num_rocks rocks, a piece of string, and some imaginary rules in my pocke
 That's not a verb I recognize.
 
 :: test
-<<set $next_passage = "puppets">>
-<span class="typed">This is a test.<<print $next_passage>></span>
+<iframe src="src/tictactoe/index.html"></iframe>
 
 :: wait [nobr]
 <div class="waiting"></div>

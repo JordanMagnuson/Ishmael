@@ -46,7 +46,9 @@ I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, <<linkreplace
 :: Play tic-tac-toe [nobr]
 <<set $can_play_tic_tac_toe = false>>
 /%TODO: interactive tic-tac-toe (jQuery - see http://jsfiddle.net/nishacodes/2Jvtu/)%/
-Nobody wanted to play tic-tac-toe, so that was out from the beginning.
+
+<iframe id="tictactoe" src="src/tictactoe/index.html" frameBorder="0"></iframe>
+
 
 <<display 'Play Options'>>
 

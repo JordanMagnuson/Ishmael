@@ -23,7 +23,7 @@ p11
 (dp13
 S'selected'
 p14
-I00
+I01
 sS'pos'
 p15
 (lp16
@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[friday_5]]\u000a[[ch3_saturday]]\u000a[[puppet show|younger ones]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a\u000a<em>[[the roof]]</em>\u000a[[wait]]
+V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[friday_5]]\u000a[[ch3_saturday]]\u000a[[puppet show|younger ones]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a\u000a<em>[[the roof]]</em>\u000a[[wait]]\u000a\u000a<<goto 'Play tic-tac-toe'>>
 p22
 sS'title'
 p23
@@ -51,9 +51,9 @@ p26
 ((I2016
 I9
 I22
-I8
-I1
-I28
+I11
+I17
+I30
 I3
 I266
 I1
@@ -203,9 +203,9 @@ g26
 ((I2016
 I9
 I22
-I8
-I7
-I23
+I11
+I10
+I14
 I3
 I266
 I1
