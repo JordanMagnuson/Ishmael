@@ -1,5 +1,0 @@
-:: Configuration [script]
-
-// See http://www.motoslave.net/sugarcube/2/docs/config-object.html
-
-config.ui.stowBarInitially = true; // the UI bar will start stowed (shut)

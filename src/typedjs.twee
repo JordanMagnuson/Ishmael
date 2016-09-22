@@ -1,3 +1,8 @@
+/% --------------------------------------------------------------------------------------
+ % NOTE: THIS FILE IS NOT ACTUALLY USED BY THE GAME: IT IS HERE FOR EDITING CONVENIENCE.
+ % ITS CONTENTS ARE MINIFIED AND INCLUDED IN THE GAME VIA THE JAVASCRIPT.TWEE FILE.
+ % -------------------------------------------------------------------------------------%/
+
 :: typedjs [script]
 
 /*********************************************************************

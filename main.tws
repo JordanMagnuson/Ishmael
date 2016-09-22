@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a[[puppet show|A beam and some clothesline]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a\u000a[[the roof]]\u000a[[wait]]\u000a\u000a<<set $good_at = 'hopscotch'>>\u000a<<set $num_rocks = 2>>\u000a<<set $next_passage = 'ch2_friday'>>
+V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[ch3_saturday]]\u000a[[puppet show|younger ones]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a\u000a<em>[[the roof]]</em>\u000a[[wait]]
 p22
 sS'title'
 p23
@@ -51,9 +51,9 @@ p26
 ((I2016
 I9
 I21
-I12
-I34
-I22
+I20
+I31
+I18
 I2
 I265
 I1
@@ -193,7 +193,7 @@ Tiddler
 p70
 (dp71
 g21
-Vsrc/typedjs.twee\u000asrc/macros.twee\u000asrc/configuration.twee\u000asrc/storyinit.twee\u000asrc/global.twee\u000asrc/stylesheet.twee\u000asrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee
+Vsrc/javascript.twee\u000asrc/storyinit.twee\u000asrc/macros.twee\u000asrc/global.twee\u000asrc/stylesheet.twee\u000asrc/ch1_thursday.twee\u000asrc/ch2_friday.twee\u000asrc/ch3_saturday.twee
 p72
 sg23
 VStoryIncludes
@@ -203,9 +203,9 @@ g26
 ((I2016
 I9
 I21
-I15
-I10
-I51
+I20
+I39
+I18
 I2
 I265
 I1

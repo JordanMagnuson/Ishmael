@@ -1,3 +1,8 @@
+/% --------------------------------------------------------------------------------------
+ % SPECIALLY-TAGGED PASSAGE FOR DEFINING CSS STYLES.
+ % See http://www.motoslave.net/sugarcube/2/docs/special-names.html#special-tags
+ % -------------------------------------------------------------------------------------%/
+ 
 :: stylesheet [stylesheet]
 
 /*********************************************************************

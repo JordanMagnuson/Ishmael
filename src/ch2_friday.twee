@@ -67,10 +67,11 @@ That's when I got the idea of taking one of the intestines and tying up the ends
 :: Etching contest
 And that's how the day went by, generally, except for one decidedly low point when Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes.
 
-[[That was Friday, the boringest day in the world]]
-TODO: have link text changed from "That was Friday" to "the boringest day in the world" when clicked the first time, then take to passage on second click.
+<<linkreplace "That was Friday." transition>>[[The boringest day in the world]].<</linkreplace>>.
 
-:: That was Friday, the boringest day in the world
+
+/% TODO: Switch this sequence to be one passage, with sentence reveal links? %/
+:: The boringest day in the world
 Finally [[Saturday]] did come.
 
 :: Saturday

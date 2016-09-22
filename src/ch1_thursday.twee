@@ -1,4 +1,6 @@
 :: ch1_thursday
+<<script>>console.log(State.variables);<</script>>
+<<print $good_at>>
 The treat would involve [[puppets]]. That's what they had been telling us.
 * <<linkreplace "examine me" transition>>I am Ishmael, son of Peach Valley.<</linkreplace>>
 * <<linkreplace "inventory" transition>>I had $num_rocks rocks and a piece of string in my pocket.<</linkreplace>>

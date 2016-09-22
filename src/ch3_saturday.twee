@@ -7,7 +7,7 @@
 
 There was whooping in our alley when I woke up, and that made me smile: today would not be boring.
 
-[[Look outside]]
+<ul><li>[[Look outside]]</li></ul>
 
 :: Look outside [nobr]
 <<script>>
@@ -15,10 +15,8 @@ There was whooping in our alley when I woke up, and that made me smile: today wo
 <</script>>
 
 Everyone was out there. Waving and shouting and banging on drums, and holding the flags of our nation. I thought how it would be nice if we had some large space that we could all go to and gather in, but the biggest space in the compound was the main alley which ran down its center from north to south.
-<br>
-TODO: How to create the intensity of what's going on here, for the reader?
 
-[[Look around]]
+<ul><li>[[Look around]]</li></ul>
 
 :: Look around
 I looked around and noticed Joe riding up on top of a bigger boy's shoulders, screaming and waving his flag. He saw me and let out a whoop. I smiled and waved back at him. 
@@ -54,11 +52,7 @@ Yes, father said.
 	}, 5000);		
 <</script>>
 
-We paraded through the streets for a while, just hollering and waving our flags and being patriotic. Eventually we managed to squeeze into the central alleyway where everyone was gathered. The visitors were up on a rooftop looking down at the crowd and shouting about hope and God and reclaiming Peach Valley. They were wearing guns, and every once in a while one of them would fire a volley up into the air, which made everyone cheer especially loud. They shouted and we cheered, and they shouted and we cheered, until the sun started to set. 
-
-[[Then one of the soldiers raised his arms]]
-
-TODO: "they shouted and we cheered" reveals link to another "they shouted and we cheered" a couple of times (sentence expanding). Then auto advance?
+We paraded through the streets for a while, just hollering and waving our flags and being patriotic. Eventually we managed to squeeze into the central alleyway where everyone was gathered. The visitors were up on a rooftop looking down at the crowd and shouting about hope and God and reclaiming Peach Valley. They were wearing guns, and every once in a while one of them would fire a volley up into the air, which made everyone cheer especially loud. <<linkreplace "They shouted and we cheered." transition>>They shouted and we cheered, <<linkreplace "they shouted and we cheered." transition>><<timed 3s>><<goto "Then one of the soldiers raised his arms">><</timed>>they shouted and we cheered, until the sun started to set.<</linkreplace>><</linkreplace>>
 
 :: Then one of the soldiers raised his arms [nobr]
 <<script>>
@@ -78,13 +72,14 @@ TODO: "they shouted and we cheered" reveals link to another "they shouted and we
 	} 	
 <</script>>
 
-Then one of the soldiers raised his arms and declared that they had a special treat for us: a puppet show. Would the younger ones please come forward to the front of the crowd so as to see and hear the presentation better. 
+Then one of the soldiers raised his arms and declared that they had a special treat for us: a puppet show. Would the [[younger ones]] please come forward to the front of the crowd so as to see and hear the presentation better. 
 
-[[A beam and some clothesline]]
-
-:: A beam and some clothesline [nobr]
+:: younger ones [nobr]
 <<script>>
 	$("#puppetsheet").slideDown(5000);
+	if (!sndChildrenCheering.playing()) {
+		sndChildrenCheering.play();
+	} 	
 <</script>>
 
 They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began|puppet_1]]. 
@@ -108,7 +103,7 @@ Ishmael was a good boy: he obeyed his father, and he loved his mother, and he wa
 :: puppet_3 [nobr puppet-show]
 <<set $next_passage = 'puppet_4'>>
 <span class="typed">
-One day, however, Ishmael's father had to explain to Ishmael that he would never be able to be a doctor, because the enemy controlled their country and had barred the routes that would allow Ishmael to travel to university. 
+One day, however, Ishmael's father had to explain to Ishmael that he would never be able to be a doctor, because the enemy controlled their country and had barred the roads that would allow Ishmael to travel to university. 
 </span>
 
 [[$next_passage]]
@@ -145,9 +140,14 @@ Now Ishmael, above all else, was a brave boy, and he determined that the only pu
 
 [[$next_passage]]
 
-:: puppet_8
-That was the end of the puppet show.
+:: puppet_8 [nobr]
+<<script>>
+	$("#puppetsheet").slideUp(5000);
+<</script>>
 
+
+That was the end of the puppet show.
+<br><br>
 [[...|martyr]]
 
 :: martyr [nobr]
@@ -194,31 +194,35 @@ He was up on top of a barrel now, holding me, and the people were taking notice.
 :: Bring him up, bring the boy up!
 I was on the rooftop then, and the soldiers had me on their shoulders. "Here is the hope of our nation!" they shouted. "Here is Ishmael, son of Peach Valley. Brave Ishmael, who will defy the enemy!"
 
-I felt metal against my skin, and then I saw that they had put a gun in my hands. It was a large gun, and very heavy. Too heavy for me. 
+I felt metal against my skin, and then I saw that they had put a gun in my hands. It was a large gun, and very heavy.
 
-[[...|The Choice]]
+[[Too heavy for me|The Choice]]
 
 :: The Choice [nobr]
 /% SOUNDS %/
 <<script>>
-	var currentVol = sndCelebration.volume();
-	sndCelebration.fade(currentVol, 0, 10000);
 
-	var currentVol = sndHollering.volume();
-	sndHollering.fade(currentVol, 0, 10000);
+	postdisplay.passageSetup = function(passageSetup) {
+		var currentVol = sndCelebration.volume();
+		sndCelebration.fade(currentVol, 0.1, 10000);
 
-	var currentVol = sndShouting.volume();
-	sndShouting.fade(currentVol, 0, 10000);
+		var currentVol = sndHollering.volume();
+		sndHollering.fade(currentVol, 0.1, 10000);
 
-	var currentVol = sndMachinegunLoop.volume();
-	sndMachinegunLoop.fade(currentVol, 0, 10000);
+		var currentVol = sndShouting.volume();
+		sndShouting.fade(currentVol, 0.1, 10000);
 
-	if (!sndBreathing.playing()) {
-		sndBreathing.play();
-	} 
-	if (!sndHeartbeat.playing()) {
-		sndHeartbeat.play();
-	} 	
+		var currentVol = sndMachinegunLoop.volume();
+		sndMachinegunLoop.fade(currentVol, 0.1, 10000);
+
+		if (!sndBreathing.playing()) {
+			sndBreathing.play();
+		} 
+		if (!sndHeartbeat.playing()) {
+			sndHeartbeat.play();
+		} 	
+		delete postdisplay[passageSetup]
+	}	
 <</script>>
 
 
@@ -226,7 +230,7 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 
 /% SCRIPT TO MOVE GUN UP/DOWN %/
 <<script>>
-	postdisplay.testing = function() {
+	postdisplay.passageSetup2 = function(passageSetup2) {
 		$('body').append('<img class="macro-shake shake-block" id="gun" src="assets/gun.png" />');
 	    $('#hold-up').click(function() {
 	    	holdGunUp();		    
@@ -234,6 +238,8 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 	    $('#put-down').click(function() {
 			putGunDown();    		    
 	    });    
+	    $('#the-choice').hide().delay(10000).fadeIn(5000);
+	    delete postdisplay[passageSetup2]
 	}
 <</script>>
 
