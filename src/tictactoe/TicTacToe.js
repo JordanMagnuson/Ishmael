@@ -87,19 +87,30 @@ function who_starts() { //Could this be written shorter?
     var randomPlayer = Math.floor(Math.random() * 2 + 1);
     if (difficulty !== "human") {
         if (randomPlayer === 1) {
-            app.startingPlayer = "The Computer of Doom!";
+			if (difficulty == "easy") {
+				app.startingPlayer = "Joe";
+			}
+			else if (difficulty == "intermediate") {
+				app.startingPlayer = "Kitty";
+			}
+			else if (difficulty == "AICheater") {
+				app.startingPlayer = "Bobby";
+			}
+			else {
+				app.startingPlayer = "Your opponent";
+			}
             app.currentPlayer = 'X';
             AIPlay();
         } else {
-            app.startingPlayer = "The Human";
+            app.startingPlayer = "You";
             app.currentPlayer = 'O';
         }
     } else {
         if (randomPlayer === 1) {
-            app.startingPlayer = "Player 1";
+            app.startingPlayer = "You";
             app.currentPlayer = 'X';
         } else {
-            app.startingPlayer = "Player 2";
+            app.startingPlayer = "Yourself";
             app.currentPlayer = 'O';
         }
     }
@@ -117,17 +128,28 @@ function changePlayer() {
 
 
 function changeStartingPlayer() {
-    if (app.startingPlayer == ("The Computer of Doom!")) {
-        app.startingPlayer = "The Human";
+    if (app.startingPlayer == "Joe" || app.startingPlayer == "Kitty" || app.startingPlayer == "Bobby") {
+        app.startingPlayer = "You";
         app.currentPlayer = 'O';
-    } else if (app.startingPlayer === "The Human") {
-        app.startingPlayer = "The Computer of Doom!";
+    } else if (app.startingPlayer === "You" && difficulty !== "human") {
+		if (difficulty == "easy") {
+			app.startingPlayer = "Joe";
+		}
+		else if (difficulty == "intermediate") {
+			app.startingPlayer = "Kitty";
+		}
+		else if (difficulty == "AICheater") {
+			app.startingPlayer = "Bobby";
+		}
+		else {
+			app.startingPlayer = "Your opponent";
+		}
         app.currentPlayer = 'X';
-    } else if (app.startingPlayer === "Player 1") {
-        app.startingPlayer = "Player 2";
+    } else if (app.startingPlayer === "You" && difficulty == "human") {
+        app.startingPlayer = "Yourself";
         app.currentPlayer = 'O';
-    } else if (app.startingPlayer === "Player 2") {
-        app.startingPlayer = "Player 1";
+    } else if (app.startingPlayer === "Yourself") {
+        app.startingPlayer = "You";
         app.currentPlayer = 'X';
     }
 }
