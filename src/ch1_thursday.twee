@@ -1,9 +1,7 @@
 :: ch1_thursday
-<<script>>console.log(State.variables);<</script>>
-<<print $good_at>>
 The treat would involve [[puppets]]. That's what they had been telling us.
-* <<linkreplace "examine me" transition>>I am Ishmael, son of Peach Valley.<</linkreplace>>
-* <<linkreplace "inventory" transition>>I had $num_rocks rocks and a piece of string in my pocket.<</linkreplace>>
+* <<linkreplace "examine me" transition>>You are Ishmael, son of Peach Valley.<</linkreplace>>
+* <<linkreplace "inventory" transition>>You have $num_rocks rocks and a piece of string in your pocket.<</linkreplace>>
 
 :: puppets
 I was excited, because I had never seen a real puppet show before.  
@@ -38,7 +36,7 @@ Robert Franklin Marshall [[Jr. III]]. He had won seven straight contests in a ro
 * <<linkreplace "x kitty" transition>>Kitty liked Bobby until <<linkreplace "last week" transition>>last week, when the Bumblebee Incident occurred<</linkreplace>><</linkreplace>>.
 
 :: Jr. III
-[[Junior the Third?|Bobby]]
+<<linkreplace "Junior the Third?" transition>>[[Junior the Third.|Bobby]]<</linkreplace>>
 
 :: tipped the votes [nobr]
 <<set $num_rocks = 2>>
@@ -47,7 +45,7 @@ I told Bobby that was bull, that Kitty would have voted for me because she was s
 <span id="rules"></span>
 
 <ul id="choices">
-	<li id="ch_inventory"><<linkreplace "inventory" transition>><<removeclass ".needs_inventory" "invisible">>I have $num_rocks rocks, a piece of string, and some imaginary rules in my pocket.<</linkreplace>></li>
+	<li id="ch_inventory"><<linkreplace "inventory" transition>><<removeclass ".needs_inventory" "invisible">>You have $num_rocks rocks, a piece of string, and some imaginary rules in my pocket.<</linkreplace>></li>
 	
 	<li id="ch_x_rules" class="needs_inventory invisible fadein"><<linkreplace "x rules" transition>><<addclass "#ch_x_rules" "invisible">><<addclass "#rules" "fadein">><<removeclass ".needs_x_rules" "invisible">><<replace "#rules">><br><br>The rules were very clear that anyone to win two etching contests in a row was to obtain the title of Master Artist: no ifs, ands, or buts about it.<</replace>><</linkreplace>></li>
 	
@@ -87,7 +85,7 @@ All of us kids cheered at that, and Mother said it was time to eat, and Father s
 
 :: I pondered these things in my heart
 The rest of the kids cheered at that, while I sat and pondered what the show would be like. Mother said it was time to eat, and Father said it was time indeed, and so we [[ate]].
-* <<linkreplace "look" transition>>I saw a small room, full of cheering children. Two tired adults were visible to the west.<</linkreplace>>
+* <<linkreplace "look" transition>>You see a small room, full of cheering children. Two tired adults were visible to the west.<</linkreplace>>
 
 :: ate
 A little bit of bread, and a little bit of rice. 
@@ -97,9 +95,9 @@ A little bit of bread, and a little bit of rice.
 :: A little bit of bread, and a little bit of rice
 Looking at our food stirred Tommy up to give a speech about how we would get our [[farm back]] someday. 
 <ul id="choices">
-	<li><<linkreplace "examine tommy" transition>>Tommy was seventeen, and pretty much an adult like Mother and Father, and eating always seemed to stir him up.<</linkreplace>></li>
+	<li><<linkreplace "examine tommy" transition>>Tommy is seventeen, and pretty much an adult like Mother and Father, and eating always seems to stir him up.<</linkreplace>></li>
 
-	<li><<linkreplace "remember farm" transition>><<removeclass ".needs_remember_farm" "invisible">><<addclass ".needs_remember_farm" "fadein">>I couldn't remember it.<</linkreplace>></li>	
+	<li><<linkreplace "remember farm" transition>><<removeclass ".needs_remember_farm" "invisible">><<addclass ".needs_remember_farm" "fadein">>You can't remember it.<</linkreplace>></li>	
 
 	<li class="invisible needs_remember_farm"><<popup "make up memory" "unrecognized verb">></li>
 </ul>
@@ -137,7 +135,7 @@ Then he told Mother to give me more rice because I needed to grow up strong like
 
 :: But there wasn't any more rice
 After supper I went up on the roof to think. The sun was very low on the horizon, and very [[orange]].
-* <<linkreplace "examine roof" transition>>My family took great pride in having a real roof instead of one of the makeshift plywood or sheet metal ones which dominated our neighborhood.<</linkreplace>>
+* <<linkreplace "examine roof" transition>>My family takes great pride in having a real roof instead of one of the makeshift plywood or sheet metal ones which dominate our neighborhood.<</linkreplace>>
 * <<linkreplace "examine sun" transition>>"And still, after all this time, the sun never says to the earth, 'you owe me.'"<</linkreplace>>
 
 :: the roof
