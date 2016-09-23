@@ -36,7 +36,7 @@ $("#puppetsheet").hide();
 
 // Add the puppets.
 $('#puppetbg').append('<img class="puppet" id="puppet-boy" src="assets/puppets/puppet_boy.png" />');
-$('#puppetbg').append('<img class="puppet" id="puppet-boy-rock" src="assets/puppets/puppet_boy_rock" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-boy-rock" src="assets/puppets/puppet_boy_rock.png" />');
 $('#puppetbg').append('<img class="puppet" id="puppet-father" src="assets/puppets/puppet_father.png" />');
 $('#puppetbg').append('<img class="puppet" id="puppet-mother" src="assets/puppets/puppet_mother.png" />');
 $('#puppetbg').append('<img class="puppet" id="puppet-house" src="assets/puppets/puppet_house.png" />');

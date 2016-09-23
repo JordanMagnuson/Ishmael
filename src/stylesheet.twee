@@ -235,6 +235,12 @@ body {
  	width: auto;
  }
 
+ .puppet#puppet-boy-rock {
+ 	right: 50%;
+ 	height: 60%;
+ 	width: auto;
+ }
+
 .puppet#puppet-father {
  	right: 75%;
  	height: 75%;
@@ -277,6 +283,13 @@ body {
  	right: -90%;
  	height: 70%;
  	width: auto;	
+ }
+
+ .puppet#puppet-question {
+ 	right: 65%;
+ 	height: 30%;
+ 	width: auto;
+ 	top: 10%!important;
  }
 
 
@@ -539,13 +552,23 @@ iframe#tictactoe {
 	}
 }
 
-/* Very Tall Aspect */
+/* Taller Aspect */
 @media (max-aspect-ratio: 3/2) {
 	#puppetbg {
 		height: 60%!important;
 	}
 	.puppet {
 		bottom: 20%!important;
+	}
+}
+
+/* Even Taller Aspect */
+@media (max-aspect-ratio: 1/1) {
+	#puppetbg {
+		height: 40%!important;
+	}
+	.puppet {
+		bottom: 30%!important;
 	}
 }
 

@@ -44,8 +44,8 @@
                 
                 // Edit these options to tweak typedjs settings. 
                 options = jQuery.extend({
-                    typeSpeed: 1,		// Proper value: 20
-                    startDelay: 1,		// Proper value: 500
+                    typeSpeed: 20,		// Proper value: 20
+                    startDelay: 500,		// Proper value: 500
                     showCursor: false,
                     callback: function() {
                     	if (State.variables['next_passage'] && tags().contains('auto-advance')) {
@@ -293,6 +293,8 @@
 						$('#bgmask2').fadeIn(0).fadeOut(100).fadeIn(0).fadeOut(100).delay(200).fadeIn(0);
 					}
 				}**/
+				
+				/*
 				if (true) {
 					// Do everything up to passage x (for testing).
 					$("#puppet-boy").fadeIn(3000);
@@ -302,8 +304,12 @@
 					//$("#puppet-hospital").fadeIn(3000);
 					//$("#puppet-wire").fadeIn(3000);
 					//$("#puppet-hospital").fadeOut(3000);
-					//$("#puppet-wire").fadeOut(3000);					
+					//$("#puppet-wire").fadeOut(3000);		
+					$("#puppet-bulldozer").fadeIn(3000);
+					$("#puppet-soldier").fadeIn(3000);								
 				}
+				*/
+				
 
 				if (State.passage == 'puppet_1') {
 					if (substr.match("^Ishmael")) {
@@ -335,7 +341,13 @@
 						$("#puppet-wire").fadeOut(3000);
 					}									
 				}	
-				else if (State.passage == 'puppet_5') {					
+				else if (State.passage == 'puppet_5') {	
+					if (substr.match("^how")) {
+						$("#puppet-question").fadeIn(3000);
+					}		
+					if (substr.match("^answer")) {
+						$("#puppet-question").fadeOut(3000);
+					}																
 					if (substr.match("^came")) {
 						$("#puppet-bulldozer").fadeIn(3000);
 						$("#puppet-soldier").fadeIn(3000);
@@ -359,7 +371,29 @@
 												    }
 												);
 					}													
-				}																					
+				}		
+				else if (State.passage == 'puppet_6') {					
+					if (substr.match("^mother")) {
+						$("#puppet-mother").fadeOut(3000);
+					}	
+					if (substr.match("^house")) {
+						$("#puppet-house").fadeOut(3000);
+					}														
+				}		
+				else if (State.passage == 'puppet_7') {					
+					if (substr.match("^threw")) {
+						$("#puppet-boy").hide();
+						$("#puppet-boy-rock").show();
+						$("#puppet-boy-rock").animate({ right : "25%" }, 1000, 'swing');
+					}
+					if (substr.match("^shot")) {
+				        $("#puppet-boy-rock").animateRotate(-90);
+				        $("#puppet-boy-rock").css("margin-bottom", "-10%");
+					}	
+					if (substr.match("^die")) {
+				        $("#puppet-boy-rock").fadeOut(3000);
+					}																									
+				}																											
 
 				// -------------- END HACKS -------------- //
 				// --------------------------------------- //						
