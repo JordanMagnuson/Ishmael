@@ -43,7 +43,7 @@
                     startDelay: 500,
                     showCursor: false,
                     callback: function() {
-                    	if (State.variables['next_passage']) {
+                    	if (State.variables['next_passage'] && tags().contains('auto-advance')) {
 	                    	// Display the "next passage" (custom set variable) when typings ends (after a delay).
 	                    	setTimeout(function() { 
 	                    		State.play(State.variables['next_passage']); 
