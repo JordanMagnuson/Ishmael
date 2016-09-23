@@ -104,17 +104,18 @@ body {
 
 .passage {
     position: absolute;
-    bottom: 10%;
-    width: 60%;
+    bottom: 0%;
+    width: 96%; /* 100% minus padding amount */
 	min-height: 12em;
-	left: 50%;
-	margin-left: -30%;
-	font-size: 1.4em;
+	left: 0;
+	right: 0;
+	margin: auto;
+	font-size: 1.2rem;
 	font-weight: bold;
 	color: black;
 	/*text-shadow: 100px 100px 12px black;*/
 	background-color:rgba(255, 255, 255, 0.8);
-	padding: 1.4em;
+	padding: 2%;
 	z-index: 900;
 }
 
@@ -188,7 +189,7 @@ body {
     display: block;
     top: 0;
     width: 50%;
-    height: 50%;
+    height: 100%;
 	left: 0;
 	background-color: orange;
 	z-index: 10;
@@ -273,7 +274,7 @@ body {
 	text-align: center;
 	background-color: transparent;
 	z-index: 9000;
-	font-size: 3rem;
+	font-size: 6vh;
 	font-weight: bold;
 	color: black;
 }
@@ -493,4 +494,18 @@ iframe#tictactoe {
 
 #passage-play-tic-tac-toe {
 	min-height: 6em;
+}
+
+
+/*********************************************************************
+ * ADJUSTMENTS FOR SMALL SCREENS (MEDIA)
+ *********************************************************************/
+
+/* Wide Screens */
+@media (min-width: 1200px) {
+	.passage {
+		font-size: 1.4rem;
+	    bottom: 10%;
+	    width: 60%;		
+	}
 }
