@@ -33,8 +33,13 @@
 
     function typedCallbackFactory(el, callback) {
         return function() {
+        	// Add a unique class ID to the calling passage, so that we can fade out this specific instance via auto-fade callback if desired.
+        	var callingPassage = State.passage;
+        	var divID = getDivID(callingPassage);
+        	var uniqueID = idGenerator();
+        	$('#' + divID).addClass(uniqueID);
             var $outer = jQuery(el),
-                $inner = jQuery('<div class="typedjs-text-wrapper" style="display:block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),
+                $inner = jQuery('<div class="typedjs-text-wrapper" style="display:inline-block;position:absolute;left:0;top:0;"><span class="typed"></span></div>'),
                 $source = $outer.children('[class|="typed"]'),
                 
                 // Edit these options to tweak typedjs settings. 
@@ -49,7 +54,13 @@
 	                    		State.play(State.variables['next_passage']); 
 	                    	}, 1000);
 	                    }
-                    	
+                    	if (tags().contains('auto-fade')) {
+                    		console.log(uniqueID);
+                    		$('.' + uniqueID).fadeOut(3000); 
+	                    } 
+                    	//if (tags().contains('end-story')) {
+                    	//	$('#the-choice').fadeIn(3000); 
+	                    //}                            	              	
                     }
                 }, getInlineOptions($source.attr("class")), {
                     strings: [$source.html()]
@@ -58,7 +69,7 @@
         }
     }
     postrender.typedSetupHandler = function(content) {
-        jQuery('[class|="typed"]', content).addClass("typed").css("visibility", "hidden").wrap('<div class="typedjs-outer-wrapper" style="display:block;position:relative;"></div>')
+        jQuery('[class|="typed"]', content).addClass("typed").css("visibility", "hidden").wrap('<div class="typedjs-outer-wrapper" style="display:inline-block;position:relative;"></div>')
     }, postdisplay.typedAnimationHandler = function() {
         for (var $elements = jQuery("#passages .typedjs-outer-wrapper"), callback = null, i = $elements.length - 1; i >= 0; --i) callback = typedCallbackFactory($elements[i], callback);
         "function" == typeof callback && callback()
