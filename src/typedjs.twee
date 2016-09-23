@@ -322,7 +322,13 @@
 						$("#puppet-hospital").fadeOut(3000);
 						$("#puppet-wire").fadeOut(3000);
 					}									
-				}												
+				}	
+				else if (State.passage == 'puppet_5') {					
+					if (substr.match("^came")) {
+						$("#puppet-bulldozer").fadeIn(3000);
+						$("#puppet-soldier").fadeIn(3000);
+					}									
+				}																
 
 				// -------------- END HACKS -------------- //
 				// --------------------------------------- //						

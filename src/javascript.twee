@@ -31,7 +31,7 @@ window.putDownEndingPassages = Array(
 
 // Add a div beneath body that we will use to handle our puppets.
 $('body').prepend('<div id="puppetsheet"></div>');
-$('body').prepend('<div id="puppetbg"></div>');
+$('body').prepend('<div id="puppetbg-container"><div id="puppetbg"></div></div>');
 $("#puppetsheet").hide();
 
 // Add the puppets.
@@ -54,7 +54,7 @@ $('body').prepend('<div class="background-image" id="blood-overlay"></div>');
 // (The puppet background should take up the space between the top of the screen and the passage.)
 postdisplay.resizePuppetBG = function() {
 	if (tags().contains('puppet-show')) {
-		$('#puppetbg').height(function(index, height) {
+		$('#puppetbg-container').height(function(index, height) {
 		    return $('.passage').offset().top;
 		});
 	}
@@ -64,7 +64,7 @@ postdisplay.resizePuppetBG = function() {
 // (The puppet background should take up the space between the top of the screen and the passage.)
 window.onresize = function() {
 	if (tags().contains('puppet-show')) {
-		$('#puppetbg').height(function(index, height) {
+		$('#puppetbg-container').height(function(index, height) {
 		    return $('.passage').offset().top;
 		});
 	}
