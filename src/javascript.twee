@@ -35,7 +35,15 @@ $('body').prepend('<div id="puppetbg"></div>');
 
 // Add the puppets.
 $('#puppetbg').append('<img class="puppet" id="puppet-boy" src="assets/puppets/puppet_boy.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-boy-rock" src="assets/puppets/puppet_boy_rock" />');
 $('#puppetbg').append('<img class="puppet" id="puppet-father" src="assets/puppets/puppet_father.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-mother" src="assets/puppets/puppet_mother.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-house" src="assets/puppets/puppet_house.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-hospital" src="assets/puppets/puppet_hospital.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-wire" src="assets/puppets/puppet_wire.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-soldier" src="assets/puppets/puppet_soldier.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-bulldozer" src="assets/puppets/puppet_bulldozer.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-question" src="assets/puppets/puppet_question.png" />');
 
 $("#puppetsheet").hide();
 $(".puppet").hide();

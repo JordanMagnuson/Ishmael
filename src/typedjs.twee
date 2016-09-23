@@ -297,12 +297,32 @@
 					if (substr.match("^Ishmael")) {
 						$("#puppet-boy").fadeIn(3000);
 					}
+					if (substr.match("^lived")) {
+						$("#puppet-house").fadeIn(3000);
+					}					
 				}
 				else if (State.passage == 'puppet_2') {
 					if (substr.match("^fathe")) {
 						$("#puppet-father").fadeIn(3000);
 					}
-				}				
+					if (substr.match("^mothe")) {
+						$("#puppet-mother").fadeIn(3000);
+					}		
+					if (substr.match("^becoming")) {
+						$("#puppet-hospital").fadeIn(3000);
+					}										
+				}	
+				else if (State.passage == 'puppet_3') {
+					if (substr.match("^barred")) {
+						$("#puppet-wire").fadeIn(3000);
+					}													
+				}	
+				else if (State.passage == 'puppet_4') {					
+					if (substr.match("^disappointed")) {
+						$("#puppet-hospital").fadeOut(3000);
+						$("#puppet-wire").fadeOut(3000);
+					}									
+				}												
 
 				// -------------- END HACKS -------------- //
 				// --------------------------------------- //						
