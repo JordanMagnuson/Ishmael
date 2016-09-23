@@ -85,7 +85,7 @@ window.sndHeartbeat = new Howl({
 window.sndWar = new Howl({
 	src: ['assets/sounds/96533__omar-alvarado__modern-day-war_01.mp3'],
 	loop: false,
-	volume: 0.7
+	volume: 0.6
 });
 
 window.sndExplosion = new Howl({
@@ -135,19 +135,28 @@ for(var i = facesImageArray.length - 1; i >= 0; i--){
 	$('body').prepend('<div class="preload-image" id="preload-image-' + i + '" style="background-image: url(assets/photos/faces/' + preloadImage + '"></div>');
 }
 
+
 /*********************************************************************
  * UTILITY FUNCTIONS
  *********************************************************************/
-window.holdGunUp = function(length) {		
+window.holdGunUp = function(element) {		
+	console.log(element);
+	if (!$(element).hasClass('clickable')) {
+		console.log('unclickable');
+		return false;
+	}
+
 	// Track where the gun is.
 	upDownCount += 1;
 	console.log(upDownCount);	
 	if (upDownCount >= 8) {
-		$('#the-choice').hide();
-		$('#gun').hide();
+		$('#the-choice').remove();
+		$('#gun').remove();
 		sndWar.stop();
 		sndBreathing.stop();
 		sndHeartbeat.stop();
+		sndShouting.stop();
+		sndMachinegunLoop.stop();
 		sndExplosion.play();
 		State.play("Hold it up");
 		return false;
@@ -157,27 +166,38 @@ window.holdGunUp = function(length) {
 	$('.passage').animate({ top : "-=5%" }, 500, 'swing');
 	$('#gun').animate({ top : "-=12%" }, 500, 'swing');
 
-	// Initialize image array.
-	if (typeof violentImageArrayCopy == 'undefined' || violentImageArrayCopy.length < 1) {
-		console.log('reinitialize array');
-		window.violentImageArrayCopy = violentImageArray.slice(0);
+	if (upDownCount >= 4) {
+		// Initialize image array.
+		if (typeof violentImageArrayCopy == 'undefined' || violentImageArrayCopy.length < 1) {
+			console.log('reinitialize array');
+			window.violentImageArrayCopy = violentImageArray.slice(0);
+		}
+		console.log(violentImageArrayCopy);
+
+		// Get a random image from the array.
+		var randomImage = violentImageArrayCopy.splice(Math.floor(Math.random()*violentImageArrayCopy.length), 1);
+		console.log(randomImage);
+
+		// Move any existing background images down on the z-index, so that the new one will be on top.
+		$('.background-image').css('z-index', 19);
+		
+		// Prepend the image to the body with a random div id so that we can access it / fade it out. 
+		var randomID = idGenerator();
+		$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/photos/violence/' + randomImage + '"></div>');
+		$('#' + randomID).fadeOut(5000, function() { $(this).remove(); });
+
+		// Fade link text out and prevent clicking temporarily. 
+		/*
+		$('#the-choice').finish().hide().fadeIn(5000);
+		$('.choice').removeClass('clickable');
+		setTimeout(function() { 
+			$('.choice').addClass('clickable');
+		}, 2000);		
+		*/
+
+		// War sounds.
+		sndWar.play();   		
 	}
-	console.log(violentImageArrayCopy);
-
-	// Get a random image from the array.
-	var randomImage = violentImageArrayCopy.splice(Math.floor(Math.random()*violentImageArrayCopy.length), 1);
-	console.log(randomImage);
-
-	// Move any existing background images down on the z-index, so that the new one will be on top.
-	$('.background-image').css('z-index', 19);
-	
-	// Prepend the image to the body with a random div id so that we can access it / fade it out. 
-	var randomID = idGenerator();
-	$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/photos/violence/' + randomImage + '"></div>');
-	$('#' + randomID).fadeOut(5000, function() { $(this).remove(); });
-
-	// Fade link text out and prevent clicking temporarily. 
-	$('#the-choice').hide().fadeIn(5000);
 
 	// Increase blood overlay.
 	var bloodOverlayOpacity = $('#blood-overlay').css('opacity');
@@ -197,52 +217,77 @@ window.holdGunUp = function(length) {
     currentVol += .1;
     if (currentVol <= 1)
     	sndHeartbeat.volume(currentVol);		
-
-	// War sounds.
-	sndWar.play();   
 };
 
-window.putGunDown = function(length) {		
+window.putGunDown = function(element) {		
+	console.log(element);
+	if (!$(element).hasClass('clickable')) {
+		console.log('unclickable');
+		return false;
+	}
+
 	// Track where the gun is.
 	upDownCount -= 1;
 	console.log(upDownCount);
-	if (upDownCount <= -20) {
+	if (upDownCount <= -8) {
+		$('#the-choice').hide();
+		$('#gun').hide();
+		sndWar.stop();
+		sndBreathing.stop();
+		sndHeartbeat.stop();
+		sndShouting.stop();
+		sndMachinegunLoop.stop();
+		sndExplosion.play();
 		State.play("Put it down");
+		return false;
 	}	 
-
 
 	// Move the whole passage down (use % from top, so that movement is relative to window height)
 	$('.passage').animate({ top : "+=5%" }, 500, 'swing');
 	$('#gun').animate({ top : "+=12%" }, 500, 'swing');	
 
-	// Initialize image array.
-	if (typeof facesImageArrayCopy == 'undefined' || facesImageArrayCopy.length < 1) {
-		console.log('reinitialize array');
-		window.facesImageArrayCopy = facesImageArray.slice(0);
-	}
-	console.log(facesImageArrayCopy);
+	if (upDownCount <= -4) {
+		// Initialize image array.
+		if (typeof facesImageArrayCopy == 'undefined' || facesImageArrayCopy.length < 1) {
+			console.log('reinitialize array');
+			window.facesImageArrayCopy = facesImageArray.slice(0);
+		}
+		console.log(facesImageArrayCopy);
 
-	// Get a random image from the array.
-	var randomImage = facesImageArrayCopy.splice(Math.floor(Math.random()*facesImageArrayCopy.length), 1);
-	console.log(randomImage);
+		// Get a random image from the array.
+		var randomImage = facesImageArrayCopy.splice(Math.floor(Math.random()*facesImageArrayCopy.length), 1);
+		console.log(randomImage);
 
-	// Move any existing background images down on the z-index, so that the new one will be on top.
-	$('.background-image').css('z-index', 19);
-	
-	// Prepend the image to the body with a random div id so that we can access it / fade it out. 
-	var randomID = idGenerator();
-	$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/photos/faces/' + randomImage + '"></div>');
-	$('#' + randomID).fadeOut(5000, function() { $(this).remove(); });
+		// Move any existing background images down on the z-index, so that the new one will be on top.
+		$('.background-image').css('z-index', 19);
+		
+		// Prepend the image to the body with a random div id so that we can access it / fade it out. 
+		var randomID = idGenerator();
+		$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/photos/faces/' + randomImage + '"></div>');
+		$('#' + randomID).fadeOut(5000, function() { $(this).remove(); });
 
-	// Decrease breathing and heartbeat volume.
+		// Fade link text out and prevent clicking temporarily. 
+		/*
+		$('#the-choice').finish().hide().fadeIn(5000);
+		$('.choice').removeClass('clickable');
+		setTimeout(function() { 
+			$('.choice').addClass('clickable');
+		}, 2000);	
+		*/
+
+		// Crowd shouting.
+		sndShouting.fade(1, 0.1, 5000);			
+	}	
+
+	// Increase breathing and heartbeat volume.
     var currentVol = sndBreathing.volume();
-    currentVol -= .1;
-    if (currentVol >= 0.1)
+    currentVol += .1;
+    if (currentVol <= 1)
     	sndBreathing.volume(currentVol);
     var currentVol = sndHeartbeat.volume();
-    currentVol -= .1;
-    if (currentVol >= 0.1)
-    	sndHeartbeat.volume(currentVol);	
+    currentVol += .1;
+    if (currentVol <= 1)
+    	sndHeartbeat.volume(currentVol);	    
 
 	// Stop war sounds.
 	sndWar.stop();		

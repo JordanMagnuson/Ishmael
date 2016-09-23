@@ -236,6 +236,7 @@ body {
 	text-align: center;
 	background-color: transparent;
 	font-size: 3rem;
+	z-index: 18;
 }
 
 #the-choice {
@@ -244,10 +245,14 @@ body {
 }
 
 #the-choice .choice {
+	cursor: default;	
+}
+
+#the-choice .choice.clickable {
 	cursor: pointer;	
 }
 
-#the-choice .choice:hover {
+#the-choice .choice.clickable:hover {
 	color: #810000;
 }
 
