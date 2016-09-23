@@ -226,22 +226,18 @@ body {
  * THE CHOICE
  *********************************************************************/
 
-#passage-the-choice {
+#the-choice {
+	position: absolute;
 	width: 100%;
 	height: auto;
 	top: 40%;
 	left: 0;
-	margin: 0;
-	padding: 0;
 	text-align: center;
 	background-color: transparent;
+	z-index: 9000;
 	font-size: 3rem;
-	z-index: 18;
-}
-
-#the-choice {
-	height: 100%;
-	width: 100%;
+	font-weight: bold;
+	color: black;
 }
 
 #the-choice .choice {
