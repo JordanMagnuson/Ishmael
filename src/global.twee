@@ -11,7 +11,9 @@ That's not a verb I recognize.
 <div class="waiting"></div>
 <<script>>
 	var waitTime = 2000;
-	setTimeout(function() { 
-		State.play(State.variables['next_passage']);
-	}, waitTime);	
+	if (State.variables['next_passage']) {
+		setTimeout(function() { 
+			State.play(State.variables['next_passage']);
+		}, waitTime);	
+	}
 <</script>>
