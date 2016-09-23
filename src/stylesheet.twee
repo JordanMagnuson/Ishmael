@@ -141,6 +141,14 @@ body {
 	color: white;
 }
 
+.passage.auto-fade {
+	/* jQuery fadeOut() does not work properly if transition is also set. */
+	-webkit-transition-property: none;
+	-moz-transition-property: none;
+	-o-transition-property: none;
+	transition-property: none;	
+}
+
 /*********************************************************************
  * MISC
  *********************************************************************/
@@ -252,6 +260,10 @@ body {
 	color: #810000;
 }
 
+#passage-the-choice {
+	display: none;
+}
+
 #gun {
 	position: absolute;
 	width: 100%;
@@ -262,7 +274,29 @@ body {
 	z-index: 500;
 }
 
+.passage.end-story {
+	min-height: auto;
+	width: 100%;
+	bottom: 40%;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: transparent;
+}
 
+.passage.end-story .typed {
+	background-color:rgba(255, 255, 255, 0.8);
+	padding: 1em;
+}
+
+.passage.end-story.put-down {
+	bottom: 60%;
+}
+
+#passage-story-end .typed {
+	background-color: transparent;
+}
 
 /**
 #passage-the-choice {

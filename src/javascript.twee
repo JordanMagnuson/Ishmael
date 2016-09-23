@@ -16,6 +16,12 @@ config.ui.stowBarInitially = true; // the UI bar will start stowed (shut)
  *********************************************************************/
 window.upDownCount = 0;
 
+window.putDownEndingPassages = Array(
+	"put_down_story_1",
+	"put_down_story_2",
+	"put_down_story_3"
+);
+
 // Note that in-game variables referenced via $foo can be set in javascript via:
 // State.variables.foo = 'bar';
 
@@ -140,7 +146,6 @@ for(var i = facesImageArray.length - 1; i >= 0; i--){
  * UTILITY FUNCTIONS
  *********************************************************************/
 window.holdGunUp = function(element) {		
-	console.log(element);
 	if (!$(element).hasClass('clickable')) {
 		console.log('unclickable');
 		return false;
@@ -148,24 +153,45 @@ window.holdGunUp = function(element) {
 
 	// Track where the gun is.
 	upDownCount += 1;
-	console.log(upDownCount);	
+
+	// Game end.
 	if (upDownCount >= 8) {
 		$('#the-choice').remove();
 		$('#gun').remove();
 		sndWar.stop();
 		sndBreathing.stop();
 		sndHeartbeat.stop();
+		sndCelebration.stop();
 		sndShouting.stop();
 		sndMachinegunLoop.stop();
-		sndExplosion.play();
-		State.play("Hold it up");
+		//sndExplosion.play();
+		State.play("Story End");
 		return false;
 	}	     
 
-	// Move the whole passage up (use % from top, so that movement is relative to window height)
-	$('#the-choice').animate({ top : "-=5%" }, 500, 'swing');
-	$('#gun').animate({ top : "-=12%" }, 500, 'swing');
+	// Show the end story passages.
+	if (upDownCount == 1) {
+		//$('#the-choice').finish().hide();
+		State.play("hold_up_story_1");
+	}
+	else if (upDownCount == 2) {
+		//$('#the-choice').finish().hide();
+		State.play("hold_up_story_2");
+	}	
+	else if (upDownCount == 4) {
+		//$('#the-choice').finish().hide();
+		State.play("hold_up_story_3");
+	}	
+	else if (upDownCount == 6) {
+		//$('#the-choice').finish().hide();
+		State.play("hold_up_story_4");
+	}	
 
+	// Move the the choice text and gun up (use % from top, so that movement is relative to window height)
+	$('#the-choice').animate({ top : "-=5%" }, 500, 'swing');
+	$('#gun').animate({ top : "-=12%" }, 500, 'swing');	
+
+	// Show an image.
 	if (upDownCount >= 4) {
 		// Initialize image array.
 		if (typeof violentImageArrayCopy == 'undefined' || violentImageArrayCopy.length < 1) {
@@ -205,7 +231,8 @@ window.holdGunUp = function(element) {
 	if (bloodOverlayOpacity < 1) {
 		bloodOverlayOpacity = bloodOverlayOpacity + 0.1;
 		console.log('bloodOverlayOpacity: ' + bloodOverlayOpacity);
-		$('#blood-overlay').css('opacity', bloodOverlayOpacity);
+		//$('#blood-overlay').css('opacity', bloodOverlayOpacity);
+		$('#blood-overlay').animate({ opacity : bloodOverlayOpacity }, 500, 'swing');
 	}
 
 	// Increase breathing and heartbeat volume.
@@ -220,7 +247,6 @@ window.holdGunUp = function(element) {
 };
 
 window.putGunDown = function(element) {		
-	console.log(element);
 	if (!$(element).hasClass('clickable')) {
 		console.log('unclickable');
 		return false;
@@ -228,24 +254,41 @@ window.putGunDown = function(element) {
 
 	// Track where the gun is.
 	upDownCount -= 1;
-	console.log(upDownCount);
-	if (upDownCount <= -8) {
-		$('#the-choice').hide();
-		$('#gun').hide();
-		sndWar.stop();
-		sndBreathing.stop();
-		sndHeartbeat.stop();
-		sndShouting.stop();
-		sndMachinegunLoop.stop();
-		sndExplosion.play();
-		State.play("Put it down");
-		return false;
+	
+	// Show the end story passages as we go down.
+	if (upDownCount == -2) {
+		//$('#the-choice').finish().hide();
+		State.play("put_down_story_1");
+	}	
+	else if (upDownCount == -4) {
+		//$('#the-choice').finish().hide();
+		State.play("put_down_story_2");
+	}	
+	else if (upDownCount == -6) {
+		//$('#the-choice').finish().hide();
+		State.play("put_down_story_3");
+	}		
+	
+	// Move the whole passage down (use % from top, so that movement is relative to window height).
+	if (upDownCount > -7) {
+		$('#the-choice').animate({ top : "+=5%" }, 500, 'swing');
+		$('#gun').animate({ top : "+=12%" }, 500, 'swing');			
+	}	
+	// Last stop: won't go any further.
+	else {
+		// Pop back up.
+		$('#the-choice').animate({ top : "+=5%" }, 750, 'swing').animate({ top : "-=5%" }, 250, 'swing')
+		upDownCount += 1;
+
+		// Show a random end sentence.
+		if (typeof putDownEndingPassagesCopy == 'undefined' || putDownEndingPassagesCopy.length < 1) {
+			window.putDownEndingPassagesCopy = putDownEndingPassages.slice(0);
+		}
+		var randomPassage = putDownEndingPassagesCopy.splice(Math.floor(Math.random()*putDownEndingPassagesCopy.length), 1);
+		State.play(randomPassage[0]);
 	}	 
 
-	// Move the whole passage down (use % from top, so that movement is relative to window height)
-	$('#the-choice').animate({ top : "+=5%" }, 500, 'swing');
-	$('#gun').animate({ top : "+=12%" }, 500, 'swing');	
-
+	// Show an image.
 	if (upDownCount <= -4) {
 		// Initialize image array.
 		if (typeof facesImageArrayCopy == 'undefined' || facesImageArrayCopy.length < 1) {
@@ -309,4 +352,14 @@ window.idGenerator = function() {
  */
 window.getRandomInt = function(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+/**
+ * Returns the div id for a Passage based on passage title.
+ */
+window.getDivID = function(passageTitle) {
+    var divID = passageTitle.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g,"-");
+    divID = divID.toLowerCase();
+    divID = "passage-" + divID;
+    return divID;
 }
