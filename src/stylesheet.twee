@@ -550,7 +550,7 @@ iframe#tictactoe {
 }
 
 /* Very Wide Aspect */
-@media (min-aspect-ratio: 5/2) {
+@media (min-aspect-ratio: 9/4) {
 	#puppetbg {
 		width: 60%!important;
 }

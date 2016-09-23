@@ -84,7 +84,7 @@ Then one of the soldiers raised his arms and declared that they had a special tr
 
 They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began|puppet_1]]. 
 
-:: puppet_1 [nobr puppet-show]
+:: puppet_1 [nobr puppet-show auto-advance]
 <<set $next_passage = 'puppet_2'>>
 <span class="typed">
 It told the story of a little boy named Ishmael who lived in Old Peach Valley despite the occupation of the enemy.
@@ -92,7 +92,7 @@ It told the story of a little boy named Ishmael who lived in Old Peach Valley de
 
 [[$next_passage]]
 
-:: puppet_2 [nobr puppet-show]
+:: puppet_2 [nobr puppet-show auto-advance]
 <<set $next_passage = 'puppet_3'>>
 <span class="typed">
 Ishmael was a good boy: he obeyed his father, and he loved his mother, and he was an example to his brothers and sisters. He was a loyal boy: he made friends for keeps, and he would defend them when they needed him. He was also an intelligent boy: he wished to learn, and had a special love for mathematics: he dreamed of attending university some day in the future, and becoming a doctor.
@@ -100,7 +100,7 @@ Ishmael was a good boy: he obeyed his father, and he loved his mother, and he wa
 
 [[$next_passage]]
 
-:: puppet_3 [nobr puppet-show]
+:: puppet_3 [nobr puppet-show auto-advance]
 <<set $next_passage = 'puppet_4'>>
 <span class="typed">
 One day, however, Ishmael's father had to explain to Ishmael that he would never be able to be a doctor, because the enemy controlled their country and had barred the roads that would allow Ishmael to travel to university. 
@@ -108,7 +108,7 @@ One day, however, Ishmael's father had to explain to Ishmael that he would never
 
 [[$next_passage]]
 
-:: puppet_4 [nobr puppet-show]
+:: puppet_4 [nobr puppet-show auto-advance]
 <<set $next_passage = 'puppet_5'>>
 <span class="typed">
 Ishmael was disappointed to hear what his father had to tell him, but he was stout of heart, and determined that he would live a happy life in spite of his inability to fulfill his dreams: after all, he had his friends to play with, and his family to love.
