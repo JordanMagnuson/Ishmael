@@ -609,7 +609,7 @@ body {
 
 
 /*********************************************************************
- * TIC-TAC-TOE STYLES
+ * TIC-TAC-TOE AND SOLO ETCHING (CANVAS DRAWING)
  *********************************************************************/
 
 iframe#tictactoe {
@@ -628,6 +628,20 @@ iframe#tictactoe {
 	min-height: 0;
 }
 
+#passage-solo-etching {
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#passage-solo-etching #meh {
+	position: absolute;
+	left: 5em;
+	bottom: 5em;
+}
 
 /*********************************************************************
  * ADJUSTMENTS FOR SMALL SCREENS (MEDIA)

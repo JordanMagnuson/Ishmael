@@ -74,7 +74,7 @@ postdisplay.resizePuppetBG = function() {
 
 // Resize the tic-tac-toe iframe after scene display.
 postdisplay.resizeTicTacToe = function() {
-	if (State.passage == "Play tic-tac-toe") {
+	if (tags().contains('tic-tac-toe')) {
 		$('iframe#tictactoe').height(function(index, height) {
 		    return $('.passage').offset().top;
 		});
@@ -88,7 +88,7 @@ window.onresize = function() {
 		    return $('.passage').offset().top;
 		});
 	}
-	if (State.passage == "Play tic-tac-toe") {
+	if (tags().contains('tic-tac-toe')) {
 		$('iframe#tictactoe').height(function(index, height) {
 		    return $('.passage').offset().top;
 		});
@@ -436,6 +436,19 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
     $({deg: 0}).animate({deg: angle}, args);
   });
 };
+
+/**
+ * jQuery plugin to resize canvas element (used in Solo etching passage)
+ * See http://stackoverflow.com/a/12844053/299337
+ */ 
+$.fn.extend({  
+    //Let the user resize the canvas to the size he/she wants  
+    resizeCanvas:  function(w, h) {  
+        var c = $(this)[0]  
+        c.width = w;  
+        c.height = h  
+    }  
+})  
 
 /**
  * Trigger browser fullscreen mode. See twinery.org/forum/discussion/comment/15038

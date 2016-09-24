@@ -22,12 +22,36 @@ Friday went by awfully slowly.
 [[Play by yourself]]
 [[Play with your friends]]
 
-:: Play by yourself
-TODO
-
 :: Play with your friends
 I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, <<linkreplace "as usual" transition>>as usual, but we didn't have much fun<</linkreplace>>.
 <<display 'Play Options'>>
+
+:: Play by yourself
+I was feeling kind of tired of Bobby and Kitty and everybody, so I decided to play by myself. Of course, that meant my options limited. 
+<<display 'Solo Play Options'>>
+
+:: Solo Play Options [nobr]
+<ul id="choices">
+	<<if $solo_can_play_tic_tac_toe>><li id="ch_play_tic_tac_toe">[[Solo tic-tac-toe]]</li><</if>>
+	<<if $solo_can_play_ratalla>><li id="ch_play_ratalla"><<linkreplace "Play Ratalla" transition>>Well, that's not gonna work.<</linkreplace>></li><</if>>
+	<<if $can_play_kickball>><li id="ch_play_kickball">[[Play kickball]]</li><</if>>
+	<<if $hang_out_times < 2>><li id="ch_hang_out">[[Hang out]]</li><</if>>
+	<<if $can_have_etching>><li id="ch_etching_contest">[[Solo etching]]</li><</if>>
+</ul>
+
+:: Solo etching [nobr]
+<canvas id="simple_sketch"></canvas>
+<<script>>
+postdisplay.sketch = function(sketch) {
+	var width = $('.passage').width();
+	var height = $('.passage').height();
+	$('#simple_sketch').resizeCanvas(width, height);
+    $('#simple_sketch').sketch();
+    delete postdisplay[sketch]
+ }
+<</script>>
+<div id="meh"><<timed 10s transition>>[[Meh|Solo Play Options]]<</timed>></div>
+
 
 :: Play Options [nobr]
 <<script>>console.log(variables());<</script>>
@@ -43,11 +67,17 @@ I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, <<linkreplace
 <<linkreplace "That was Friday" transition>>[[The boringest day in the world]]<</linkreplace>>
 <</if>>
 
-:: Play tic-tac-toe [nobr]
+:: Play tic-tac-toe [nobr tic-tac-toe]
 <<set $can_play_tic_tac_toe = false>>
 <iframe id="tictactoe" src="src/tictactoe/index.html" frameBorder="0" allowtransparency="true"></iframe>
 
-[[Enough of this|Hang out]]
+[[Enough of this|Play Options]]
+
+:: Solo tic-tac-toe[nobr tic-tac-toe]
+<<set $solo_can_play_tic_tac_toe = false>>
+<iframe id="tictactoe" src="src/tictactoe/solo.html" frameBorder="0" allowtransparency="true"></iframe>
+
+<<timed 10s transition>>[[Well, that was fun|Solo Play Options]]<</timed>>
 
 :: Play kickball [nobr]
 <<set $can_play_kickball = false>>
