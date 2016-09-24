@@ -58,6 +58,12 @@
                     		console.log(uniqueID);
                     		$('.' + uniqueID).fadeOut(3000); 
 	                    } 
+						if (callingPassage == 'Story End') {	
+							// Last line of the game has finished in Story End passage.				
+		                	setTimeout(function() { 
+		                		State.restart();
+		                	}, 5000);									
+						}			                    
                     	//if (tags().contains('end-story')) {
                     	//	$('#the-choice').fadeIn(3000); 
 	                    //}                            	              	
@@ -393,7 +399,7 @@
 					if (substr.match("^die")) {
 				        $("#puppet-boy-rock").fadeOut(3000);
 					}																									
-				}																											
+				}																														
 
 				// -------------- END HACKS -------------- //
 				// --------------------------------------- //						

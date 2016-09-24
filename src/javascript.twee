@@ -56,6 +56,8 @@ $('body').prepend('<div class="background-image" id="blood-overlay"></div>');
 // Add cover image.
 $('body').prepend('<div class="background-image" id="cover-image"></div>');
 
+// Add fade out.
+$('body').prepend('<div class="background-image" id="fade-out"></div>');
 
 
 /*********************************************************************

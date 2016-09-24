@@ -30,6 +30,7 @@
 html {
 	height: 100%;
 	position: relative;
+	background-color: black;
 }
 
 body { 
@@ -42,6 +43,7 @@ body {
     -o-background-size: cover;
     background-size: cover;
     overflow: hidden;
+    background-color: black;
 }
 
 .preload-image { 
@@ -66,13 +68,14 @@ body {
     margin: 0;
     padding: 0;
     z-index: 20;
+    pointer-events: none;
 }
 
-.fade-out {
+#fade-out {
 	position: absolute;
 	left: 0;
 	top: 0;
-	display: block;
+	display: none;
 	width: 100%;
 	height: 100%;
 	background-color: black;
@@ -85,7 +88,8 @@ body {
     background-size: cover;	
     margin: 0;
     padding: 0;
-    z-index: 600;	
+    z-index: 9000!important;
+    pointer-events: none!important;
 }
 
 #ground {
@@ -216,6 +220,14 @@ body {
  	background: none;
  	font-weight: normal;
  	color: #241007;
+	-webkit-transition-property: none;
+	-moz-transition-property: none;
+	-o-transition-property: none;
+	transition-property: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;		
 }
 
 #passage-title #title-container {

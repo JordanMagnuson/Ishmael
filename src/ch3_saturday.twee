@@ -261,7 +261,8 @@ TOOD: Have "could not put it down" come in with typewriter effect?
 <span class="typed">It was a large gun, and very heavy. Too heavy for me.</span>
 
 :: Story End [end-story nobr nobg white-text]
-<<script>>$('body').prepend('<div class="fade-out"></div>');<</script>>
+<<script>>$('#fade-out').show();$('#blood-overlay').hide();<</script>>
+<<remember $game_completed = true>>
 <span class="typed-speed40-delay1000">But I could not put it down, because the eyes of my people were on me.</span>
 
 

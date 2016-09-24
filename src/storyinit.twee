@@ -4,12 +4,14 @@
  % -------------------------------------------------------------------------------------%/
 
 :: StoryInit
-<<set $good_at = 'hopscotch'>>
+<<set $good_at = 'ratalla'>>
 <<set $num_rocks = 2>>
 <<set $next_passage = 'ch2_friday'>>
+<<set $game_completed = false>>
 
 /% Friday variables (playing) %/
 <<set $can_play_tic_tac_toe = true>>
+<<set $can_play_hopscotch = true>>
 <<set $can_play_ratalla = true>>
 <<set $can_play_kickball = true>>
 <<set $can_have_etching = true>>

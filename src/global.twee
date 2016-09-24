@@ -14,9 +14,8 @@ WARNING: contains some depictions of violence.
 
 :: title [nobr]
 <<script>>
-
 	$('#cover-image').show();
-
+	$('#fade-out').show().fadeOut(3000);
 <</script>>
 
 <div id="title-container">
@@ -38,7 +37,7 @@ That's not a verb I recognize.
 :: test
 <iframe src="src/tictactoe/index.html"></iframe>
 
-:: wait [nobr]
+:: Wait [nobr]
 <div class="waiting"></div>
 <<script>>
 	var waitTime = 2000;
