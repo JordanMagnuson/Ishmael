@@ -297,10 +297,11 @@ window.holdGunUp = function(element) {
 		sndWar.stop();
 		window.sndBreathing.stop();
 		window.sndScream.play();
-		sndHeartbeat.stop();
-		sndCelebration.stop();
-		sndShouting.stop();
-		sndMachinegunLoop.stop();
+		window.sndHeartbeat.stop();
+		window.sndCelebration.stop();
+		window.sndShouting.stop();
+		window.sndHollering.stop();
+		window.sndMachinegunLoop.stop();
 		clearAllTimeouts();
 		stopAllHurtSounds();
 

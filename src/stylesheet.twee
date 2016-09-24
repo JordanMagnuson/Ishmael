@@ -114,6 +114,7 @@ body {
 /* SugarCube UI Bar */
 
 #ui-bar {
+	display: none;
 	z-index: 9000;
 }
 

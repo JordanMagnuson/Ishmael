@@ -60,7 +60,7 @@ We paraded through the streets for a while, just hollering and waving our flags 
 postdisplay.passageSetup = function(passageSetup) {
 	if (window.sndCelebration.playing()) {
 		var currentVol1 = window.sndCelebration.volume();
-		window.sndCelebration.fade(currentVol1, 0, 10000);
+		window.sndCelebration.fade(currentVol1, 0, 6000);
 	} 
 
 	if (window.sndHollering.playing()) {
@@ -87,7 +87,7 @@ Then one of the soldiers raised his arms and declared that they had a special tr
 	} 	
 <</script>>
 
-They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began|puppet_8]]. 
+They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began|puppet_1]]. 
 
 :: puppet_1 [nobr puppet-show auto-advance]
 <<set $next_passage = 'puppet_2'>>
@@ -145,10 +145,18 @@ That was the end of the puppet show.
 :: martyr [nobr]
 <<script>>
 postdisplay.passageSetup = function(passageSetup) {
+	window.sndHollering.stop();
+	window.sndShouting.stop();
+	window.sndCelebration.stop();
+	window.sndMachinegunLoop.stop();
 	if (!window.sndShouting.playing()) {
 		window.sndShouting.play();
 		window.sndShouting.fade(1, 0.5, 1000);
 	} 
+	if (!window.sndHollering.playing()) {
+		window.sndHollering.play();
+		window.sndHollering.fade(1, 0.5, 1000);		
+	} 	
 	setTimeout(function() { 
 		if (!window.sndCelebration.playing()) {
 			window.sndCelebration.play();
@@ -156,9 +164,8 @@ postdisplay.passageSetup = function(passageSetup) {
 		} 
 	}, 3000);
 	setTimeout(function() { 
-		if (!window.sndMachinegunLoop.playing()) {
+				if (!window.sndMachinegunLoop.playing()) {
 			window.sndMachinegunLoop.play();
-			window.sndMachinegunLoop.volume(0.5);
 		} 
 	}, 5000);	
 	delete postdisplay[passageSetup]
@@ -198,17 +205,34 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 /% SOUNDS %/
 <<script>>
 postdisplay.passageSetup = function(passageSetup) {
-	var xcurrentVol1 = window.sndCelebration.volume();
-	window.sndCelebration.fade(xcurrentVol1, 0.1, 10000);
 
-	var xcurrentVol2 = window.sndHollering.volume();
-	window.sndHollering.fade(xcurrentVol2, 0.1, 10000);
+	window.sndCelebration.stop();
+	window.sndHollering.stop();
+	window.sndShouting.stop();
+	window.sndMachinegunLoop.stop();
 
-	var xcurrentVol3 = window.sndShouting.volume();
-	window.sndShouting.fade(xcurrentVol3, 0.1, 10000);
-
-	var xcurrentVol4 = window.sndMachinegunLoop.volume();
-	window.sndMachinegunLoop.fade(xcurrentVol4, 0.1, 10000);
+	setTimeout(function() { 
+		if (!window.sndCelebration.playing()) {
+			window.sndCelebration.volume(0);
+			window.sndCelebration.play();
+			window.sndCelebration.fade(0, 0.1, 2000);
+		}
+		if (!window.sndHollering.playing()) {
+			window.sndHollering.volume(0);
+			window.sndHollering.play();
+			window.sndHollering.fade(0, 0.1, 2000);
+		}
+		if (!window.sndShouting.playing()) {
+			window.sndShouting.volume(0);
+			window.sndShouting.play();
+			window.sndShouting.fade(0, 0.1, 2000);
+		}
+		if (!window.sndMachinegunLoop.playing()) {
+			window.sndMachinegunLoop.volume(0);
+			window.sndMachinegunLoop.play();
+			window.sndMachinegunLoop.fade(0, 0.1, 2000);
+		}		
+	}, 5000);	
 
 	if (!window.sndBreathing.playing()) {
 		window.sndBreathing.play();
@@ -221,7 +245,6 @@ postdisplay.passageSetup = function(passageSetup) {
 
 		
 <</script>>
-
 
 /%TODO: maybe replace shake effect with jRumble to shake whole screen: https://jackrugile.com/jrumble/%/
 
@@ -243,7 +266,9 @@ postdisplay.passageSetup = function(passageSetup) {
 	}
 <</script>>
 
-Some test text.
+<<script>>
+	$('#fade-out').show().fadeOut(20000);
+<</script>>
 
 
 :: Put it down

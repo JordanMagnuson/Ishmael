@@ -27,8 +27,8 @@ I01
 sS'pos'
 p15
 (lp16
-I10
-aI10
+F10.0
+aF10.0
 asS'passage'
 p17
 (itiddlywiki
@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[friday_5]]\u000a[[ch3_saturday]]\u000a[[puppet show|younger ones]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a\u000a<em>[[the roof]]</em>\u000a[[Wait]]\u000a\u000a<<script>>$('#cover-image').hide();$('#ground').show();<</script>>\u000a\u000a/%\u000a<<if $game_completed>>\u000a<<goto 'title'>>\u000a<<else>>\u000a<<goto 'warning'>>\u000a<</if>>\u000a%/
+V/%\u000a[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[friday_5]]\u000a[[ch3_saturday]]\u000a[[Then one of the soldiers raised his arms]]\u000a[[puppet show|younger ones]]\u000a[[puppet_7]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a[[Wait]]\u000a%/\u000a\u000a<<script>>$('#cover-image').hide();$('#ground').show();<</script>>\u000a\u000a\u000a\u000a<<if $game_completed>>\u000a<<goto 'title'>>\u000a<<else>>\u000a<<goto 'warning'>>\u000a<</if>>\u000a
 p22
 sS'title'
 p23
@@ -51,9 +51,9 @@ p26
 ((I2016
 I9
 I24
-I1
-I49
-I25
+I12
+I40
+I44
 I5
 I268
 I1
