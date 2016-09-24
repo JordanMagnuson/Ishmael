@@ -264,17 +264,27 @@ TOOD: Have "could not put it down" come in with typewriter effect?
 :: hold_up_story_4 [end-story auto-fade]
 <span class="typed">It was a large gun, and very heavy. Too heavy for me.</span>
 
+
+
+:: put_down_story_1 [end-story put-down auto-fade]
+<span class="typed">Ishmael was a good boy: he obeyed his father, and he loved his mother, and he was an example to his brothers and sisters.</span>
+
+:: put_down_story_2 [end-story put-down auto-fade]
+<span class="typed">He was a loyal boy: he made friends for keeps, and he would defend them when they needed him.</span>
+
+:: put_down_story_3 [end-story put-down auto-fade]
+<span class="typed">Now Ishmael, above all else, was a brave boy.</span>
+
+:: put_down_story_4 [end-story put-down auto-fade]
+<span class="typed">He determined that the purpose of his life was to fight the enemy however he could.</span>
+
+:: put_down_story_5 [end-story put-down auto-fade]
+<span class="typed">In this way he could live out his love for his family, and his loyalty to his friends.</span>
+
+
+
+
 :: Story End [end-story nobr nobg white-text]
 <<script>>$('#fade-out').show();$('#blood-overlay').hide();<</script>>
 <<remember $game_completed = true>>
 <span class="typed-speed40-delay1000">But I could not put it down, because the eyes of my people were on me.</span>
-
-
-:: put_down_story_1 [end-story put-down auto-fade]
-<span class="typed">Now Ishmael, above all else, was a brave boy.</span>
-
-:: put_down_story_2 [end-story put-down auto-fade]
-<span class="typed">He determined that the purpose of his life was to fight the enemy however he could.</span>
-
-:: put_down_story_3 [end-story put-down auto-fade]
-<span class="typed">In this way he could live out his love for his mother, and his loyalty to his friends.</span>

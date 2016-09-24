@@ -88,7 +88,7 @@ body {
     background-size: cover;	
     margin: 0;
     padding: 0;
-    z-index: 9000!important;
+    z-index: 1000!important;
     pointer-events: none!important;
 }
 
@@ -465,7 +465,11 @@ body {
 }
 
 .passage.end-story.put-down {
-	bottom: 60%;
+	bottom: 40%;
+}
+
+#passage-story-end {
+	z-index: 9000!important;	
 }
 
 #passage-story-end .typed {

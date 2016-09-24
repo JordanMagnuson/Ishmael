@@ -19,8 +19,12 @@ window.upDownCount = 0;
 window.putDownEndingPassages = Array(
 	"put_down_story_1",
 	"put_down_story_2",
-	"put_down_story_3"
+	"put_down_story_3",
+	"put_down_story_4",
+	"put_down_story_5"	
 );
+
+window.putDownEndingPassagesCopy = window.putDownEndingPassages.slice(0);
 
 // Note that in-game variables referenced via $foo can be set in javascript via:
 // State.variables.foo = 'bar';
@@ -161,7 +165,6 @@ window.sndExplosion = new Howl({
 
 // Violent images.
 window.violentImageArray = Array(
-	"14107469954_b84973bf28_o.jpg",
 	"2190176602_9c4e70b78b.jpg",
 	"3298081311_d75e5d5c1f_o.jpg",
 	"Another_injury_caused_by_the_bombing_of_Israeli_Air_Forces_over_Gaza_Strip,_reached_the_hospital_unconscious.jpg",
@@ -313,6 +316,7 @@ window.putGunDown = function(element) {
 	upDownCount -= 1;
 	
 	// Show the end story passages as we go down.
+	/*
 	if (upDownCount == -2) {
 		//$('#the-choice').finish().hide();
 		State.play("put_down_story_1");
@@ -325,6 +329,7 @@ window.putGunDown = function(element) {
 		//$('#the-choice').finish().hide();
 		State.play("put_down_story_3");
 	}		
+	*/
 	
 	// Move the whole passage down (use % from top, so that movement is relative to window height).
 	if (upDownCount > -7) {
@@ -338,15 +343,16 @@ window.putGunDown = function(element) {
 		upDownCount += 1;
 
 		// Show a random end sentence.
-		if (typeof putDownEndingPassagesCopy == 'undefined' || putDownEndingPassagesCopy.length < 1) {
+		if (typeof window.putDownEndingPassagesCopy == 'undefined' || window.putDownEndingPassagesCopy.length < 1) {
+			console.log('time to shuffle');
 			window.putDownEndingPassagesCopy = putDownEndingPassages.slice(0);
+			shuffle(putDownEndingPassagesCopy);
 		}
-		var randomPassage = putDownEndingPassagesCopy.splice(Math.floor(Math.random()*putDownEndingPassagesCopy.length), 1);
-		State.play(randomPassage[0]);
-	}	 
+		var randomPassage = putDownEndingPassagesCopy.shift();
+		console.log(putDownEndingPassagesCopy);
+		console.log(randomPassage);
+		State.play(randomPassage);
 
-	// Show an image.
-	if (upDownCount <= -4) {
 		// Initialize image array.
 		if (typeof facesImageArrayCopy == 'undefined' || facesImageArrayCopy.length < 1) {
 			console.log('reinitialize array');
@@ -364,7 +370,7 @@ window.putGunDown = function(element) {
 		// Prepend the image to the body with a random div id so that we can access it / fade it out. 
 		var randomID = idGenerator();
 		$('body').prepend('<div class="background-image" id="' + randomID + '" style="background-image: url(assets/photos/faces/' + randomImage + '"></div>');
-		$('#' + randomID).fadeOut(5000, function() { $(this).remove(); });
+		$('#' + randomID).fadeOut(10000, function() { $(this).remove(); });
 
 		// Fade link text out and prevent clicking temporarily. 
 		/*
@@ -376,7 +382,7 @@ window.putGunDown = function(element) {
 		*/
 
 		// Crowd shouting.
-		sndShouting.fade(1, 0.1, 5000);			
+		//sndShouting.fade(1, 0.1, 5000);			
 	}	
 
 	// Increase breathing and heartbeat volume.
@@ -468,5 +474,19 @@ window.fullscreen = function(enter) {
             d[a[i]]();
             break;
         }
+    }
+}
+
+/**
+ * Shuffles array in place.
+ * @param {Array} a items The array containing the items.
+ */
+window.shuffle = function(a) {
+    var j, x, i;
+    for (i = a.length; i; i--) {
+        j = Math.floor(Math.random() * i);
+        x = a[i - 1];
+        a[i - 1] = a[j];
+        a[j] = x;
     }
 }
