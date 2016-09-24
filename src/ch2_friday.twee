@@ -32,14 +32,20 @@ I was feeling kind of tired of Bobby and Kitty and everybody, so I decided to pl
 
 :: Solo Play Options [nobr]
 <ul id="choices">
-	<<if $solo_can_play_tic_tac_toe>><li id="ch_play_tic_tac_toe">[[Solo tic-tac-toe]]</li><</if>>
-	<<if $solo_can_play_ratalla>><li id="ch_play_ratalla"><<linkreplace "Play Ratalla" transition>>Well, that's not gonna work.<</linkreplace>></li><</if>>
-	<<if $can_play_kickball>><li id="ch_play_kickball">[[Play kickball]]</li><</if>>
-	<<if $hang_out_times < 2>><li id="ch_hang_out">[[Hang out]]</li><</if>>
-	<<if $can_have_etching>><li id="ch_etching_contest">[[Solo etching]]</li><</if>>
+	<<if $solo_can_play_tic_tac_toe>><li id="ch_play_tic_tac_toe">[[Play tic-tac-toe|Solo tic-tac-toe]]</li><</if>>
+	<<if $solo_can_play_ratalla>><li id="ch_play_ratalla"><<linkreplace "Play Ratalla" transition>><<set $solo_can_play_ratalla = false>>Well, that's not gonna work.<</linkreplace>></li><</if>>
+	<<if $solo_can_have_etching>><li id="ch_etching_contest">[[Draw in the dirt|Solo etching]]</li><</if>>
+	<li id="ch_etching_contest">[[Go look for your friends after all]]</li>
+	<li id="ch_etching_contest">[[Sit and wait|solo wait]]</li>
 </ul>
 
+/% TODO: have a more involved search through back alleys? %/
+:: Go look for your friends after all
+I decided I wasn't feeling so tired of Bobby and Kitty after all, and it didn't take me long to find them, along with the rest of the gang, in an alley that we called <<linkreplace "Kiss Kiss Lane" transition>>Kiss Kiss Lane (on account of that's where Kitty tried to kiss Joe one time)<</linkreplace>>.
+<<display 'Play Options'>>
+
 :: Solo etching [nobr]
+<<set $solo_can_have_etching = false>>
 <canvas id="simple_sketch"></canvas>
 <<script>>
 postdisplay.sketch = function(sketch) {
@@ -50,7 +56,7 @@ postdisplay.sketch = function(sketch) {
     delete postdisplay[sketch]
  }
 <</script>>
-<div id="meh"><<timed 10s transition>>[[Meh|Solo Play Options]]<</timed>></div>
+<<timed 10s transition>><div id="meh">[[Meh|Solo Play Options]]</div><</timed>>
 
 
 :: Play Options [nobr]
@@ -64,7 +70,7 @@ postdisplay.sketch = function(sketch) {
 </ul>
 
 <<if !$can_play_tic_tac_toe && !$can_play_ratalla && !$can_play_kickball && !$can_have_etching && $hang_out_times >= 2>>
-<<linkreplace "That was Friday" transition>>[[The boringest day in the world]]<</linkreplace>>
+	<<display 'That was Friday'>>
 <</if>>
 
 :: Play tic-tac-toe [nobr tic-tac-toe]
@@ -77,7 +83,7 @@ postdisplay.sketch = function(sketch) {
 <<set $solo_can_play_tic_tac_toe = false>>
 <iframe id="tictactoe" src="src/tictactoe/solo.html" frameBorder="0" allowtransparency="true"></iframe>
 
-<<timed 10s transition>>[[Well, that was fun|Solo Play Options]]<</timed>>
+[[That was fun|Solo Play Options]]
 
 :: Play kickball [nobr]
 <<set $can_play_kickball = false>>
@@ -113,9 +119,12 @@ We stopped playing and just sat around for a bit, watching the flies crawl aroun
 
 :: Etching contest [nobr]
 <<set $can_have_etching = false>>
-At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes.
+At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had practiced a bit by myself earlier.<</if>>
 
 <<display 'Play Options'>>
+
+:: That was Friday
+<<linkreplace "That was Friday" transition>>[[The boringest day in the world]]<</linkreplace>>
 
 /% TODO: Is this better with each sentence in its own passage, or as a chained link of sentences like this? %/
 :: The boringest day in the world [nobr]
@@ -135,5 +144,4 @@ The day of the [[get-together]].
 The day of [[remembering]].
 
 :: remembering
-The day of the [[puppet show|wait]].
-<<set $next_passage = 'ch3_saturday'>>
+The day of the [[puppet show|ch3_saturday]].

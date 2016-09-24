@@ -49,6 +49,23 @@ That's not a verb I recognize.
 	}
 <</script>>
 
+:: solo wait [nobr]
+<<set $solo_wait += 1>>
+<<if $solo_wait >= 4>>
+	<<set $next_passage = 'That was Friday'>>
+<<else>>
+	<<set $next_passage = 'Solo Play Options'>>
+<</if>>
+<div class="waiting"></div>
+<<script>>
+	var waitTime = 2000;
+	if (State.variables['next_passage']) {
+		setTimeout(function() { 
+			State.play(State.variables['next_passage']);
+		}, waitTime);	
+	}
+<</script>>
+
 :: credits
 Coming soon. :)
 

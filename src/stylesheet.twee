@@ -635,12 +635,19 @@ iframe#tictactoe {
 	top: 0;
 	margin: 0;
 	padding: 0;
+	background-color: transparent;
+}
+
+#passage-solo-etching canvas {
+	cursor: pointer;
 }
 
 #passage-solo-etching #meh {
 	position: absolute;
 	left: 5em;
 	bottom: 5em;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 0.5em 1em;
 }
 
 /*********************************************************************

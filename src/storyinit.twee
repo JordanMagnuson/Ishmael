@@ -15,3 +15,8 @@
 <<set $can_have_etching = true>>
 <<set $has_ball = false>>
 <<set $hang_out_times = 0>>
+
+<<set $solo_wait = 0>>
+<<set $solo_can_play_tic_tac_toe = true>>
+<<set $solo_can_play_ratalla = true>>
+<<set $solo_can_have_etching = true>>
