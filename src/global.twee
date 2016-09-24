@@ -1,3 +1,34 @@
+:: warning [nobr]
+<div id="warning-message">
+It is recommended to play this game with headphones, and using a horizontal aspect ratio.<br><br>
+
+WARNING: contains some depictions of violence.
+<br><br>
+<span class="button">
+	<<click "Continue">><<script>>
+		$.when( fullscreen() ).done( state.play("title") );
+	<</script>><</click>>
+</span>
+
+</div>
+
+:: title [nobr]
+<<script>>
+
+	$('#cover-image').show();
+
+<</script>>
+
+<div id="title-container">
+	<div id="title">Ishmael</div>
+	<div id="by-line">by Jordan Magnuson</div>
+	<div id="buttons">
+		<span class="button" id="credits-button">[[credits]]</span> .
+		<span class="button" id="begin-button">[[begin|ch1_thursday]]</span>
+	</div>	
+</div>
+
+
 :: inventory
 I have $num_rocks rocks, a piece of string, and some imaginary rules in my pocket.
 
@@ -17,3 +48,8 @@ That's not a verb I recognize.
 		}, waitTime);	
 	}
 <</script>>
+
+:: credits
+Coming soon. :)
+
+[[Back|title]]

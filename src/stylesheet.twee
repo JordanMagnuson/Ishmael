@@ -8,7 +8,12 @@
 /*********************************************************************
  * COLOR CONSTANTS
  ********************************************************************/
-/* blood red: #810000 */
+/* 
+	blood red: #810000
+	dirt color (dark brown):  #241007
+*/
+
+
 
 /*********************************************************************
  * BODY
@@ -29,7 +34,6 @@ html {
 
 body { 
 	font-family: MyTyped,Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace; 
-	background-image: url('assets/ground.jpg');
 	background-repeat: no-repeat;
 	background-position: center center;
 	/* Cover the whole screen. */
@@ -84,11 +88,23 @@ body {
     z-index: 600;	
 }
 
+#ground {
+	background-image: url('assets/ground.jpg');
+	z-index: 0!important;	
+	display: none;
+}
+
 #blood-overlay {
 	background-image: url('assets/a-necessary-evil_4614659778_a93bef3820_o.jpg');
 	mix-blend-mode: multiply;
 	opacity: 0;
 	z-index: 10!important;
+}
+
+#cover-image {
+	background-image: url('assets/cover.jpg');
+	z-index: 10!important;	
+	display: none;
 }
 
 /* SugarCube UI Bar */
@@ -151,6 +167,89 @@ body {
 }
 
 /*********************************************************************
+ * WARNING
+ *********************************************************************/
+
+#passage-warning {
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	margin: 0;
+	padding: 0;
+	background-color: black;
+	color: white;
+}
+
+#passage-warning #warning-message {
+	position: absolute;
+	width: 60%;
+	height: auto;
+	top: 40%;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#passage-warning a {
+	color: white!important;
+	border: 1px solid white;
+	padding: 0.5em;
+}
+
+#passage-warning a:hover {
+	background-color: rgba(255, 255, 255, 0.3);
+}
+
+
+/*********************************************************************
+ * TITLE SCREEN / COVER PASSAGE
+ *********************************************************************/
+
+#passage-title {
+ 	height: 100%;
+ 	width: 100%;
+ 	margin: 0;
+ 	padding: 0;
+ 	top: 0;
+ 	left: 0;
+ 	background: none;
+ 	font-weight: normal;
+ 	color: #241007;
+}
+
+#passage-title #title-container {
+ 	position: absolute;
+ 	top: 32%;
+ 	left: 4%;
+ 	padding: 1em;
+}
+
+#passage-title #title{
+ 	font-size: 10vw;
+ 	margin-bottom: -0.6em;
+ 	margin-top: -0.2em;
+}
+
+#passage-title #by-line {
+ 	font-size: 3vw;
+ 	margin-left: 0.5em;
+}
+
+#passage-title #buttons {
+ 	margin-left: 4em;
+ 	font-size: 2vw;
+}
+
+#passage-title a  {
+ 	text-decoration: none;
+ 	border-bottom: 0;
+}
+
+#passage-title a:hover  {
+}
+
+/*********************************************************************
  * MISC
  *********************************************************************/
 
@@ -191,7 +290,7 @@ body {
     width: 50%;
     height: 100%;
 	left: 0;
-	background-color: orange;
+	background-color: transparent;
 	z-index: 10;
 }
 
@@ -203,7 +302,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: 11;
-    background-color: green;
+    background-color: transparent;
 }
 
 #puppetsheet {
@@ -539,6 +638,24 @@ iframe#tictactoe {
 		font-size: 1.4rem;
 	    bottom: 10%;
 	    width: 60%;		
+	}
+}
+
+/* Small Screens */
+@media (max-width: 1000px) {
+	#passage-title #title-container {
+	 	background-color:rgba(255, 255, 255, 0.8);
+	 	top: 40%;
+	}
+
+	#passage-title #by-line {
+	 	font-size: 4vw;
+	 	margin-left: 0em;
+	}
+
+	#passage-title #buttons {
+	 	margin-left: 1em;
+	 	font-size: 4vw;
 	}
 }
 

@@ -2,6 +2,8 @@
 The treat would involve [[puppets]]. That's what they had been telling us.
 * <<linkreplace "examine me" transition>>You are Ishmael, son of Peach Valley.<</linkreplace>>
 * <<linkreplace "inventory" transition>>You have $num_rocks rocks and a piece of string in your pocket.<</linkreplace>>
+<<script>>$('#cover-image').hide();$('#ground').show();<</script>>
+
 
 :: puppets
 I was excited, because I had never seen a real puppet show before.  

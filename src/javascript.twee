@@ -47,8 +47,14 @@ $('#puppetbg').append('<img class="puppet" id="puppet-bulldozer" src="assets/pup
 $('#puppetbg').append('<img class="puppet" id="puppet-question" src="assets/puppets/puppet_question.png" />');
 $(".puppet").hide();
 
+// Add ground.
+$('body').prepend('<div class="background-image" id="ground"></div>');
+
 // Add the blood overlay.
 $('body').prepend('<div class="background-image" id="blood-overlay"></div>');
+
+// Add cover image.
+$('body').prepend('<div class="background-image" id="cover-image"></div>');
 
 // Resize the puppet background after scene display.
 // (The puppet background should take up the space between the top of the screen and the passage.)
@@ -131,6 +137,8 @@ window.sndExplosion = new Howl({
 /*********************************************************************
  * PRELOAD IMAGES
  *********************************************************************/
+
+// Violent images.
 window.violentImageArray = Array(
 	"14107469954_b84973bf28_o.jpg",
 	"2190176602_9c4e70b78b.jpg",
@@ -151,6 +159,7 @@ for(var i = violentImageArray.length - 1; i >= 0; i--){
 	$('body').prepend('<div class="preload-image" id="preload-image-' + i + '" style="background-image: url(assets/photos/violence/' + preloadImage + '"></div>');
 }
 
+// Face images.
 window.facesImageArray = Array(
 	"3202880684_763846e8f4_o.jpg",
 	"3286208380_176e6f164f_o.jpg",
@@ -408,3 +417,22 @@ $.fn.animateRotate = function(angle, duration, easing, complete) {
     $({deg: 0}).animate({deg: angle}, args);
   });
 };
+
+/**
+ * Trigger browser fullscreen mode. See twinery.org/forum/discussion/comment/15038
+ */ 
+window.fullscreen = function(enter) {
+    var d = document,
+        i = -1, a;
+    if (typeof enter != "boolean" && !enter) {
+        enter = !(d.fullscreenElement || d.mozFullScreenElement || d.webkitFullscreenElement || d.msFullscreenElement);
+    }
+    a = ["requestFullscreen","mozRequestFullScreen","webkitRequestFullscreen"];
+    enter && (d = d.documentElement);
+    while(i++ < 3) {
+        if (d[a[i]]) {
+            d[a[i]]();
+            break;
+        }
+    }
+}
