@@ -40,8 +40,8 @@ Yes, father said.
 	setTimeout(function() { 
 		if (!sndHollering.playing() && (State.passage == '...')) {
 			sndHollering.play();
-			sndHollering.fade(0, 0.5, 2000);
 		} 
+		sndHollering.fade(0, 0.5, 2000);
 	}, 1000);
 
 
@@ -49,6 +49,7 @@ Yes, father said.
 		if (!sndMachinegunLoop.playing() && (State.passage == '...')) {
 			sndMachinegunLoop.play();
 		}	
+		sndMachinegunLoop.volume(0.5);
 	}, 5000);		
 <</script>>
 
@@ -56,20 +57,23 @@ We paraded through the streets for a while, just hollering and waving our flags 
 
 :: Then one of the soldiers raised his arms [nobr]
 <<script>>
+postdisplay.passageSetup = function(passageSetup) {
 	if (sndCelebration.playing()) {
-		var currentVol = sndCelebration.volume();
-		sndCelebration.fade(currentVol, 0, 10000);
+		var currentVol1 = sndCelebration.volume();
+		sndCelebration.fade(currentVol1, 0, 10000);
 	} 
 
 	if (sndHollering.playing()) {
-		var currentVol = sndHollering.volume();
-		sndHollering.fade(currentVol, 0, 3000);
+		var currentVol2 = sndHollering.volume();
+		sndHollering.fade(currentVol2, 0, 3000);
 	} 
 
 	if (sndMachinegunLoop.playing()) {
-		var currentVol = sndMachinegunLoop.volume();
-		sndMachinegunLoop.fade(currentVol, 0, 1000);
+		var currentVol3 = sndMachinegunLoop.volume();
+		sndMachinegunLoop.fade(currentVol3, 0, 1000);
 	} 	
+	delete postdisplay[passageSetup]
+}		
 <</script>>
 
 Then one of the soldiers raised his arms and declared that they had a special treat for us: a puppet show. Would the [[younger ones]] please come forward to the front of the crowd so as to see and hear the presentation better. 
@@ -141,18 +145,19 @@ That was the end of the puppet show.
 <<script>>
 	if (!sndShouting.playing()) {
 		sndShouting.play();
-		sndShouting.fade(1, 0.5, 1000);
 	} 
+	sndShouting.fade(1, 0.5, 1000);
 	setTimeout(function() { 
 		if (!sndCelebration.playing()) {
 			sndCelebration.play();
-			sndCelebration.fade(0, 0.3, 3000);
 		} 
+		sndCelebration.fade(0, 0.3, 3000);
 	}, 3000);
 	setTimeout(function() { 
-		if (!sndMachinegunLoop.playing() && (State.passage != 'The Choice')) {
+		if (!sndMachinegunLoop.playing()) {
 			sndMachinegunLoop.play();
 		} 
+		sndCelebration.volume(0.5);
 	}, 5000);	
 
 <</script>>
@@ -188,19 +193,18 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 :: The Choice [nobr]
 /% SOUNDS %/
 <<script>>
-
 	postdisplay.passageSetup = function(passageSetup) {
-		var currentVol = sndCelebration.volume();
-		sndCelebration.fade(currentVol, 0.1, 10000);
+		var currentVol1 = sndCelebration.volume();
+		sndCelebration.fade(currentVol1, 0.1, 10000);
 
-		var currentVol = sndHollering.volume();
-		sndHollering.fade(currentVol, 0.1, 10000);
+		var currentVol2 = sndHollering.volume();
+		sndHollering.fade(currentVol2, 0.1, 10000);
 
-		var currentVol = sndShouting.volume();
-		sndShouting.fade(currentVol, 0.1, 10000);
+		var currentVol3 = sndShouting.volume();
+		sndShouting.fade(currentVol3, 0.1, 10000);
 
-		var currentVol = sndMachinegunLoop.volume();
-		sndMachinegunLoop.fade(currentVol, 0.1, 10000);
+		var currentVol4 = sndMachinegunLoop.volume();
+		sndMachinegunLoop.fade(currentVol4, 0.1, 10000);
 
 		if (!sndBreathing.playing()) {
 			sndBreathing.play();
