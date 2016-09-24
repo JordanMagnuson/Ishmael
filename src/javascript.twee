@@ -49,6 +49,7 @@ $('#puppetbg').append('<img class="puppet" id="puppet-house" src="assets/puppets
 $('#puppetbg').append('<img class="puppet" id="puppet-hospital" src="assets/puppets/puppet_hospital.png" />');
 $('#puppetbg').append('<img class="puppet" id="puppet-wire" src="assets/puppets/puppet_wire.png" />');
 $('#puppetbg').append('<img class="puppet" id="puppet-soldier" src="assets/puppets/puppet_soldier.png" />');
+$('#puppetbg').append('<img class="puppet" id="puppet-soldier-shooting" src="assets/puppets/puppet_soldier_shooting.png" />');
 $('#puppetbg').append('<img class="puppet" id="puppet-bulldozer" src="assets/puppets/puppet_bulldozer.png" />');
 $('#puppetbg').append('<img class="puppet" id="puppet-question" src="assets/puppets/puppet_question.png" />');
 $(".puppet").hide();

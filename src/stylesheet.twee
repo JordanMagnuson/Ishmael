@@ -338,70 +338,76 @@ body {
 	display: block;
  	position: absolute;
  	z-index: 100;
- }
+}
 
 .puppet#puppet-boy {
  	right: 50%;
  	height: 60%;
  	width: auto;
- }
+}
 
- .puppet#puppet-boy-rock {
+.puppet#puppet-boy-rock {
  	right: 50%;
  	height: 60%;
  	width: auto;
- }
+}
 
 .puppet#puppet-father {
  	right: 75%;
  	height: 75%;
  	width: auto;
- }
+}
 
 .puppet#puppet-mother {
  	right: 20%;
  	height: 75%;
  	width: auto;
- }
+}
 
 .puppet#puppet-house {
  	right: -10%;
  	height: 50%;
  	width: auto;	
  	z-index: 90;
- }
+}
 
 .puppet#puppet-hospital {
  	right: -75%;
  	height: 70%;
  	width: auto;	
- }
+}
 
 .puppet#puppet-wire {
   	bottom: 0!important;
  	right: -35%;
  	height: 120%!important;
  	width: auto;	
- }
+}
 
 .puppet#puppet-bulldozer {
  	right: -70%;
  	height: 80%;
  	width: auto;	
- }
+}
 
- .puppet#puppet-soldier {
- 	right: -90%;
+.puppet#puppet-soldier {
+ 	right: -94%;
  	height: 70%;
  	width: auto;	
- }
+}
 
- .puppet#puppet-question {
+.puppet#puppet-soldier-shooting {
+ 	right: -94%;
+ 	height: 70%;
+ 	width: auto;	
+}
+
+.puppet#puppet-question {
  	right: 65%;
  	height: 30%;
  	width: auto;
  	top: 10%!important;
- }
+}
 
 
  /*********************************************************************

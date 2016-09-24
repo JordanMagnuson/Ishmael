@@ -303,16 +303,16 @@
 				/*
 				if (true) {
 					// Do everything up to passage x (for testing).
-					$("#puppet-boy").fadeIn(3000);
-					$("#puppet-house").fadeIn(3000);
-					$("#puppet-father").fadeIn(3000);
-					$("#puppet-mother").fadeIn(3000);
+					$("#puppet-boy").show();
+					$("#puppet-house").show();
+					$("#puppet-father").show();
+					$("#puppet-mother").show();
 					//$("#puppet-hospital").fadeIn(3000);
 					//$("#puppet-wire").fadeIn(3000);
 					//$("#puppet-hospital").fadeOut(3000);
 					//$("#puppet-wire").fadeOut(3000);		
-					$("#puppet-bulldozer").fadeIn(3000);
-					$("#puppet-soldier").fadeIn(3000);								
+					$("#puppet-bulldozer").show();
+					$("#puppet-soldier").show();								
 				}
 				*/
 				
@@ -393,6 +393,8 @@
 						$("#puppet-boy-rock").animate({ right : "25%" }, 1000, 'swing');
 					}
 					if (substr.match("^shot")) {
+						$("#puppet-soldier").hide();
+						$("#puppet-soldier-shooting").show();						
 				        $("#puppet-boy-rock").animateRotate(-90);
 				        $("#puppet-boy-rock").css("margin-bottom", "-10%");
 					}	
