@@ -135,7 +135,7 @@ We stopped playing and just sat around for a bit, watching the flies crawl aroun
 
 :: Etching contest [nobr]
 <<set $can_have_etching = false>>
-At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had peen practicing a bit by myself<</if>>
+At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had been practicing a bit by myself<</if>>
 
 <<display 'Play Options'>>
 

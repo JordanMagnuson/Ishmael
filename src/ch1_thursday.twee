@@ -150,18 +150,18 @@ I just stood there as the sun went down and the world burned orange around me.
 <ul id="choices">
 	<li id="ch_wait"><<linkreplace "Wait" transition>><<removeclass ".needs_wait" "invisible">><<addclass ".needs_wait" "fadein">><<addclass "#ch_wait" "invisible">><</linkreplace>></li>
 
-	<li class="invisible needs_wait"><<linkreplace "Think about father" transition>>I thought about Father and how I loved coming home and seeing him happy like he had been tonight.<</linkreplace>></li>	
+	<li class="invisible needs_wait"><<linkreplace "Think about Father" transition>>I thought about Father and how I loved coming home and seeing him happy like he had been tonight.<</linkreplace>></li>	
 
-	<li class="invisible needs_wait"><<linkreplace "Think about tommy" transition>><<removeclass ".needs_tommy" "invisible">><<addclass ".needs_tommy" "fadein">>I thought about Tommy and how brave he was.<</linkreplace>></li>	
+	<li class="invisible needs_wait"><<linkreplace "Think about Tommy" transition>><<removeclass ".needs_tommy" "invisible">><<addclass ".needs_tommy" "fadein">>I thought about Tommy and how brave he was.<</linkreplace>></li>	
 
 	<li class="invisible needs_tommy"><<linkreplace "Think about siblings" transition>><<removeclass ".needs_siblings" "invisible">><<addclass ".needs_siblings" "fadein">>I thought about all my brothers and sisters then: Jake and Fred and Angela and Mary, and how Mary was a rotten little brat who always whined about everything.<</linkreplace>></li>	
 
-	<li class="invisible needs_siblings">[[Think about joseph]]</li>		
+	<li class="invisible needs_siblings">[[Think about Joseph]]</li>		
 </ul>
 
 /% TODO: below: link each sibling to a description? %/
 
-:: Think about joseph
+:: Think about Joseph
 That made me think about Joseph, and how he had never whined about anything. Mother had said that if we had been living in Old Peach Valley we would have been able to get medicine, and things would have [[been different]].
 
 :: been different
