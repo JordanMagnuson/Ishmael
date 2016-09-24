@@ -615,16 +615,17 @@ body {
 iframe#tictactoe {
 	position: absolute;
 	height: 20em;
-	width: 80%;
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	bottom: 100%;
 	left: 0;
 	overflow: hidden;
+	background-color:rgba(255, 255, 255, 0.8);
 }
 
 #passage-play-tic-tac-toe {
-	min-height: 6em;
+	min-height: 0;
 }
 
 
