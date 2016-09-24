@@ -72,6 +72,7 @@ postdisplay.passageSetup = function(passageSetup) {
 		var currentVol3 = sndMachinegunLoop.volume();
 		sndMachinegunLoop.fade(currentVol3, 0, 1000);
 	} 	
+	window.sndShush.play();
 	delete postdisplay[passageSetup]
 }		
 <</script>>
