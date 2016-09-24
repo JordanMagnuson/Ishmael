@@ -1,19 +1,19 @@
 /% TODO: Implement $good_at variable to change what happens depending on what game you are good at. %/
 
 :: ch2_friday
-[[Friday|wait]]
+[[Friday|Wait]]
 <<set $next_passage = 'friday_2'>>
 
 :: friday_2
-Friday [[went|wait]]
+Friday [[went|Wait]]
 <<set $next_passage = 'friday_3'>>
 
 :: friday_3
-Friday went [[by|wait]]
+Friday went [[by|Wait]]
 <<set $next_passage = 'friday_4'>>
 
 :: friday_4
-Friday went by [[awfully|wait]]
+Friday went by [[awfully|Wait]]
 <<set $next_passage = 'friday_5'>>
 
 :: friday_5
