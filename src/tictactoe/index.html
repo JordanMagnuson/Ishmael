@@ -32,51 +32,15 @@
 </head>
 
 <body id="page-top">
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle Navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">TicTacToe </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a class="page-scroll" id = "home" href="">Restart</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" id = "switch_player" href="">Switch Players</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Score</a>
-                    </li>
-
-                    <li>
-                        <a class="page-scroll" href="#portfolio">About</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <header style="min-height:100%">
         <div class="header-content">
             <div class="header-content-inner" id="game_options">
                 <div class = "game_control">
-                    <h2 style = "margin-top:-.5rem">Choose your difficulty </h2>
+                    <h2 style = "margin-top:-.5rem">Choose your opponent </h2>
                     <hr>
-				<a id ="human" class="difficulty_button btn btn-primary btn-xl" style ="background-color:teal;">Human Verus Human</a>
-				<a id ="easy" class="difficulty_button btn btn-primary btn-xl" style ="background-color:green" >Easy</a>
-				<a id ="intermediate" class="difficulty_button btn btn-primary btn-xl" style = " background-color:orange">Intermediate</a>
-				<a id ="AIHardDefending" class="difficulty_button btn btn-primary btn-xl" style ="background-color:red">Hard (Beta)</a>
-                <a id ="AICheater"  class="difficulty_button btn btn-xl" style ="background-color:clear">?</a>
+				<a id ="easy" class="difficulty_button btn btn-primary btn-xl" style ="background-color:green" >Joe</a>
+				<a id ="intermediate" class="difficulty_button btn btn-primary btn-xl" style = " background-color:orange">Kitty</a>
+				<a id ="AICheater" class="difficulty_button btn btn-primary btn-xl" style ="background-color:red">Bobby</a>
             </div>
         </div>
 
@@ -109,6 +73,7 @@
         <p>
         <div class="header-content-inner game_options" style="margin-top:3rem">
             <a id="next_round" class="btn btn-primary btn-xl">Next Round</a>
+			<a id="home" class="btn btn-primary btn-xl" href="">Choose a new opponent</a>
         </div>
         <div id="wonDiv"></div>
         </p>

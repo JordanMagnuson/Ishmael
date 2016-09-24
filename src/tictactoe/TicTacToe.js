@@ -56,9 +56,9 @@ function countdownAnimation() {
         }, 1000);
         $('#rolling').fadeIn(500).delay(4000).fadeOut(500);
         $('#starting_player_is').delay(5000).fadeIn(500).text("The starting player is " + app.startingPlayer);
-        $('#begun, #play_happening, .game_table, #home, #score, #next_round').delay(5000).fadeIn(500);
+        $('#begun, #play_happening, .game_table, #home, #score, #next_round, #home').delay(5000).fadeIn(500);
         setupScoreBoard();
-        $('#next_round').attr("disabled", "disabled");
+        $('#next_round, #home').attr("disabled", "disabled");
  }, 500);
 }
 
@@ -203,7 +203,7 @@ function clearBoard() {
     if (app.currentPlayer === "X") {
         AIPlay();
     }
-    $('#next_round').attr("disabled", "disabled");
+    $('#next_round, #home').attr("disabled", "disabled");
     console.log(app.turn);
 }
 
@@ -265,7 +265,7 @@ function roundWon() {
 
 function endRound() {
     app.isRoundInProgress = false;
-    $('#next_round').attr("disabled", false);
+    $('#next_round, #home').attr("disabled", false);
 }
 
 
