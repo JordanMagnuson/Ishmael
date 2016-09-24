@@ -1,7 +1,7 @@
 :: ch3_saturday [nobr]
 <<script>>
-	if (!sndCelebration.playing()) {
-		sndCelebration.play();
+	if (!window.sndCelebration.playing()) {
+		window.sndCelebration.play();
 	}
 <</script>>
 
@@ -11,7 +11,7 @@ There was whooping in our alley when I woke up, and that made me smile: today wo
 
 :: Look outside [nobr]
 <<script>>
-	sndCelebration.volume(1);
+	window.sndCelebration.volume(1);
 <</script>>
 
 Everyone was out there. Waving and shouting and banging on drums, and holding the flags of our nation. I thought how it would be nice if we had some large space that we could all go to and gather in, but the biggest space in the compound was the main alley which ran down its center from north to south.
@@ -38,18 +38,18 @@ Yes, father said.
 :: ... [nobr]
 <<script>>
 	setTimeout(function() { 
-		if (!sndHollering.playing() && (State.passage == '...')) {
-			sndHollering.play();
+		if (!window.sndHollering.playing() && (State.passage == '...')) {
+			window.sndHollering.play();
 		} 
-		sndHollering.fade(0, 0.5, 2000);
+		window.sndHollering.fade(0, 0.5, 2000);
 	}, 1000);
 
 
 	setTimeout(function() { 
-		if (!sndMachinegunLoop.playing() && (State.passage == '...')) {
-			sndMachinegunLoop.play();
+		if (!window.sndMachinegunLoop.playing() && (State.passage == '...')) {
+			window.sndMachinegunLoop.play();
 		}	
-		sndMachinegunLoop.volume(0.5);
+		window.sndMachinegunLoop.volume(0.5);
 	}, 5000);		
 <</script>>
 
@@ -58,21 +58,21 @@ We paraded through the streets for a while, just hollering and waving our flags 
 :: Then one of the soldiers raised his arms [nobr]
 <<script>>
 postdisplay.passageSetup = function(passageSetup) {
-	if (sndCelebration.playing()) {
-		var currentVol1 = sndCelebration.volume();
-		sndCelebration.fade(currentVol1, 0, 10000);
+	if (window.sndCelebration.playing()) {
+		var currentVol1 = window.sndCelebration.volume();
+		window.sndCelebration.fade(currentVol1, 0, 10000);
 	} 
 
-	if (sndHollering.playing()) {
-		var currentVol2 = sndHollering.volume();
-		sndHollering.fade(currentVol2, 0, 3000);
+	if (window.sndHollering.playing()) {
+		var currentVol2 = window.sndHollering.volume();
+		window.sndHollering.fade(currentVol2, 0, 3000);
 	} 
 
-	if (sndMachinegunLoop.playing()) {
-		var currentVol3 = sndMachinegunLoop.volume();
-		sndMachinegunLoop.fade(currentVol3, 0, 1000);
+	if (window.sndMachinegunLoop.playing()) {
+		var currentVol3 = window.sndMachinegunLoop.volume();
+		window.sndMachinegunLoop.fade(currentVol3, 0, 1000);
 	} 	
-	window.sndShush.play();
+	window.window.sndShush.play();
 	delete postdisplay[passageSetup]
 }		
 <</script>>
@@ -82,12 +82,12 @@ Then one of the soldiers raised his arms and declared that they had a special tr
 :: younger ones [nobr]
 <<script>>
 	$("#puppetsheet").slideDown(5000);
-	if (!sndChildrenCheering.playing()) {
-		sndChildrenCheering.play();
+	if (!window.sndChildrenCheering.playing()) {
+		window.sndChildrenCheering.play();
 	} 	
 <</script>>
 
-They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began|puppet_1]]. 
+They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began|puppet_8]]. 
 
 :: puppet_1 [nobr puppet-show auto-advance]
 <<set $next_passage = 'puppet_2'>>
@@ -144,22 +144,25 @@ That was the end of the puppet show.
 
 :: martyr [nobr]
 <<script>>
-	if (!sndShouting.playing()) {
-		sndShouting.play();
+postdisplay.passageSetup = function(passageSetup) {
+	if (!window.sndShouting.playing()) {
+		window.sndShouting.play();
+		window.sndShouting.fade(1, 0.5, 1000);
 	} 
-	sndShouting.fade(1, 0.5, 1000);
 	setTimeout(function() { 
-		if (!sndCelebration.playing()) {
-			sndCelebration.play();
+		if (!window.sndCelebration.playing()) {
+			window.sndCelebration.play();
+			window.sndCelebration.fade(0, 0.3, 3000);
 		} 
-		sndCelebration.fade(0, 0.3, 3000);
 	}, 3000);
 	setTimeout(function() { 
-		if (!sndMachinegunLoop.playing()) {
-			sndMachinegunLoop.play();
+		if (!window.sndMachinegunLoop.playing()) {
+			window.sndMachinegunLoop.play();
+			window.sndMachinegunLoop.volume(0.5);
 		} 
-		sndCelebration.volume(0.5);
 	}, 5000);	
+	delete postdisplay[passageSetup]
+}
 
 <</script>>
 "A martyr!" 
@@ -194,27 +197,29 @@ I felt metal against my skin, and then I saw that they had put a gun in my hands
 :: The Choice [nobr]
 /% SOUNDS %/
 <<script>>
-	postdisplay.passageSetup = function(passageSetup) {
-		var currentVol1 = sndCelebration.volume();
-		sndCelebration.fade(currentVol1, 0.1, 10000);
+postdisplay.passageSetup = function(passageSetup) {
+	var xcurrentVol1 = window.sndCelebration.volume();
+	window.sndCelebration.fade(xcurrentVol1, 0.1, 10000);
 
-		var currentVol2 = sndHollering.volume();
-		sndHollering.fade(currentVol2, 0.1, 10000);
+	var xcurrentVol2 = window.sndHollering.volume();
+	window.sndHollering.fade(xcurrentVol2, 0.1, 10000);
 
-		var currentVol3 = sndShouting.volume();
-		sndShouting.fade(currentVol3, 0.1, 10000);
+	var xcurrentVol3 = window.sndShouting.volume();
+	window.sndShouting.fade(xcurrentVol3, 0.1, 10000);
 
-		var currentVol4 = sndMachinegunLoop.volume();
-		sndMachinegunLoop.fade(currentVol4, 0.1, 10000);
+	var xcurrentVol4 = window.sndMachinegunLoop.volume();
+	window.sndMachinegunLoop.fade(xcurrentVol4, 0.1, 10000);
 
-		if (!window.sndBreathing.playing()) {
-			window.sndBreathing.play();
-		} 
-		if (!sndHeartbeat.playing()) {
-			sndHeartbeat.play();
-		} 	
-		delete postdisplay[passageSetup]
-	}	
+	if (!window.sndBreathing.playing()) {
+		window.sndBreathing.play();
+	} 
+	if (!window.sndHeartbeat.playing()) {
+		window.sndHeartbeat.play();
+	} 	
+	delete postdisplay[passageSetup]
+}
+
+		
 <</script>>
 
 

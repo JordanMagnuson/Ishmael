@@ -128,7 +128,7 @@ window.sndShouting = new Howl({
 window.sndChildrenCheering = new Howl({
 	src: ['assets/sounds/346814__robinhood76__06684-children-hooray-joy-shout.mp3'],
 	loop: false,
-	volume: 1
+	volume: 0.7
 });
 
 window.sndShush = new Howl({
