@@ -26,6 +26,8 @@ window.putDownEndingPassages = Array(
 
 window.putDownEndingPassagesCopy = window.putDownEndingPassages.slice(0);
 
+window.allTimeouts = Array();
+
 // Note that in-game variables referenced via $foo can be set in javascript via:
 // State.variables.foo = 'bar';
 
@@ -128,6 +130,12 @@ window.sndChildrenCheering = new Howl({
 	volume: 1
 });
 
+window.sndShush = new Howl({
+	src: ['assets/sounds/360590__fallbackcrush__shh.mp3'],
+	loop: false,
+	volume: 1
+});
+
 window.sndMachinegunLoop = new Howl({
 	src: ['assets/sounds/101961__cgeffex__heavy-machine-gun.mp3'],
 	loop: true,
@@ -158,6 +166,73 @@ window.sndExplosion = new Howl({
 	volume: 1
 });
 
+window.sndScream = new Howl({
+	src: ['assets/sounds/HumanScream_DIGII07-25-05.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt01 = new Howl({
+	src: ['assets/sounds/hurt01.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt02 = new Howl({
+	src: ['assets/sounds/hurt02.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt03 = new Howl({
+	src: ['assets/sounds/hurt03.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt04 = new Howl({
+	src: ['assets/sounds/hurt04.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt05 = new Howl({
+	src: ['assets/sounds/hurt05.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt06 = new Howl({
+	src: ['assets/sounds/hurt06.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt07 = new Howl({
+	src: ['assets/sounds/hurt07.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt08 = new Howl({
+	src: ['assets/sounds/hurt08.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt09 = new Howl({
+	src: ['assets/sounds/hurt09.mp3'],
+	loop: false,
+	volume: 1
+});
+
+window.sndHurt10 = new Howl({
+	src: ['assets/sounds/hurt10.mp3'],
+	loop: false,
+	volume: 1
+});
+
+var sndHurtArray = Array(sndHurt01, sndHurt02, sndHurt03, sndHurt04, sndHurt05,sndHurt06, sndHurt07, sndHurt08, sndHurt09, sndHurt10);
 
 /*********************************************************************
  * PRELOAD IMAGES
@@ -219,11 +294,15 @@ window.holdGunUp = function(element) {
 		$('#the-choice').remove();
 		$('#gun').remove();
 		sndWar.stop();
-		sndBreathing.stop();
+		window.sndBreathing.stop();
+		window.sndScream.play();
 		sndHeartbeat.stop();
 		sndCelebration.stop();
 		sndShouting.stop();
 		sndMachinegunLoop.stop();
+		clearAllTimeouts();
+		stopAllHurtSounds();
+
 		//sndExplosion.play();
 		State.play("Story End");
 		return false;
@@ -338,6 +417,9 @@ window.putGunDown = function(element) {
 	}	
 	// Last stop: won't go any further.
 	else {
+		// Hurt sound
+		playRandomHurtSound();
+
 		// Pop back up.
 		$('#the-choice').animate({ top : "+=5%" }, 750, 'swing').animate({ top : "-=5%" }, 250, 'swing')
 		upDownCount += 1;
@@ -386,10 +468,10 @@ window.putGunDown = function(element) {
 	}	
 
 	// Increase breathing and heartbeat volume.
-    var currentVol = sndBreathing.volume();
+    var currentVol = window.sndBreathing.volume();
     currentVol += .1;
     if (currentVol <= 1)
-    	sndBreathing.volume(currentVol);
+    	window.sndBreathing.volume(currentVol);
     var currentVol = sndHeartbeat.volume();
     currentVol += .1;
     if (currentVol <= 1)
@@ -397,6 +479,31 @@ window.putGunDown = function(element) {
 
 	// Stop war sounds.
 	sndWar.stop();		
+};
+
+window.playRandomHurtSound = function(volume) {
+	do {
+		var sndRandom = sndHurtArray[Math.floor(Math.random() * sndHurtArray.length)];
+	}
+	while (sndRandom.playing());
+
+	window.sndBreathing.pause();
+	sndRandom.play();
+	var pauseDuration = 500;	
+
+	var id = window.setTimeout(function() { 
+		if (!window.sndBreathing.playing()) {
+			window.sndBreathing.play();
+		}
+		stopAllHurtSounds();
+	}, pauseDuration);		
+	window.allTimeouts.push(id);
+};
+
+window.stopAllHurtSounds = function(volume) {
+	for (var i=0; i<sndHurtArray.length; i++) {
+	  sndHurtArray[i].stop();
+	}	
 };
 
 /*
@@ -489,4 +596,12 @@ window.shuffle = function(a) {
         a[i - 1] = a[j];
         a[j] = x;
     }
+}
+
+window.clearAllTimeouts = function() {
+	console.log('clearing timeouts');
+	console.log(allTimeouts);
+	for (var i=0; i<allTimeouts.length; i++) {
+	  window.clearTimeout(allTimeouts[i]);
+	}	
 }
