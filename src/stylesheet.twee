@@ -106,7 +106,8 @@ body {
 }
 
 #cover-image {
-	background-image: url('assets/cover.jpg');
+	/* Use embedded image for the cover, since we need it to load quickly during Twine preloading phase. */
+	background-image: [img[cover]];
 	z-index: 10!important;	
 	display: none;
 }
