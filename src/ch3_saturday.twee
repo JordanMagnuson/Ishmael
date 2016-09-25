@@ -19,7 +19,7 @@ Everyone was out there. Waving and shouting and banging on drums, and holding th
 <ul><li>[[Look around]]</li></ul>
 
 :: Look around
-I looked around and noticed Joe riding up on top of a bigger boy's shoulders, yelling and waving his flag. He saw me and let out a whoop. I smiled and waved back at him. 
+I looked around and noticed Josiah riding up on top of a bigger boy's shoulders, yelling and waving his flag. He saw me and let out a whoop. I smiled and waved back at him. 
 
 Father came to the door then and put his hand on my shoulder. 
 
@@ -53,7 +53,7 @@ Yes, father said.
 	}, 5000);		
 <</script>>
 
-We paraded through the streets for a while, just hollering and waving our flags and being patriotic. Eventually we managed to squeeze into the central alleyway where everyone was gathered. The visitors were up on a rooftop looking down at the crowd and shouting about hope and God and reclaiming Peach Valley. They were wearing guns, and every once in a while one of them would fire a volley up into the air, which made everyone cheer especially loud. <<linkreplace "They shouted and we cheered." transition>>They shouted and we cheered, <<linkreplace "they shouted and we cheered." transition>><<timed 3s>><<goto "Then one of the soldiers raised his arms">><</timed>>they shouted and we cheered, until the sun started to set.<</linkreplace>><</linkreplace>>
+We paraded through the streets for a while, just hollering and waving our flags and being patriotic. Eventually we managed to squeeze into the central alleyway where everyone was gathered. The visitors were up on a rooftop looking down at the crowd and shouting about hope and God and reclaiming Pine Nut Valley. They were wearing guns, and every once in a while one of them would fire a volley up into the air, which made everyone cheer especially loud. <<linkreplace "They shouted and we cheered." transition>>They shouted and we cheered, <<linkreplace "they shouted and we cheered." transition>><<timed 3s>><<goto "Then one of the soldiers raised his arms">><</timed>>they shouted and we cheered, until the sun started to set.<</linkreplace>><</linkreplace>>
 
 :: Then one of the soldiers raised his arms [nobr]
 <<script>>
@@ -92,7 +92,7 @@ They draped a sheet over a wooden beam suspended between two clotheslines, and t
 :: puppet_1 [nobr puppet-show auto-advance]
 <<set $next_passage = 'puppet_2'>>
 <span class="typed">
-It told the story of a little boy named Ishmael who lived in Old Peach Valley despite the occupation of the enemy.
+It told the story of a little boy named Ishmael who lived in Old Pine Nut Valley despite the occupation of the enemy.
 </span>
 
 :: puppet_2 [nobr puppet-show auto-advance]
@@ -195,7 +195,7 @@ He was up on top of a barrel now, holding me, and the people were taking notice.
 [[Bring him up, bring the boy up!]]
 
 :: Bring him up, bring the boy up!
-I was on the rooftop then, and the soldiers had me on their shoulders. "Here is the hope of our nation!" they shouted. "Here is Ishmael, son of Peach Valley. Brave Ishmael, who will defy the enemy!"
+I was on the rooftop then, and the soldiers had me on their shoulders. "Here is the hope of our nation!" they shouted. "Here is Ishmael, son of Pine Nut Valley. Brave Ishmael, who will defy the enemy!"
 
 I felt metal against my skin, and then I saw that they had put a gun in my hands. It was a large gun, and very heavy.
 
@@ -284,7 +284,7 @@ I put the gun down because <<textbox "$put_down_why" "" "Can't put it down" auto
 TOOD: Have "could not put it down" come in with typewriter effect?
 
 :: hold_up_story_1 [end-story auto-fade]
-<span class="typed">Here is Ishmael, son of Peach Valley.</span>
+<span class="typed">Here is Ishmael, son of Pine Nut Valley.</span>
 
 :: hold_up_story_2 [end-story auto-fade]
 <span class="typed">Brave Ishmael, who will defy the enemy.</span>

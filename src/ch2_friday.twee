@@ -22,11 +22,11 @@ Friday went by awfully slowly.
 * [[Play with friends]]
 
 :: Play with friends
-I spent the day with Bobby and Kitty and Joe and Ryan and Harriet, <<linkreplace "as usual" transition>>as usual, but we didn't have much fun<</linkreplace>>.
+I spent the day with Farooq and Aleena and Josiah and Banu and Korah, <<linkreplace "as usual" transition>>as usual, but we didn't have much fun<</linkreplace>>.
 <<display 'Play Options'>>
 
 :: Play by yourself
-I was feeling kind of tired of Bobby and Kitty and everybody, so I decided to play by myself. Of course, that meant my options were a bit limited. 
+I was feeling kind of tired of Farooq and Aleena and everybody, so I decided to play by myself. Of course, that meant my options were a bit limited. 
 <<display 'Solo Play Options'>>
 
 :: Solo Play Options [nobr]
@@ -40,7 +40,7 @@ I was feeling kind of tired of Bobby and Kitty and everybody, so I decided to pl
 
 /% TODO: have a more involved search through back alleys? %/
 :: Go look for your friends after all
-I decided I wasn't feeling so tired of Bobby and Kitty after all, and it didn't take me long to find them, along with the rest of the gang, in an alley that we called <<linkreplace "Kiss Kiss Lane" transition>>Kiss Kiss Lane (on account of that's where Kitty tried to kiss Joe one time)<</linkreplace>>.
+I decided I wasn't feeling so tired of Farooq and Aleena after all, and it didn't take me long to find them, along with the rest of the gang, in an alley that we called <<linkreplace "Kiss Kiss Lane" transition>>Kiss Kiss Lane (on account of that's where Aleena tried to kiss Josiah one time)<</linkreplace>>.
 <<display 'Play Options'>>
 
 :: Solo etching [nobr]
@@ -107,12 +107,12 @@ postdisplay.sketch = function(sketch) {
 
 :: Play ratalla [nobr]
 <<set $can_play_ratalla = false>>
-We got some rocks together and played ratalla for a while, but Joe had decided that ratalla was the boringest game in the world, and Harriet had sliced her shooting finger the day before, so she definitely couldn't play, she said. That left me and Bobby and Kitty and Ryan, and the game isn't really meant for four people.  
+We got some rocks together and played ratalla for a while, but Josiah had decided that ratalla was the boringest game in the world, and Korah had sliced her shooting finger the day before, so she definitely couldn't play, she said. That left me and Farooq and Aleena and Banu, and the game isn't really meant for four people.  
 
 <<if $good_at == 'ratalla'>>
-	I tried to suggest that we might get one or two of our kid brothers or sisters to play, but Bobby <<linkreplace "gave me the look when I said that." transition>>gave me the look when I said that. He's not nearly as good at ratalla as I am.<</linkreplace>>
+	I tried to suggest that we might get one or two of our kid brothers or sisters to play, but Farooq <<linkreplace "gave me the look when I said that." transition>>gave me the look when I said that. He's not nearly as good at ratalla as I am.<</linkreplace>>
 <<else>>
-	After a while Ryan suggested that we might get one or two of our kid brothers or sisters to play, but Bobby gave him the look when he said that, and I thought that it was a <<linkreplace "pretty silly idea myself." transition>>pretty silly idea myself. Not because I was bad at ratalla, or anything.<</linkreplace>>
+	After a while Banu suggested that we might get one or two of our kid brothers or sisters to play, but Farooq gave him the look when he said that, and I thought that it was a <<linkreplace "pretty silly idea myself." transition>>pretty silly idea myself. Not because I was bad at ratalla, or anything.<</linkreplace>>
 <</if>>
 
 <<display 'Play Options'>>
@@ -120,7 +120,7 @@ We got some rocks together and played ratalla for a while, but Joe had decided t
 :: Hang out [nobr]
 <<set $hang_out_times += 1>>
 <<if $hang_out_times == 1>>
-We stopped playing and just sat around for a bit, watching the flies crawl around on the dead carcass in front of Mr. Gumingway's shack. One of his goats had gotten infected with some kind of disease a while back and died suddenly. It was about half gone now, and consisted mainly of ribs and bloated intestines. 
+We stopped playing and just sat around for a bit, watching the flies crawl around on the dead carcass in front of Mr. Gafar's shack. One of his goats had gotten infected with some kind of disease a while back and died suddenly. It was about half gone now, and consisted mainly of ribs and bloated intestines. 
 
 <ul id="choices">
 	<li id="ch_examine_intestines"><<linkreplace "Examine intestines" transition>><<removeclass ".needs_examine_intestines" "invisible">>One of those intestines looks awfully bloated and round...<</linkreplace>></li>
@@ -135,7 +135,7 @@ We stopped playing and just sat around for a bit, watching the flies crawl aroun
 
 :: Etching contest [nobr]
 <<set $can_have_etching = false>>
-At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Bobby immediately scowled, and Kitty immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had been practicing a bit by myself<</if>>
+At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Farooq immediately scowled, and Aleena immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had been practicing a bit by myself<</if>>
 
 <<display 'Play Options'>>
 
