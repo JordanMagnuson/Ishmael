@@ -32,7 +32,7 @@ I was feeling kind of tired of Farooq and Aleena and everybody, so I decided to 
 :: Solo Play Options [nobr]
 <ul id="choices">
 	<<if $solo_can_play_tic_tac_toe>><li id="ch_play_tic_tac_toe">[[Play tic-tac-toe|Solo tic-tac-toe]]</li><</if>>
-	<<if $solo_can_play_ratalla>><li id="ch_play_ratalla"><<linkreplace "Play Ratalla" transition>><<set $solo_can_play_ratalla = false>>Well, that's not gonna work. <<if $good_at == 'ratalla'>>I <em>would</em> love to play some ratalla, though.<</if>><</linkreplace>></li><</if>>
+	<<if $solo_can_play_ratalla>><li id="ch_play_ratalla"><<linkreplace "Play ratalla" transition>><<set $solo_can_play_ratalla = false>>Well, that's not gonna work. <<if $good_at == 'ratalla'>>I <em>would</em> love to play some ratalla, though.<</if>><</linkreplace>></li><</if>>
 	<<if $solo_can_have_etching>><li id="ch_etching_contest">[[Draw in the dirt|Solo etching]]</li><</if>>
 	<li id="ch_look_for_friends">[[Go look for your friends after all]]</li>
 	<li id="ch_wait">[[Sit and wait|solo wait]]</li>
@@ -135,7 +135,7 @@ We stopped playing and just sat around for a bit, watching the flies crawl aroun
 
 :: Etching contest [nobr]
 <<set $can_have_etching = false>>
-At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Farooq immediately scowled, and Aleena immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had been practicing a bit by myself<</if>>
+At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Farooq immediately scowled, and Aleena immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had been practicing a bit by myself.<</if>>
 
 <<display 'Play Options'>>
 
