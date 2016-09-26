@@ -65,14 +65,15 @@ a[disabled] {
 }
 
 header .header-content .header-content-inner p{
-	font-size:.9em;
+	font-size:2.4rem;
+	font-weight: bold;
 }
 
 h1{
 	color:rgba(255,255,255,.7);
 }
 
-@media (min-width: 800px) {
+@media (min-height: 480px) {
 	.game_table {
 		margin-top:1.5rem;
 		width:30rem;
@@ -84,16 +85,28 @@ h1{
 		width: 9rem;
 		height: 9rem;
 	}
-
+/*
 	header .header-content .header-content-inner p{
 		font-size:2.4rem;
 		font-weight: bold;
 	}
+*/
 }
 
-@media (max-height: 500px) {
-	header .header-content .header-content-inner p{
-		display: none;
+
+/* Hide less important top text if we don't have room on screen */
+
+@media (max-height: 380px) {
+	header .header-content .header-content-inner p#begun {
+		display: none!important;
 	}
 }
 
+
+/*
+@media (max-height: 440px) {
+	header .header-content .header-content-inner p#starting_player_is {
+		display: none!important;
+	}
+}
+*/

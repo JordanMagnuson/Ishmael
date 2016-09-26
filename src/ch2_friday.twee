@@ -85,13 +85,13 @@ postdisplay.sketch = function(sketch) {
 
 :: Play tic-tac-toe [nobr tic-tac-toe]
 <<set $can_play_tic_tac_toe = false>>
-<iframe id="tictactoe" src="src/tictactoe/index.html" frameBorder="0" allowtransparency="true"></iframe>
+<iframe id="tictactoe" src="src/tictactoe/index.html" frameBorder="0" allowtransparency="true" scrolling="no"></iframe>
 
-[[This is getting awfully old|Play Options]]
+[[Tic-tac-toe was getting awfully old|Play Options]]
 
 :: Solo tic-tac-toe[nobr tic-tac-toe]
 <<set $solo_can_play_tic_tac_toe = false>>
-<iframe id="tictactoe" src="src/tictactoe/solo.html" frameBorder="0" allowtransparency="true"></iframe>
+<iframe id="tictactoe" src="src/tictactoe/solo.html" frameBorder="0" allowtransparency="true" scrolling="no"></iframe>
 
 [[That was fun|Solo Play Options]]
 
