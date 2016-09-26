@@ -88,13 +88,13 @@ function who_starts() { //Could this be written shorter?
     if (difficulty !== "human") {
         if (randomPlayer === 1) {
 			if (difficulty == "easy") {
-				app.startingPlayer = "Joe";
+				app.startingPlayer = "Josiah";
 			}
 			else if (difficulty == "intermediate") {
-				app.startingPlayer = "Kitty";
+				app.startingPlayer = "Aleena";
 			}
 			else if (difficulty == "AICheater") {
-				app.startingPlayer = "Bobby";
+				app.startingPlayer = "Farooq";
 			}
 			else {
 				app.startingPlayer = "Your opponent";
@@ -128,18 +128,18 @@ function changePlayer() {
 
 
 function changeStartingPlayer() {
-    if (app.startingPlayer == "Joe" || app.startingPlayer == "Kitty" || app.startingPlayer == "Bobby") {
+    if (app.startingPlayer == "Josiah" || app.startingPlayer == "Aleena" || app.startingPlayer == "Farooq") {
         app.startingPlayer = "You";
         app.currentPlayer = 'O';
     } else if (app.startingPlayer === "You" && difficulty !== "human") {
 		if (difficulty == "easy") {
-			app.startingPlayer = "Joe";
+			app.startingPlayer = "Josiah";
 		}
 		else if (difficulty == "intermediate") {
-			app.startingPlayer = "Kitty";
+			app.startingPlayer = "Aleena";
 		}
 		else if (difficulty == "AICheater") {
-			app.startingPlayer = "Bobby";
+			app.startingPlayer = "Farooq";
 		}
 		else {
 			app.startingPlayer = "Your opponent";
