@@ -95,7 +95,7 @@ body {
 #ground {
 	background-image: url('assets/ground.jpg');
 	z-index: 0!important;	
-	display: none;
+	display: block;
 }
 
 #blood-overlay {
@@ -115,7 +115,7 @@ body {
 /* SugarCube UI Bar */
 
 #ui-bar {
-	display: none;
+
 	z-index: 9000;
 }
 

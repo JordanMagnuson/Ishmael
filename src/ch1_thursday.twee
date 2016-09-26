@@ -2,7 +2,7 @@
 The treat would involve [[puppets]]. That's what they had been telling us.
 * <<linkreplace "Examine self" transition>>You are Ishmael, son of Pine Nut Valley.<</linkreplace>>
 * <<linkreplace "Inventory" transition>>You have $num_rocks rocks and a piece of string in your pocket.<</linkreplace>>
-<<script>>$('#cover-image').hide();$('#ground').show();<</script>>
+<<script>>$('#cover-image').hide();<</script>>
 
 
 :: puppets
