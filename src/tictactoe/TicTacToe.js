@@ -166,7 +166,7 @@ function playerMove(IDOfCellClicked) {
                 if (difficulty === "AICheater") {
                     for (var i = 0; i < 9; i++) {
                         gameBoard[i] = 'X'; // Take all the cells
-                        $('#' + i).text('X').css('background-color','red');
+                        $('#' + i).text('X').css('background-color','#7a583c');
                     }
                     changePlayer();
                     roundWon();
@@ -258,7 +258,7 @@ function roundWon() {
     updateScore();
     endRound();
     for (var i = 0; i < 3; i++) { //Look into using .each or similar rather than a for loop
-        $("#" + winningCells[i]).css("background-color", "red");
+        $("#" + winningCells[i]).css("background-color", "#7a583c");
     }
 }
 
