@@ -8,24 +8,21 @@ html,
 body {
     width: 100%;
     height: 100%;
+	background-color: transparent;
 }
 
 html {
-  background: url(images/bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
 }
 
 
 body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
+    font-family: MyTyped,Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
+	font-weight: bold;
 }
 
 hr {
     max-width: 50px;
-    border-color: #f05f40;
+    border-color: black;
     border-width: 3px;
 }
 
@@ -51,7 +48,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: MyTyped,Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
+	font-weight: bold;
 }
 
 p {
@@ -187,13 +185,7 @@ header {
     min-height: auto;
     text-align: center;
     padding-top:5px;
-    color: #fff;
-    background-image: url(../img/header.jpg);
-    background-position: center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    color: black;
 }
 
 header .header-content {
@@ -218,7 +210,7 @@ header .header-content .header-content-inner p {
     margin-bottom: 50px;
     font-size: 16px;
     font-weight: 300;
-    color: rgba(255,255,255,.7);
+    color: black;
 }
 
 @media(min-width:768px) {
@@ -451,7 +443,7 @@ fieldset[disabled] .btn-primary.active {
     border: 0;
     border-radius: 300px;
     text-transform: uppercase;
-    font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
+    font-family: MyTyped,Lucida Sans Typewriter,Lucida Console,monaco,Bitstream Vera Sans Mono,monospace;
     font-weight: 700;
 }
 
@@ -483,4 +475,40 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #222;
+}
+
+
+/* HACKS / ADDITIONS */
+/*
+#bottom-buttons {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+
+#bottom-buttons a {
+	padding: 0;
+}
+*/
+
+a#next_round, a#home, a#easy, a#intermediate, a#AICheater, a#human {
+	border-radius: 0;
+	border: none;
+	background-color: transparent!important;
+	color: black;
+	border-bottom: 1px dashed black;
+	padding: inherit;
+    font-size: 2.4rem;
+    margin: 0 0.5em;
+	text-transform: none;
+}
+
+a#next_round:hover, a#home:hover, a#easy:hover, a#intermediate:hover, a#AICheater:hover, a#human:hover {
+	color: #810000;
+	border-bottom: 1px solid #810000;
+}
+
+a#next_round[disabled],
+a#home[disabled] {
+	display: none!important;
 }
