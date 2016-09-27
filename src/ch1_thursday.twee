@@ -19,23 +19,22 @@ I was excited, because I had never seen a real puppet show before.
 [[What did we do for fun?]]
 
 :: What did we do for fun? [nobr]
-Most of the time we played in the dirt for fun: tic-tac-toe, 
+Most of the time we played in the dirt for fun: tic-tac-toe, hopscotch, ratalla... sometimes we just [[etched figures]] in the sand.
 
-<<link "hopscotch">><<set $good_at = 'hopscotch'>><<addclass "#good_at" "fadein">><<replace "#good_at">>I was pretty good at hopscotch, but terrible at ratalla.<</replace>><</link>>, 
+<ul id="choices">
+	<li id="ch_practice_hopscotch"><<linkreplace "Practice hopscotch" transition>><<remove "#ch_practice_ratalla">><<set $good_at = 'hopscotch'>>Your hopscotch skills have leveled up: you are now very good at hopscotch. Your ratalla skills have declined.<</linkreplace>></li>
 
-<<link "ratalla">><<set $good_at = 'ratalla'>><<addclass "#good_at" "fadein">><<replace "#good_at">>I was pretty good at ratalla, but terrible at hopscotch.<</replace>><</link>>... 
+	<li id="ch_practice_ratalla"><<linkreplace "Practice ratalla" transition>><<remove "#ch_practice_hopscotch">><<set $good_at = 'ratalla'>>Your ratalla skills have leveled up: you are now very good at ratalla. Your hopscotch skills have declined.<</linkreplace>></li>
 
-sometimes we just [[etched figures]] in the sand.
-
-<br><br><span id="good_at"></span>
+</ul>
 
 :: etched figures
 I was officially the master artist of our neighborhood, because I had beaten [[Farooq]] in our last two etching contests. 
 
 :: Farooq
 Farooq, son of Farooq, son of Farooq. He had won seven straight contests in a row before I put an end to his streak. //He// maintained that the title of Master Artist was still up in the air, because Aleena had been sick on the day of our last tournament, which had [[tipped the votes]] in my favor. 
-* <<linkreplace "Examine Farooq" transition>>What a jerk.<</linkreplace>>
-* <<linkreplace "Examine Aleena" transition>>Aleena liked Farooq until <<linkreplace "last week." transition>>last week: the week The Bee happened.<</linkreplace>><</linkreplace>>
+* <<linkreplace "Examine Farooq" transition>>Farooq's kind of a jerk, and a <<linkreplace "hopeless cheat." transition>>hopeless cheat (especially at tic-tac-toe).<</linkreplace>><</linkreplace>>
+* <<linkreplace "Examine Aleena" transition>>Aleena liked Farooq until last week.<</linkreplace>>
 
 :: tipped the votes [nobr]
 <<set $num_rocks = 2>>
@@ -62,8 +61,8 @@ Anyway, that was Thursday of the previous week, and we hadn't had any etching co
 
 :: promise
 Father thought so too, apparently, because when I returned home that evening he was beaming. It was going to be great, he said, this get-together on Saturday: our spirits would unite again, and we'd remember who we were. It was important to have hope, he said, and we had to fuel it every opportunity we got. 
-* <<linkreplace "Examine Father" transition>>Father was beaming.<</linkreplace>>
-* <<linkreplace "Ask father about hope" transition>>"Where there is ruin, there is hope for a treasure," he recited in a booming voice.<</linkreplace>>
+* <<linkreplace "Examine Father" transition>>Father is beaming.<</linkreplace>>
+* <<linkreplace "Ask father about hope" transition>>"Where there is ruin, there is hope for a treasure," he recites in a booming voice.<</linkreplace>>
 [[What about the puppet show?]]
 
 :: What about the puppet show?
@@ -122,7 +121,7 @@ Then he told Mother to give me more rice because I needed to grow up strong like
 [[But there wasn't any more rice]]
 
 :: Look at Mother
-Mother smiled at me then, but I thought she seemed sad. My brothers and sisters were pointing at me and making fun, but Mother put her hand on my face and spoke softly: "You're a strong boy, Ishmael," she said. "Here, have some more rice."
+Mother smiled at me then, but I thought she seemed sad. My brothers and sisters started pointing at me and making fun, but Mother put her hand on my face and spoke softly: "You're a strong boy, Ishmael," she said. "Here, have some more rice."
 
 [[But there wasn't any more rice]]
 
