@@ -40,7 +40,7 @@ I was feeling kind of tired of Farooq and Aleena and everybody, so I decided to 
 
 /% TODO: have a more involved search through back alleys? %/
 :: Go look for your friends after all
-I decided I wasn't feeling so tired of Farooq and Aleena after all, and it didn't take me long to find them, along with the rest of the gang, in an alley that we called <<linkreplace "Kiss Kiss Lane" transition>>Kiss Kiss Lane (on account of that's where Aleena tried to kiss Josiah one time)<</linkreplace>>.
+I decided I wasn't feeling so tired of Farooq and Aleena after all, and it didn't take me long to find them, along with the rest of the gang, in an alley that we called <<linkreplace "Kiss Kiss Lane." transition>>Kiss Kiss Lane (on account of that's where Aleena tried to kiss Banu one time).<</linkreplace>>
 <<display 'Play Options'>>
 
 :: Solo etching [nobr]
@@ -112,7 +112,7 @@ We got some rocks together and played ratalla for a while, but Josiah had decide
 <<if $good_at == 'ratalla'>>
 	I tried to suggest that we might get one or two of our kid brothers or sisters to play, but Farooq <<linkreplace "gave me the look when I said that." transition>>gave me the look when I said that. He's not nearly as good at ratalla as I am.<</linkreplace>>
 <<else>>
-	After a while Banu suggested that we might get one or two of our kid brothers or sisters to play, but Farooq gave him the look when he said that, and I thought that it was a <<linkreplace "pretty silly idea myself." transition>>pretty silly idea myself (not because I was bad at ratalla, or anything).<</linkreplace>>
+	After a while Banu suggested that we might get one or two of our kid brothers or sisters to play, but Farooq gave him the look when he said that, and I thought that it was a <<linkreplace "pretty silly idea myself." transition>>pretty silly idea myself (not because I'm bad at ratalla, or anything).<</linkreplace>>
 <</if>>
 
 <<display 'Play Options'>>
