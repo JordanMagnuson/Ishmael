@@ -265,13 +265,8 @@ var sndHurtArray = Array(sndHurt01, sndHurt02, sndHurt03, sndHurt04, sndHurt05,s
 /*********************************************************************
  * PRELOAD IMAGES
  *********************************************************************/
-// Add ground.
-// TODO: Embed this rather than preloading, like we do for image cover, so that it is available immediately on game load.
-$('body').prepend('<div class="preload-image" id="preload-image-ground" style="background-image: url(assets/ground.jpg)"></div>');
-
 // Add the blood overlay.
 $('body').prepend('<div class="preload-image" id="preload-image-blood-overlay" style="background-image: url(assets/a-necessary-evil_4614659778_a93bef3820_o.jpg)"></div>');
-
 
 // Puppets
 window.puppetImageArray = Array(

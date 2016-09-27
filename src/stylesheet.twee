@@ -93,7 +93,7 @@ body {
 }
 
 #ground {
-	background-image: url('assets/ground.jpg');
+	background-image: [img[ground]];
 	z-index: 0!important;	
 	display: block;
 }
