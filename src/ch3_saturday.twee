@@ -60,7 +60,7 @@ We paraded through the streets for a while, just hollering and waving our flags 
 postdisplay.passageSetup = function(passageSetup) {
 	if (window.sndCelebration.playing()) {
 		var currentVol1 = window.sndCelebration.volume();
-		window.sndCelebration.fade(currentVol1, 0, 6000);
+		window.sndCelebration.fade(currentVol1, 0, 7000);
 	} 
 
 	if (window.sndHollering.playing()) {
@@ -73,6 +73,10 @@ postdisplay.passageSetup = function(passageSetup) {
 		window.sndMachinegunLoop.fade(currentVol3, 0, 1000);
 	} 	
 	window.window.sndShush.play();
+	if (!window.sndBackgroundChatter03.playing()) {
+		window.sndBackgroundChatter03.play();
+		window.sndBackgroundChatter03.fade(1, 0, 30000);
+	} 	
 	delete postdisplay[passageSetup]
 }		
 <</script>>
@@ -84,7 +88,14 @@ Then one of the soldiers raised his arms and declared that they had a special tr
 	$("#puppetsheet").slideDown(5000);
 	if (!window.sndChildrenCheering.playing()) {
 		window.sndChildrenCheering.play();
+	} 
+	if (!window.sndBackgroundChatter01.playing()) {
+		window.sndBackgroundChatter01.play();
 	} 	
+	if (!window.sndBackgroundChatter02.playing()) {
+		window.sndBackgroundChatter02.play();
+		window.sndBackgroundChatter02.fade(0.5, 0, 15000);
+	} 									
 <</script>>
 
 They draped a sheet over a wooden beam suspended between two clotheslines, and the show [[began|puppet_1]]. 
@@ -134,7 +145,9 @@ Now Ishmael, above all else, was a brave boy, and he determined that the purpose
 :: puppet_8 [nobr]
 <<script>>
 	$("#puppetsheet").slideUp(5000);
-	$("#puppetbg-container").animate({ top: '-100%'}, 5000, function() { $(this).remove(); })
+	$("#puppetbg-container").animate({ top: '-100%'}, 5000, function() { $(this).remove(); });
+	window.sndBackgroundMurmur.play();
+	window.sndBackgroundMurmur.volume(0.7);
 <</script>>
 
 
@@ -149,13 +162,17 @@ postdisplay.passageSetup = function(passageSetup) {
 	window.sndShouting.stop();
 	window.sndCelebration.stop();
 	window.sndMachinegunLoop.stop();
+
+	window.sndBackgroundChatter01.stop();
+	window.sndBackgroundChatter02.stop();
+	window.sndBackgroundChatter03.stop();
+	window.sndBackgroundMurmur.fade(0.8, 0, 15000);
+
 	if (!window.sndShouting.playing()) {
 		window.sndShouting.play();
-		window.sndShouting.fade(1, 0.5, 1000);
 	} 
 	if (!window.sndHollering.playing()) {
-		window.sndHollering.play();
-		window.sndHollering.fade(1, 0.5, 1000);		
+		window.sndHollering.play();	
 	} 	
 	setTimeout(function() { 
 		if (!window.sndCelebration.playing()) {

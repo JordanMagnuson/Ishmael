@@ -143,6 +143,30 @@ window.sndMachinegunLoop = new Howl({
 	volume: 0.5
 });
 
+window.sndBackgroundChatter01 = new Howl({
+	src: ['assets/sounds/background_chatter_01_171986__klankbeeld__school-is-out-kids-121218-00.mp3'],
+	loop: true,
+	volume: 0.5
+});
+
+window.sndBackgroundChatter02 = new Howl({
+	src: ['assets/sounds/background_chatter_02_7209__corsica-s__people-sitting-by-fire.mp3'],
+	loop: true,
+	volume: 0.5
+});
+
+window.sndBackgroundChatter03 = new Howl({
+	src: ['assets/sounds/background_chatter_03_260122__mentalsanityoff__indoor-adult-murmur-medium-group.mp3'],
+	loop: true,
+	volume: 1
+});
+
+window.sndBackgroundMurmur= new Howl({
+	src: ['assets/sounds/background_murmur_238980__qubodup__crowd-talk-loop.mp3'],
+	loop: true,
+	volume: 0
+});
+
 window.sndBreathing = new Howl({
 	src: ['assets/sounds/54776__bevangoldswain__heavy-breathing-off-mic-loop.mp3'],
 	loop: true,
@@ -607,6 +631,10 @@ window.shuffle = function(a) {
     }
 }
 
+/**
+ * Utility function which attempts to clear all timeout callbacks.
+ * (Note that timeouts to be cleared must be registered in allTimeouts array)
+ */
 window.clearAllTimeouts = function() {
 	console.log('clearing timeouts');
 	console.log(allTimeouts);
@@ -615,6 +643,30 @@ window.clearAllTimeouts = function() {
 	}	
 }
 
+/**
+ * Checks to see if a given string starts with a vowel.
+ */
 window.startsWithVowel = function(x) {
     return ['a', 'e', 'i', 'o', 'u'].indexOf(x.charAt(0).toLowerCase()) !== -1
 }
+
+/**
+ * Plays the murmuring crowd sound for a given duration, fading in to maxVol voluem.
+ */
+window.playMurmur = function(duration, maxVol) {
+	try
+	{
+
+		var fadeDuration = duration / 2;
+		var currentVol = window.sndBackgroundMurmur.volume();
+		if (!window.sndBackgroundMurmur.playing()) {
+			window.sndBackgroundMurmur.play();
+		}
+		window.sndBackgroundMurmur.fade(currentVol, maxVol, fadeDuration);	
+		setTimeout(function() { 
+			window.sndBackgroundMurmur.fade(maxVol, 0.1, fadeDuration);	
+		}, fadeDuration);		
+	}
+	catch(e) {
+	}
+};
