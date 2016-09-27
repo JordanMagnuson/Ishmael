@@ -116,7 +116,7 @@ Ishmael was disappointed to hear what his father had to tell him, but he was sto
 :: puppet_5 [nobr puppet-show auto-advance]
 <<set $next_passage = 'puppet_6'>>
 <span class="typed">
-But one day the enemy came with a bulldozer and told Ishmael's family that they would have to leave their home, because the land was no longer theirs. Ishmael's father asked how this could be, since their family had deeds that went back three-hundred years. The enemy would not answer him, and only asked that they step aside so that the house could be bulldozed. Ishmael's mother would not step aside, and so they bulldozed her into the ground with the house.
+But one day the enemy came with a bulldozer and told Ishmael's family that they would have to leave their home, because the land was no longer theirs. Ishmael's father asked how this could be, since their family had deeds that went back three hundred years. The enemy would not answer him, and only asked that they step aside so that the house could be bulldozed. Ishmael's mother would not step aside, and so they bulldozed her into the ground with the house.
 </span>
 
 :: puppet_6 [nobr puppet-show auto-advance]

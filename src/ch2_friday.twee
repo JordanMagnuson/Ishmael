@@ -124,7 +124,7 @@ We stopped playing and just sat around for a bit, watching the flies crawl aroun
 
 <ul id="choices">
 	<li id="ch_examine_intestines"><<linkreplace "Examine intestines" transition>><<removeclass ".needs_examine_intestines" "invisible">>One of those intestines looks awfully bloated and round...<</linkreplace>></li>
-	<li id="ch_play_kickball" class="needs_examine_intestines invisible fadein"><<link [[Play kickball]]>><<set $has_ball = true>><</link>></li>
+	<li id="ch_play_kickball" class="needs_examine_intestines invisible fadein"><<link [[Play kickball?|Play kickball]]>><<set $has_ball = true>><</link>></li>
 </ul>
 
 <<else>>
@@ -135,7 +135,7 @@ We stopped playing and just sat around for a bit, watching the flies crawl aroun
 
 :: Etching contest [nobr]
 <<set $can_have_etching = false>>
-At one point Joe asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Farooq immediately scowled, and Aleena immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had been practicing a bit by myself.<</if>>
+At one point Josiah asked if we might not have an etching contest, and everybody immediately thought of what happened last Thursday, and I immediately thought about my balls, and Farooq immediately scowled, and Aleena immediately rolled her eyes. <<if !$solo_can_have_etching>>I decided not to tell anyone that I had been practicing a bit by myself.<</if>>
 
 <<display 'Play Options'>>
 
