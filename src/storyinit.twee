@@ -10,6 +10,9 @@
 
 <<set $examined_self = false>>
 <<set $checked_inventory = false>>
+<<set $farooq_name_count = 0>>
+<<set $farooq_last_name = ''>>
+<<set $farooq_all_names = ''>>
 
 /% Friday variables (playing) %/
 <<set $can_play_tic_tac_toe = true>>

@@ -53,8 +53,47 @@ I told Farooq that was bull, that Aleena would have voted for me because she was
 
 :: Explain the rules to Farooq
 I tried to explain the rules to Farooq, but he just kicked me in the balls and then ran off down the alley yelling about how I was a little donkey’s fart.
+* [[Yell back at Farooq]]
+* [[Be the bigger man|Anyway]]
 
-[[Anyway]]
+:: Yell back at Farooq [nobr]
+<<set $farooq_name_count += 1>>
+
+<<if $farooq_last_name == ''>>
+	Oh yeah, Farooq? Well you're a <<textbox "$farooq_last_name" "" "Yell back at Farooq" autofocus>>!
+<<else>>
+	<<if $farooq_all_names == ''>>
+		<<if startsWithVowel($farooq_last_name)>>
+			<<set $farooq_all_names = ' an ' + $farooq_last_name>>
+		<<else>>
+			<<set $farooq_all_names = 'a ' + $farooq_last_name>>
+		<</if>>	
+	<<else>>
+		<<if startsWithVowel($farooq_last_name)>>
+			<<set $farooq_all_names = $farooq_all_names + ' and an ' + $farooq_last_name>>
+		<<else>>
+			<<set $farooq_all_names = $farooq_all_names + ' and a ' + $farooq_last_name>>
+		<</if>>
+	<</if>>
+	Oh yeah, Farooq? Well you're <<print $farooq_all_names>> and a <<textbox "$farooq_last_name" "" "Yell back at Farooq" autofocus>><span id="exclamations"></span>
+
+	<br><br>
+
+	<<if $farooq_name_count < 4>>
+		[[That felt good|Anyway]]	
+	<<elseif $farooq_name_count < 10>>
+		[[Okay, that's probably enough|Anyway]]		
+	<<else>>
+		[[End the madness|Anyway]]	
+	<</if>>
+<</if>>
+
+<<script>>
+postdisplay.addExclamations = function(addExclamations) {
+	$('#exclamations').text(Array(State.variables.farooq_name_count + 1).join("!"));
+	delete postdisplay[addExclamations]
+}
+<</script>> 
 
 :: Anyway
 Anyway, that was Thursday of the previous week, and we hadn't had any etching contests since then; tic-tac-toe was getting awfully old, so this idea of a puppet show held real [[promise]]. 

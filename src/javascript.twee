@@ -614,3 +614,7 @@ window.clearAllTimeouts = function() {
 	  window.clearTimeout(allTimeouts[i]);
 	}	
 }
+
+window.startsWithVowel = function(x) {
+    return ['a', 'e', 'i', 'o', 'u'].indexOf(x.charAt(0).toLowerCase()) !== -1
+}
