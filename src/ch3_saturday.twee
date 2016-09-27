@@ -232,24 +232,24 @@ postdisplay.passageSetup = function(passageSetup) {
 		if (!window.sndCelebration.playing()) {
 			window.sndCelebration.volume(0);
 			window.sndCelebration.play();
-			window.sndCelebration.fade(0, 0.1, 2000);
+			window.sndCelebration.fade(0, 0.1, 3000);
 		}
 		if (!window.sndHollering.playing()) {
 			window.sndHollering.volume(0);
 			window.sndHollering.play();
-			window.sndHollering.fade(0, 0.1, 2000);
+			window.sndHollering.fade(0, 0.1, 3000);
 		}
 		if (!window.sndShouting.playing()) {
 			window.sndShouting.volume(0);
 			window.sndShouting.play();
-			window.sndShouting.fade(0, 0.1, 2000);
+			window.sndShouting.fade(0, 0.1, 3000);
 		}
 		if (!window.sndMachinegunLoop.playing()) {
 			window.sndMachinegunLoop.volume(0);
 			window.sndMachinegunLoop.play();
-			window.sndMachinegunLoop.fade(0, 0.1, 2000);
+			window.sndMachinegunLoop.fade(0, 0.1, 3000);
 		}		
-	}, 5000);	
+	}, 4000);	
 
 	if (!window.sndBreathing.playing()) {
 		window.sndBreathing.play();

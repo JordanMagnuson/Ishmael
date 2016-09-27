@@ -122,7 +122,7 @@ window.sndHollering = new Howl({
 window.sndShouting = new Howl({
 	src: ['assets/sounds/101871__dickblox__crowd-shouting.mp3'],
 	loop: true,
-	volume: 1
+	volume: 0.8
 });
 
 window.sndChildrenCheering = new Howl({
@@ -182,7 +182,7 @@ window.sndHeartbeat = new Howl({
 window.sndWar = new Howl({
 	src: ['assets/sounds/96533__omar-alvarado__modern-day-war_01.mp3'],
 	loop: false,
-	volume: 0.6
+	volume: 0.4
 });
 
 window.sndExplosion = new Howl({
@@ -434,7 +434,7 @@ window.holdGunUp = function(element) {
 	// Increase breathing and heartbeat volume.
     var currentVol = sndBreathing.volume();
     currentVol += .1;
-    if (currentVol <= 1)
+    if (currentVol <= .8)
     	sndBreathing.volume(currentVol);
     var currentVol = sndHeartbeat.volume();
     currentVol += .1;
@@ -528,7 +528,7 @@ window.putGunDown = function(element) {
 	// Increase breathing and heartbeat volume.
     var currentVol = window.sndBreathing.volume();
     currentVol += .1;
-    if (currentVol <= 1)
+    if (currentVol <= .8)
     	window.sndBreathing.volume(currentVol);
     var currentVol = sndHeartbeat.volume();
     currentVol += .1;
