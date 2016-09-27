@@ -20,12 +20,14 @@
  *********************************************************************/
 
 /* Embedded typewriter font. */
+/*
 @font-face {
     font-family: 'MyTyped';
     src: url('assets/SpecialElite.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
+*/
 
 html {
 	height: 100%;
