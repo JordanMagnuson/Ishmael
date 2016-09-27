@@ -115,7 +115,7 @@ body {
 /* SugarCube UI Bar */
 
 #ui-bar {
-
+	display: none;
 	z-index: 9000;
 }
 
@@ -441,6 +441,7 @@ body {
 	font-size: 6vh;
 	font-weight: bold;
 	color: black;
+	/*text-shadow: 0 -200px 10px black;*/
 }
 
 #the-choice .choice {
@@ -467,6 +468,20 @@ body {
 	left: 0;
 	background-color: transparent;
 	z-index: 500;
+}
+
+#gun-shadow {
+	position: absolute;
+	width: 100%;
+	height: auto;
+	bottom: 0%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	background-color: transparent;
+	z-index: 100;
+	opacity: 0.7;
+	width: 50%;
 }
 
 .passage.end-story {

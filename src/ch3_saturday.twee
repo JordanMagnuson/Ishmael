@@ -60,12 +60,12 @@ We paraded through the streets for a while, just hollering and waving our flags 
 postdisplay.passageSetup = function(passageSetup) {
 	if (window.sndCelebration.playing()) {
 		var currentVol1 = window.sndCelebration.volume();
-		window.sndCelebration.fade(currentVol1, 0, 7000);
+		window.sndCelebration.fade(currentVol1, 0, 10000);
 	} 
 
 	if (window.sndHollering.playing()) {
 		var currentVol2 = window.sndHollering.volume();
-		window.sndHollering.fade(currentVol2, 0, 3000);
+		window.sndHollering.fade(currentVol2, 0, 10000);
 	} 
 
 	if (window.sndMachinegunLoop.playing()) {
@@ -272,6 +272,7 @@ postdisplay.passageSetup = function(passageSetup) {
 		$('body').append('<div id="the-choice" class="macro-shake shake-block"><span class="choice clickable" id="hold-up">Hold it up</span><br><br><span class="choice clickable" id="put-down">Put it down</span></div>');
 
 		$('body').append('<img class="macro-shake shake-block" id="gun" src="assets/gun.png" />');
+		$('body').append('<img class="macro-shake shake-block" id="gun-shadow" src="assets/gun_shadow.png" />');
 	    $('#hold-up.clickable').click(function() {
 	    	holdGunUp(this);		    
 	    });	    		

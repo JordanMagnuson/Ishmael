@@ -191,6 +191,7 @@ window.sndExplosion = new Howl({
 	volume: 1
 });
 
+/**
 window.sndScream = new Howl({
 	src: ['assets/sounds/HumanScream_DIGII07-25-05.mp3'],
 	loop: false,
@@ -258,6 +259,8 @@ window.sndHurt10 = new Howl({
 });
 
 var sndHurtArray = Array(sndHurt01, sndHurt02, sndHurt03, sndHurt04, sndHurt05,sndHurt06, sndHurt07, sndHurt08, sndHurt09, sndHurt10);
+**/
+
 
 /*********************************************************************
  * PRELOAD IMAGES
@@ -269,6 +272,25 @@ $('body').prepend('<div class="preload-image" id="preload-image-ground" style="b
 // Add the blood overlay.
 $('body').prepend('<div class="preload-image" id="preload-image-blood-overlay" style="background-image: url(assets/a-necessary-evil_4614659778_a93bef3820_o.jpg)"></div>');
 
+
+// Puppets
+window.puppetImageArray = Array(
+	"puppet_boy.png",
+	"puppet_boy_rock.png",
+	"puppet_father.png",
+	"puppet_mother.png",
+	"puppet_house.png",
+	"puppet_hospital.png",
+	"puppet_wire.png",
+	"puppet_soldier.png",
+	"puppet_soldier_shooting.png",
+	"puppet_bulldozer.png",
+	"puppet_question.png"
+);
+for(var i = puppetImageArray.length - 1; i >= 0; i--){
+	var preloadImage = puppetImageArray[i];
+	$('body').prepend('<div class="preload-image" id="preload-puppet-image-' + i + '" style="background-image: url(assets/photos/violence/' + preloadImage + '"></div>');
+}
 
 // Violent images.
 window.violentImageArray = Array(
@@ -287,7 +309,7 @@ window.violentImageArray = Array(
 );	
 for(var i = violentImageArray.length - 1; i >= 0; i--){
 	var preloadImage = violentImageArray[i];
-	$('body').prepend('<div class="preload-image" id="preload-image-' + i + '" style="background-image: url(assets/photos/violence/' + preloadImage + '"></div>');
+	$('body').prepend('<div class="preload-image" id="preload-violent-image-' + i + '" style="background-image: url(assets/photos/violence/' + preloadImage + '"></div>');
 }
 
 // Face images.
@@ -305,7 +327,7 @@ window.facesImageArray = Array(
 );
 for(var i = facesImageArray.length - 1; i >= 0; i--){
 	var preloadImage = facesImageArray[i];
-	$('body').prepend('<div class="preload-image" id="preload-image-' + i + '" style="background-image: url(assets/photos/faces/' + preloadImage + '"></div>');
+	$('body').prepend('<div class="preload-image" id="preload-faces-image-' + i + '" style="background-image: url(assets/photos/faces/' + preloadImage + '"></div>');
 }
 
 
@@ -325,9 +347,10 @@ window.holdGunUp = function(element) {
 	if (upDownCount >= 8) {
 		$('#the-choice').remove();
 		$('#gun').remove();
+		$('#gun-shadow').remove();
 		sndWar.stop();
 		window.sndBreathing.stop();
-		window.sndScream.play();
+		//window.sndScream.play();
 		window.sndHeartbeat.stop();
 		window.sndCelebration.stop();
 		window.sndShouting.stop();
@@ -362,6 +385,7 @@ window.holdGunUp = function(element) {
 	// Move the the choice text and gun up (use % from top, so that movement is relative to window height)
 	$('#the-choice').animate({ top : "-=5%" }, 500, 'swing');
 	$('#gun').animate({ top : "-=12%" }, 500, 'swing');	
+	$('#gun-shadow').animate({ top : "-=8%" }, 500, 'swing');	
 
 	// Show an image.
 	if (upDownCount >= 4) {
@@ -446,12 +470,13 @@ window.putGunDown = function(element) {
 	// Move the whole passage down (use % from top, so that movement is relative to window height).
 	if (upDownCount > -7) {
 		$('#the-choice').animate({ top : "+=5%" }, 500, 'swing');
-		$('#gun').animate({ top : "+=12%" }, 500, 'swing');			
+		$('#gun').animate({ top : "+=12%" }, 500, 'swing');		
+		$('#gun-shadow').animate({ top : "+=8%" }, 500, 'swing');		
 	}	
 	// Last stop: won't go any further.
 	else {
 		// Hurt sound
-		playRandomHurtSound();
+		// playRandomHurtSound();
 
 		// Pop back up.
 		$('#the-choice').animate({ top : "+=5%" }, 750, 'swing').animate({ top : "-=5%" }, 250, 'swing')
