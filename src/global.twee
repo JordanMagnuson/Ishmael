@@ -27,6 +27,8 @@ WARNING: contains some depictions of violence.
 	</div>	
 </div>
 
+<div id="version">version $version</div>
+
 
 :: inventory
 I have $num_rocks rocks, a piece of string, and some imaginary rules in my pocket.

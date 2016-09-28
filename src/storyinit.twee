@@ -4,6 +4,8 @@
  % -------------------------------------------------------------------------------------%/
 
 :: StoryInit
+<<set $version = 'alpha 2'>>
+
 <<set $good_at = 'ratalla'>>
 <<set $num_rocks = 2>>
 <<set $next_passage = 'ch2_friday'>>
