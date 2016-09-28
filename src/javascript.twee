@@ -503,7 +503,8 @@ window.putGunDown = function(element) {
 		// playRandomHurtSound();
 
 		// Pop back up.
-		$('#the-choice').animate({ top : "+=5%" }, 750, 'swing').animate({ top : "-=5%" }, 250, 'swing')
+		$('#the-choice').animate({ top : "+=5%" }, 750, 'swing').animate({ top : "-=5%" }, 250, 'swing');
+		$('#gun-shadow').animate({ top : "+=5%" }, 750, 'swing').animate({ top : "-=5%" }, 250, 'swing');
 		upDownCount += 1;
 
 		// Show a random end sentence.

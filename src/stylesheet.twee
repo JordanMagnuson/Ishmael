@@ -558,7 +558,7 @@ a.disabled {
 	position: absolute;
 	width: 100%;
 	height: auto;
-	bottom: -100%;
+	bottom: -90%;
 	left: 0;
 	background-color: transparent;
 	z-index: 500;
@@ -568,7 +568,7 @@ a.disabled {
 	position: absolute;
 	width: 100%;
 	height: auto;
-	bottom: 0%;
+	bottom: 4%;
 	left: 0;
 	right: 0;
 	margin: auto;
