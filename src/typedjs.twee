@@ -370,7 +370,7 @@
 						$("#puppet-mother").animate({ right : "-15%" }, 1000, 'swing');
 					}	
 					if (substr.match("^ground")) {			
-						window.sndBackgroundMurmur.fade(0.1, 0.4, 1000);
+						window.sndBackgroundMurmur.fade(0.1, 0.3, 1000);
 
 						// Animate the bulldozer bulldozing mother and house.
 						$("#puppet-bulldozer")	.animate({ right : "-30%" }, 1000, 'swing')
@@ -409,7 +409,7 @@
 				        $("#puppet-boy-rock").css("margin-bottom", "-10%");
 					}	
 					if (substr.match("^die")) {
-						window.sndBackgroundMurmur.fade(0.4, 0.6, 1000);
+						window.sndBackgroundMurmur.fade(0.3, 0.4, 1000);
 				        $("#puppet-boy-rock").fadeOut(3000);
 					}																									
 				}																														
