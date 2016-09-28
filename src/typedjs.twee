@@ -64,7 +64,8 @@
 		                		$('.passage').fadeOut(10000);
 		                	}, 5000);	
 		                	setTimeout(function() { 
-		                		State.restart();
+		                		initializeStory();
+		                		State.play('title');
 		                	}, 16000);				                									
 						}			                    
                     	//if (tags().contains('end-story')) {

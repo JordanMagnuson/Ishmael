@@ -18,7 +18,38 @@ WARNING: contains some depictions of violence.
 </div>
 
 :: title [nobr]
+/% Initialize variables.%/
+<<set $version = 'alpha 2'>>
+
+<<set $hopscotch_level = 0>>
+<<set $ratalla_level = 0>>
+
+<<set $num_rocks = 2>>
+<<set $next_passage = 'ch2_friday'>>
+
+<<set $examined_self = false>>
+<<set $checked_inventory = false>>
+<<set $farooq_name_count = 0>>
+<<set $farooq_last_name = ''>>
+<<set $farooq_all_names = ''>>
+
+/% Friday variables (playing) %/
+<<set $can_play_tic_tac_toe = true>>
+<<set $can_play_hopscotch = true>>
+<<set $can_play_ratalla = true>>
+<<set $can_play_kickball = true>>
+<<set $can_have_etching = true>>
+<<set $has_ball = false>>
+<<set $hang_out_times = 0>>
+
+<<set $solo_wait = 0>>
+<<set $solo_can_play_tic_tac_toe = true>>
+<<set $solo_can_have_etching = true>>
+<<set $solo_can_practice_hopscotch = true>>
+<<set $solo_can_practice_ratalla = true>>
+
 <<script>>
+	initializeStory();
 	$('#cover-image').show();
 	$('#fade-out').show().fadeOut(3000);
 	sndTest.stop();
