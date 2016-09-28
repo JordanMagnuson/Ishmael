@@ -70,21 +70,25 @@ That's not a verb I recognize.
 <div class="waiting"></div>
 <<script>>
 	var waitTime = 18000;
+
 	var halfTime = waitTime / 2;
-	var sunsetOutTime = waitTime / 3;
-	var nightInTime = waitTime / 3;
-	var nightOutTime = waitTime / 3;
+	var quarterTime = waitTime / 6;
+
 	if (State.variables['next_passage']) {
 		setTimeout(function() { 
 			State.play(State.variables['next_passage']);
 		}, waitTime);	
 	}
-	$('#sunset-overlay').stop().fadeTo(sunsetOutTime, 0);
-	$('#night-overlay').stop().fadeTo(sunsetOutTime, 1);
+	$('#sunset-overlay').stop().fadeTo(quarterTime, 0);
+	$('#night-overlay').stop().fadeTo(quarterTime, 1);
 
 	$('#fade-out').stop().fadeTo(halfTime, 1, function() {
 		$('#night-overlay').hide();
+		$('#sunrise-overlay').stop().show().css('opacity', 1);
     	$('#fade-out').stop().fadeTo(halfTime, 0);
+		setTimeout(function() { 
+    		$('#sunrise-overlay').fadeTo(quarterTime, 0);
+		}, halfTime - quarterTime);	    	
   	}); 	
 <</script>>
 

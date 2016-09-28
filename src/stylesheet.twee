@@ -95,11 +95,26 @@ body {
 	display: none;
 	width: 100%;
 	height: 100%;
-	background-color: #1b1353;
+	background-color: #000f83;
 	mix-blend-mode: soft-light;
     margin: 0;
     padding: 0;
     z-index: 89!important;
+    pointer-events: none!important;
+}
+
+#sunrise-overlay {
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: #ffc3ff;
+	mix-blend-mode: soft-light;
+    margin: 0;
+    padding: 0;
+    z-index: 88!important;
     pointer-events: none!important;
 }
 

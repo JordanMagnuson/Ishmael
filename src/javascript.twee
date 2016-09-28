@@ -73,6 +73,10 @@ $('#sunset-overlay').hide();
 $('body').prepend('<div class="background-image" id="night-overlay"></div>');
 $('#night-overlay').hide();
 
+// Add sunrise overlay.
+$('body').prepend('<div class="background-image" id="sunrise-overlay"></div>');
+$('#sunrise-overlay').hide();
+
 // Add fade out.
 $('body').prepend('<div class="background-image" id="fade-out"></div>');
 $('#fade-out').hide();
