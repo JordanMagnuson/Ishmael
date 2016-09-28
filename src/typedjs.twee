@@ -61,8 +61,11 @@
 						if (callingPassage == 'Story End') {	
 							// Last line of the game has finished in Story End passage.				
 		                	setTimeout(function() { 
+		                		$('.passage').fadeOut(10000);
+		                	}, 5000);	
+		                	setTimeout(function() { 
 		                		State.restart();
-		                	}, 5000);									
+		                	}, 16000);				                									
 						}			                    
                     	//if (tags().contains('end-story')) {
                     	//	$('#the-choice').fadeIn(3000); 
