@@ -357,6 +357,21 @@ body {
 	display: none;
 }
 
+.passage table {
+	width: 100%;
+/*	font-size: 1.2rem!important;*/
+}
+
+#reveal-container {
+	position: absolute;
+	top: 50%;
+}
+
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 /*********************************************************************
  * PUPPET SHOW
  *********************************************************************/
@@ -369,7 +384,7 @@ body {
     height: 100%;
 	left: 0;
 	background-color: transparent;
-	z-index: 10;
+	z-index: 100;
 }
 
 #puppetbg {
@@ -379,7 +394,7 @@ body {
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: 11;
+    z-index: 100!important;
     background-color: transparent;
 }
 
@@ -404,7 +419,7 @@ body {
 	bottom: 0;
 	display: block;
  	position: absolute;
- 	z-index: 100;
+ 	z-index: 100!important;
 }
 
 .puppet#puppet-boy {
@@ -558,6 +573,14 @@ body {
 
 #passage-story-end {
 	z-index: 9000!important;	
+	-webkit-transition-property: none;
+	-moz-transition-property: none;
+	-o-transition-property: none;
+	transition-property: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;		
 }
 
 #passage-story-end .typed {

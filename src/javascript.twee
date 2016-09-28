@@ -57,10 +57,6 @@ $(".puppet").hide();
 // Add ground.
 $('body').prepend('<div class="background-image" id="ground"></div>');
 
-// Add the blood overlay.
-$('body').prepend('<div class="background-image" id="blood-overlay"></div>')
-$('#blood-overlay').hide();
-
 // Add cover image.
 $('body').prepend('<div class="background-image" id="cover-image"></div>');
 $('#cover-image').hide();
@@ -117,6 +113,13 @@ window.onresize = function() {
 		    return $('.passage').offset().top;
 		});
 	}	
+}
+
+// Handle links that we want to automatically advance when the user hovers over them.
+postdisplay.handleHoverLlinks = function() {
+	$('.hoverlink a').mouseover(function() {
+	    this.click();
+	});
 }
 
 /*********************************************************************
@@ -282,6 +285,10 @@ var sndHurtArray = Array(sndHurt01, sndHurt02, sndHurt03, sndHurt04, sndHurt05,s
  *********************************************************************/
 // Add the blood overlay.
 $('body').prepend('<div class="preload-image" id="preload-image-blood-overlay" style="background-image: url(assets/a-necessary-evil_4614659778_a93bef3820_o.jpg)"></div>');
+
+// Gun
+$('body').prepend('<div class="preload-image" id="preload-gun" style="background-image: url(assets/gun.png)"></div>');
+$('body').prepend('<div class="preload-image" id="preload-gun-shadow" style="background-image: url(assets/gun_shadow.png)"></div>');
 
 // Puppets
 window.puppetImageArray = Array(

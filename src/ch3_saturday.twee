@@ -190,32 +190,102 @@ postdisplay.passageSetup = function(passageSetup) {
 }
 
 <</script>>
-"A martyr!" 
-<br>
-<br>
-[[A martyr!]]
+<<linkreplace "A martyr!" transition>><span class="fadein" style="float:right"><<linkreplace "A martyr!" transition>>The people in the alley cheered.<<timed 1s>><<goto "The sun was low in the sky now">><</timed>><</linkreplace>></span><</linkreplace>>
 
-:: A martyr!
-The people in the alley cheered.
-
+:: The sun was low in the sky now
 The sun was low in the sky now, and the world was glowing orange around us. The soldiers fired their guns, and the people cheered louder. I noticed tears on the face of an old man in the crowd.
+* <span class="hoverlink">[[Ask the old man why he is crying]]</span>
+* <span class="hoverlink">[[Look for your friends]]</span>
+* <span class="hoverlink">[[Go home]]</span>
 
-[[A martyr!|Nudge]]
+:: Ask the old man why he is crying
+Before I could say anything <<display "Nudge">>
+
+:: Look for your friends
+Before I could look around <<display "Nudge">>
+
+:: Go home
+Before I could do anything <<display "Nudge">>
+
 
 :: Nudge
 I felt a nudge behind me, and then my father was lifting me up for the people to see. "Here is Ishmael!" he shouted. "My son! His name is Ishmael, like the boy in the story! He is strong and brave and intelligent just like that boy!"
 
-[[My son]]
+<span style="float:right" class="hoverlink">[[My son!|My son]]</span>
 
 :: My son
 He was up on top of a barrel now, holding me, and the people were taking notice. They were shouting. A soldier from the rooftop peered down at us, and he was yelling and motioning with his arm. 
 
-[[Bring him up, bring the boy up!]]
+<span class="hoverlink">[[Bring him up, bring the boy up!]]</span>
 
-:: Bring him up, bring the boy up!
+:: Bring him up, bring the boy up! [nobr]
 I was on the rooftop then, and the soldiers had me on their shoulders. "Here is the hope of our nation!" they shouted. "Here is Ishmael, son of Pine Nut Valley. Brave Ishmael, who will defy the enemy!"
+<span id="reveal-container"><span id="reveal"></span></span>
+<table>
+<tr>
+<td>
+	<ul>
+		<li><<link "Examine self">><<replace "#reveal">><span class="fadein">You are Ishmael, son of Pine Nut Valley.</span><</replace>><</link>></li>
+	 	<li><<link "Inventory">><<replace "#reveal">><span class="fadein">You have $num_rocks rocks and a piece of string in your pocket.</span><</replace>><</link>></li>
+	 	<li><<link "Wait">><<replace "#reveal">><span class="fadein">Wait for what?</span><</replace>><</link>></li>
+	 	<li><<link "Exit">><<replace "#reveal">><span class="fadein">Where would you go?</span><</replace>><</link>></li>
+	</ul>
+</td>
+<td>
+	<ul>
+		<li><<link "Practice hopscotch">><<replace "#reveal">><span class="fadein">How could you practice hopscotch here?</span><</replace>><</link>></li>
+	 	<li><<link "Practice ratalla">><<replace "#reveal">><span class="fadein">But the soldiers have you on their shoulders.</span><</replace>><</link>></li>
+	 	<li><<link "Look">><<replace "#reveal">><span class="fadein">You see a sea of people in an alley running north to south.</span><</replace>><</link>></li>
+	 	<li><<link "Get down from roof">><<replace "#reveal">><span class="fadein">That's not a verb I recognize.</span><</replace>><</link>></li>
+	</ul>
+</td>
+<td>
+	<ul>
+		<li><<link "Cheer">><<replace "#reveal">><span class="fadein">You try to raise your voice, but you can't seem to find it.</span><</replace>><</link>></li>
+		<li><<link "Ponder these things">><<replace "#reveal">><span class="fadein"><span class="waiting"></span></span><</replace>><</link>></li>
+	 	<li><<link "Remember farm">><<replace "#reveal">><span class="fadein">You can't remember it.</span><</replace>><</link>></li>
+	 	<li><<link "Examine soldiers">><<replace "#reveal">><span class="fadein">The soldiers are beneath you. All you can sea is the sea of people below.</span><</replace>><</link>></li>
+	</ul>
+</td>
+<td>
+	<ul>
+		<li><<link "Think about Jubran">><<replace "#reveal">><span class="fadein">Jubran is brave and strong and not afraid of dying.</span><</replace>><</link>></li>
+	 	<li><<link "Think about Joseph">><<replace "#reveal">><span class="fadein">Joseph never complained about anything.</span><</replace>><</link>></li>
+	 	<li><<link "Yell at Farooq">><<replace "#reveal">><span class="fadein">You can't make Farooq out in the crowd below you.</span><</replace>><</link>></li>
+	 	<li><<link "Be brave">><<replace "#reveal">><span class="fadein"><span class="waiting"></span></span><</replace>><</link>></li>
+	</ul>
+</td>
+</tr>
+</table>
 
-I felt metal against my skin, and then I saw that they had put a gun in my hands. It was a large gun, and very heavy.
+<<script>>
+	postdisplay.passageSetup = function(passageSetup) {
+
+		$("table a").click(function() {
+			$("table").fadeTo(500, 0, function() {
+			    $("table a").hide();
+		  	});
+
+		  	$("table a").addClass("disabled");
+
+			setTimeout(function() { 
+				State.play("I felt metal");
+			}, 2000);			
+		});
+
+	    delete postdisplay[passageSetup];
+	}
+<</script>>
+
+
+:: Examine self end
+I tried to steady myself by reciting my name, but I couldn't seem to get past the first syllable. <<display "I felt metal">>
+
+:: Inventory end
+I tried to find my lucky string, but someone was pulling my arm. <<display "I felt metal">>
+
+:: I felt metal
+I felt metal against my skin, and then I saw that the soldiers had put a gun in my hands. It was a large gun, and very heavy.
 
 [[Too heavy for me|The Choice]]
 
@@ -272,8 +342,9 @@ postdisplay.passageSetup = function(passageSetup) {
 
 		$('body').append('<div id="the-choice" class="macro-shake shake-block"><span class="choice clickable" id="hold-up">Hold it up</span><br><br><span class="choice clickable" id="put-down">Put it down</span></div>');
 
-		$('body').append('<img class="macro-shake shake-block" id="gun" src="assets/gun.png" />');
-		$('body').append('<img class="macro-shake shake-block" id="gun-shadow" src="assets/gun_shadow.png" />');
+		$('body').prepend('<img class="macro-shake shake-block" id="gun" src="assets/gun.png" />');
+		$('body').prepend('<img class="macro-shake shake-block" id="gun-shadow" src="assets/gun_shadow.png" />');
+		$('body').prepend('<div class="background-image" id="blood-overlay"></div>')
 	    $('#hold-up.clickable').click(function() {
 	    	holdGunUp(this);		    
 	    });	    		
@@ -335,6 +406,6 @@ TOOD: Have "could not put it down" come in with typewriter effect?
 
 
 :: Story End [end-story nobr nobg white-text]
-<<script>>$('#fade-out').show();$('#blood-overlay').hide();<</script>>
 <<remember $game_completed = true>>
 <span class="typed-speed40-delay1000">But I could not put it down, because the eyes of my people were on me.</span>
+<<script>>$('#fade-out').show();$('#blood-overlay').hide();<</script>>
