@@ -408,4 +408,4 @@ TOOD: Have "could not put it down" come in with typewriter effect?
 :: Story End [end-story nobr nobg white-text]
 <<remember $game_completed = true>>
 <span class="typed-speed40-delay1000">But I could not put it down, because the eyes of my people were on me.</span>
-<<script>>$('#fade-out').show();$('#blood-overlay').hide();<</script>>
+<<script>>$('#fade-out').stop().show().css('opacity', 1);$('#blood-overlay').hide();<</script>>
