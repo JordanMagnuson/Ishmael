@@ -367,7 +367,7 @@ window.holdGunUp = function(element) {
 		$('#gun-shadow').remove();
 		sndWar.stop();
 		window.sndBreathing.stop();
-		//window.sndScream.play();
+		window.sndScream.play();
 		window.sndHeartbeat.stop();
 		window.sndCelebration.stop();
 		window.sndShouting.stop();
