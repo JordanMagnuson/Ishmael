@@ -125,6 +125,13 @@ postdisplay.handleHoverLlinks = function() {
 /*********************************************************************
  * INITIALIZE SOUND OBJECTS (these make use of the howler.js library)
  *********************************************************************/
+
+window.sndTest = new Howl({
+	src: ['assets/sounds/sound_volume_check_test.mp3'],
+	loop: false,
+	volume: 1
+});
+
 window.sndCelebration = new Howl({
 	src: ['assets/sounds/209982__yuval__distant-turkish-wedding.mp3'],
 	loop: true,

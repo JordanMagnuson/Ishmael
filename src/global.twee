@@ -1,6 +1,10 @@
 :: warning [nobr]
 <div id="warning-message">
-It is recommended to play this game with headphones, and using a horizontal aspect ratio.<br><br>
+It is recommended to play this game with headphones. <br><br>
+
+<<link "▶ Sound Check">><<script>>sndTest.stop();sndTest.play();<</script>><</link>>
+
+<br><br>
 
 WARNING: contains some depictions of violence.
 <br><br>
@@ -16,6 +20,7 @@ WARNING: contains some depictions of violence.
 <<script>>
 	$('#cover-image').show();
 	$('#fade-out').show().fadeOut(3000);
+	sndTest.stop();
 <</script>>
 
 <div id="title-container">
