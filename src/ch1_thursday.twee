@@ -22,9 +22,9 @@ I was excited, because I had never seen a real puppet show before.
 Most of the time we played in the dirt for fun: tic-tac-toe, hopscotch, ratalla... sometimes we just [[etched figures]] in the sand.
 
 <ul id="choices">
-	<li id="ch_practice_hopscotch"><<linkreplace "Practice hopscotch" transition>><<remove "#ch_practice_ratalla">><<set $good_at = 'hopscotch'>>Your hopscotch skills have leveled up: you are now very good at hopscotch. Your ratalla skills have declined.<</linkreplace>></li>
+	<li id="ch_practice_hopscotch"><<linkreplace "Practice hopscotch" transition>><<remove "#ch_practice_ratalla">><<set $hopscotch_level += 1>>Your hopscotch skills have leveled up: you are now very good at hopscotch. Your ratalla skills have declined: you are now terrible at ratalla.<</linkreplace>></li>
 
-	<li id="ch_practice_ratalla"><<linkreplace "Practice ratalla" transition>><<remove "#ch_practice_hopscotch">><<set $good_at = 'ratalla'>>Your ratalla skills have leveled up: you are now very good at ratalla. Your hopscotch skills have declined.<</linkreplace>></li>
+	<li id="ch_practice_ratalla"><<linkreplace "Practice ratalla" transition>><<remove "#ch_practice_hopscotch">><<set $ratalla_level += 1>>Your ratalla skills have leveled up: you are now very good at ratalla. Your hopscotch skills have declined: you are now terrible at hopscotch.<</linkreplace>></li>
 
 </ul>
 

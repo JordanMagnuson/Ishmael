@@ -1,5 +1,3 @@
-/% TODO: Implement $good_at variable to change what happens depending on what game you are good at. %/
-
 :: ch2_friday
 [[Friday|Wait]]
 <<set $next_passage = 'friday_2'>>
@@ -32,8 +30,13 @@ I was feeling kind of tired of Farooq and Aleena and everybody, so I decided to 
 :: Solo Play Options [nobr]
 <ul id="choices">
 	<<if $solo_can_play_tic_tac_toe>><li id="ch_play_tic_tac_toe">[[Play tic-tac-toe|Solo tic-tac-toe]]</li><</if>>
-	<<if $solo_can_play_ratalla>><li id="ch_play_ratalla"><<linkreplace "Play ratalla" transition>><<set $solo_can_play_ratalla = false>>Well, that's not gonna work. <<if $good_at == 'ratalla'>>I <em>would</em> love to play some ratalla, though.<</if>><</linkreplace>></li><</if>>
-	<<if $solo_can_have_etching>><li id="ch_etching_contest">[[Draw in the dirt|Solo etching]]</li><</if>>
+	<<if $solo_can_have_etching>><li id="ch_etching_contest">[[Draw in the dirt|Solo etching]]</li><</if>>	
+	<<if $solo_can_play_ratalla>><li id="ch_play_ratalla"><<linkreplace "Play ratalla" transition>><<set $solo_can_play_ratalla = false>>Well, that's not gonna work. <<if $ratalla_level >= 1>>I <em>would</em> love to play some ratalla, though.<</if>><</linkreplace>></li><</if>>
+
+	<<if $solo_can_practice_hopscotch>><li id="ch_practice_hopscotch"><<linkreplace "Practice hopscotch" transition>><<set $solo_can_practice_hopscotch = false>><<if $hopscotch_level >= 1>><<set $hopscotch_level += 1>>Your hopscotch skills have leveled up: you are now invincible at hopscotch.<<else>>You're too bad for it to be worth it.<</if>><</linkreplace>></li><</if>>
+
+	<<if $solo_can_practice_ratalla>><li id="ch_practice_ratalla"><<linkreplace "Practice ratalla" transition>><<set $solo_can_practice_ratalla = false>><<if $ratalla_level >= 1>><<set $ratalla_level += 1>>Your ratalla skills have leveled up: you are now invincible at ratalla.<<else>>You're too bad for it to be worth it.<</if>><</linkreplace>></li><</if>>
+
 	<li id="ch_look_for_friends">[[Go look for your friends after all]]</li>
 	<li id="ch_wait">[[Sit and wait|solo wait]]</li>
 </ul>
@@ -75,10 +78,12 @@ postdisplay.sketch = function(sketch) {
 
 :: Play hopscotch [nobr]
 <<set $can_play_hopscotch = false>>
-<<if $good_at == 'hopscotch'>>
+<<if $hopscotch_level > 1>>
+	We played hopscotch and I won. Did I ever mention that I'm invincible at hopscotch?
+<<elseif $hopscotch_level > 0>>
 	We played hopscotch and I won. Did I ever mention that I'm pretty good at hopscotch?
 <<else>>
-	We played hopscotch and I lost. Did I ever mention that I'm terrible at hopscotch?
+	We played hopscotch and I lost. Did I ever mention that I never practice hopscotch?
 <</if>>
 
 <<display 'Play Options'>>
@@ -106,13 +111,14 @@ postdisplay.sketch = function(sketch) {
 <<display 'Play Options'>>
 
 :: Play ratalla [nobr]
-<<set $can_play_ratalla = false>>
 We got some rocks together and played ratalla for a while, but Josiah had decided that ratalla was the boringest game in the world, and Korah had sliced her shooting finger the day before, so she definitely couldn't play, she said. That left me and Farooq and Aleena and Banu, and the game isn't really meant for four people.  
 
-<<if $good_at == 'ratalla'>>
-	I tried to suggest that we might get one or two of our kid brothers or sisters to play, but Farooq <<linkreplace "gave me the look when I said that." transition>>gave me the look when I said that. He's not nearly as good at ratalla as I am.<</linkreplace>>
+<<if $ratalla_level > 1>>
+	I tried to suggest that we might get one or two of our kid brothers or sisters to play (since I always win ratalla), but Farooq <<linkreplace "gave me the look when I said that." transition>>gave me the look when I said that. He's not nearly as good at ratalla as I am.<</linkreplace>>
+<<elseif $ratalla_level > 0>>
+	I tried to suggest that we might get one or two of our kid brothers or sisters to play (since I had been practicing, and wanted to put my skills to use), but Farooq <<linkreplace "gave me the look when I said that." transition>>gave me the look when I said that (I don't think he's been practicing).<</linkreplace>>
 <<else>>
-	After a while Banu suggested that we might get one or two of our kid brothers or sisters to play, but Farooq gave him the look when he said that, and I thought that it was a <<linkreplace "pretty silly idea myself." transition>>pretty silly idea myself (not because I'm bad at ratalla, or anything).<</linkreplace>>
+	After a while Banu suggested that we might get one or two of our kid brothers or sisters to play, but Farooq gave him the look when he said that (which was fine by me since I'm terrible at ratalla).
 <</if>>
 
 <<display 'Play Options'>>
