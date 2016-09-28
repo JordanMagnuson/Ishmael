@@ -421,7 +421,7 @@ a.disabled {
     right: 0;
     width: 100%;
     height: 100%;
-    z-index: 100!important;
+    z-index: 95!important;
     background-color: transparent;
 }
 
@@ -439,7 +439,7 @@ a.disabled {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;	
-    z-index: 99!important;
+    z-index: 94!important;
 }
 
 #puppetbg .puppet {
@@ -477,7 +477,7 @@ a.disabled {
  	right: -10%;
  	height: 50%;
  	width: auto;	
- 	z-index: 90;
+ 	z-index: 99!important;
 }
 
 .puppet#puppet-hospital {
@@ -833,6 +833,12 @@ iframe#tictactoe {
 	 	margin-left: 1em;
 	 	font-size: 4vw;
 	}
+
+	.passage.end-story .typed {
+		background-color:rgba(255, 255, 255, 0.8);
+		padding: 1em;
+		display: inline-block!important;
+	}		
 }
 
 /* Tall Aspect */

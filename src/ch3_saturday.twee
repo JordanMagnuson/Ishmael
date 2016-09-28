@@ -147,8 +147,7 @@ Now Ishmael, above all else, was a brave boy, and he determined that the purpose
 	$('#sunset-overlay').show();
 	$("#puppetsheet").slideUp(5000);
 	$("#puppetbg-container").animate({ top: '-100%'}, 5000, function() { $(this).remove(); });
-	window.sndBackgroundMurmur.play();
-	window.sndBackgroundMurmur.volume(0.7);
+	window.sndBackgroundMurmur.volume(0.6);
 	
 <</script>>
 
@@ -167,7 +166,7 @@ postdisplay.passageSetup = function(passageSetup) {
 	window.sndBackgroundChatter01.stop();
 	window.sndBackgroundChatter02.stop();
 	window.sndBackgroundChatter03.stop();
-	window.sndBackgroundMurmur.fade(0.8, 0, 15000);
+	window.sndBackgroundMurmur.fade(0.4, 0, 15000);
 
 	if (!window.sndShouting.playing()) {
 		window.sndShouting.play();
@@ -357,7 +356,7 @@ postdisplay.passageSetup = function(passageSetup) {
 <</script>>
 
 <<script>>
-	$('#fade-out').show().fadeOut(20000);
+	$('#fade-out').stop().show().css('opacity', 1).fadeOut(20000);
 <</script>>
 
 
@@ -388,7 +387,7 @@ TOOD: Have "could not put it down" come in with typewriter effect?
 
 
 :: put_down_story_1 [end-story put-down auto-fade]
-<span class="typed">Ishmael was a good boy: he obeyed his father, and he loved his mother, and he was an example to his brothers and sisters.</span>
+<span class="faketyped">Ishmael was a good boy: he loved his mother, and he was an example to his brothers and sisters.</span>
 
 :: put_down_story_2 [end-story put-down auto-fade]
 <span class="typed">He was a loyal boy: he made friends for keeps, and he would defend them when they needed him.</span>

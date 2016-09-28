@@ -1,6 +1,7 @@
 :: warning [nobr]
 <div id="warning-message">
-It is recommended to play this game with headphones. <br><br>
+This game takes about 15 minutes to play through.<br>
+It is recommended to play with headphones. <br><br>
 
 <<link "▶ Sound Check">><<script>>sndTest.stop();sndTest.play();<</script>><</link>>
 
