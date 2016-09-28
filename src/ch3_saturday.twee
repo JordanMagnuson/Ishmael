@@ -342,9 +342,9 @@ postdisplay.passageSetup = function(passageSetup) {
 
 		$('body').append('<div id="the-choice" class="macro-shake shake-block"><span class="choice clickable" id="hold-up">Hold it up</span><br><br><span class="choice clickable" id="put-down">Put it down</span></div>');
 
-		$('body').prepend('<img class="macro-shake shake-block" id="gun" src="assets/gun.png" />');
-		$('body').prepend('<img class="macro-shake shake-block" id="gun-shadow" src="assets/gun_shadow.png" />');
-		$('body').prepend('<div class="background-image" id="blood-overlay"></div>')
+		$('body').append('<img class="macro-shake shake-block" id="gun" src="assets/gun.png" />');
+		$('body').append('<img class="macro-shake shake-block" id="gun-shadow" src="assets/gun_shadow.png" />');
+		$('body').append('<div class="background-image" id="blood-overlay"></div>');
 	    $('#hold-up.clickable').click(function() {
 	    	holdGunUp(this);		    
 	    });	    		
