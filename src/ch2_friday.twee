@@ -141,6 +141,9 @@ At one point Josiah asked if we might not have an etching contest, and everybody
 
 :: That was Friday
 <<linkreplace "That was Friday" transition>>[[The boringest day in the world]]<</linkreplace>>
+<<script>>
+	$('#sunset-overlay').fadeIn(20000);
+<</script>>
 
 /% TODO: Is this better with each sentence in its own passage, or as a chained link of sentences like this? %/
 :: The boringest day in the world [nobr]
@@ -148,10 +151,11 @@ At one point Josiah asked if we might not have an etching contest, and everybody
 <<linkreplace "Finally Saturday did come." transition>>Finally Saturday did come. 
 	<<linkreplace "The day of the get-together." transition>>The day of the get-together.
 		<<linkreplace "The day of remembering." transition>>The day of remembering.
-			[[The day of the puppet show.|ch3_saturday]]
+			[[The day of the puppet show.|night wait]]
 		<</linkreplace>>
 	<</linkreplace>>
 <</linkreplace>>
+<<set $next_passage = 'ch3_saturday'>>
 
 :: Saturday
 The day of the [[get-together]].

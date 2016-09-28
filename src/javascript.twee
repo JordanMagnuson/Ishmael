@@ -58,13 +58,24 @@ $(".puppet").hide();
 $('body').prepend('<div class="background-image" id="ground"></div>');
 
 // Add the blood overlay.
-$('body').prepend('<div class="background-image" id="blood-overlay"></div>');
+$('body').prepend('<div class="background-image" id="blood-overlay"></div>')
+$('#blood-overlay').hide();
 
 // Add cover image.
 $('body').prepend('<div class="background-image" id="cover-image"></div>');
+$('#cover-image').hide();
+
+// Add sunset overlay.
+$('body').prepend('<div class="background-image" id="sunset-overlay"></div>');
+$('#sunset-overlay').hide();
+
+// Add night overlay.
+$('body').prepend('<div class="background-image" id="night-overlay"></div>');
+$('#night-overlay').hide();
 
 // Add fade out.
 $('body').prepend('<div class="background-image" id="fade-out"></div>');
+$('#fade-out').hide();
 
 
 /*********************************************************************
@@ -351,8 +362,8 @@ window.holdGunUp = function(element) {
 		window.sndShouting.stop();
 		window.sndHollering.stop();
 		window.sndMachinegunLoop.stop();
-		clearAllTimeouts();
-		stopAllHurtSounds();
+		//clearAllTimeouts();
+		//stopAllHurtSounds();
 
 		//sndExplosion.play();
 		State.play("Story End");

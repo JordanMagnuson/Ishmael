@@ -165,33 +165,36 @@ Mother smiled at me then, but I thought she seemed sad. My brothers and sisters 
 [[But there wasn't any more rice]]
 
 
-:: But there wasn't any more rice
+:: But there wasn't any more rice [sunset]
 After supper I went up on the roof to think. The sun was very low on the horizon, and very [[orange]].
 * <<linkreplace "Examine roof" transition>>Your family takes great pride in having a real roof instead of one of the makeshift plywood or sheet metal ones which dominate your neighborhood.<</linkreplace>>
 * <<linkreplace "Examine sun" transition>>"And still, after all this time, the sun never says to the earth, 'you owe me.'" Something you heard Father say one time.<</linkreplace>>
+<<script>>
+	$('#sunset-overlay').fadeTo(4000, 0.4);
+<</script>>
 
 :: the roof
 My family took great pride in having a real roof instead of one of the makeshift plywood or sheet metal ones which dominated our neighborhood. 
 
 <<display 'orange'>>
 
-:: orange
+:: orange [sunset]
 I thought it was interesting how the orange light so consumed everything around me. I knew the partially painted building across the alley where Aleena lived was blue and gray, for instance, but it just looked orange. 
 * <<linkreplace "Look" transition>>A poster two rooftops away proclaims our compound to be New Pine Nut Valley, with smaller lettering underneath that says we are from Old Pine Nut Valley, and are going back some day.<</linkreplace>>
-* [[Wait]]
+* [[Wait|sunset wait]]
 <<set $next_passage = 'smaller lettering'>>
 
-:: smaller lettering
+:: smaller lettering [sunset]
 The light suddenly caught on one of the tin roofs off in the distance, which sent a brilliant spark flying across the neighborhood and straight onto the poster across the way; for a minute its small lettering appeared to be on fire.
 * <<linkreplace "Examine lettering" transition>>We are from from Old Pine Nut Valley, and we are going back some day.<</linkreplace>>
-* [[Wait]]
+* [[Wait|sunset wait]]
 <<set $next_passage = 'I just stood there as the sun went down'>>
 
-:: I just stood there as the sun went down [nobr]
+:: I just stood there as the sun went down [nobr sunset]
 I just stood there as the sun went down and the world burned orange around me.
 
 <ul id="choices">
-	<li id="ch_wait"><<linkreplace "Wait" transition>><<removeclass ".needs_wait" "invisible">><<addclass ".needs_wait" "fadein">><<addclass "#ch_wait" "invisible">><</linkreplace>></li>
+	<li id="ch_wait"><<linkreplace "Wait" transition>><<script>>$('#sunset-overlay').stop().fadeTo(4000, 1);<</script>><<removeclass ".needs_wait" "invisible">><<addclass ".needs_wait" "fadein">><<addclass "#ch_wait" "invisible">><</linkreplace>></li>
 
 	<li class="invisible needs_wait"><<linkreplace "Think about Father" transition>>I thought about Father and how I loved coming home and seeing him happy like he had been tonight.<</linkreplace>></li>	
 
@@ -204,18 +207,33 @@ I just stood there as the sun went down and the world burned orange around me.
 
 /% TODO: below: link each sibling to a description? %/
 
-:: Think about Joseph
+:: Think about Joseph [sunset]
 That made me think about Joseph, and how he had never whined about anything. Mother had said that if we had been living in Old Pine Nut Valley we would have been able to get medicine for him, and things would have [[been different]].
+<<script>>
+	$('#sunset-overlay').stop().fadeOut(45000);
+	$('#night-overlay').fadeIn(30000);
+<</script>>
 
-:: been different
+:: been different [sunset]
 Jubran had gotten upset at that idea because, he said, it was just [[wishful thinking]]. Jubran hated [[wishful thinking]]. He told Mother to think of our cousins who were still trying to live back there, through the occupation, and how hard they had it. 
 
-:: wishful thinking
+:: wishful thinking [sunset]
 Mother told him she meant that if the Valley were like it used to be before the enemy came, that //then// things might have been different. Jubran said she should be more clear when she talked, and anyway we were going to reclaim the valley—for Joseph and for all our people who had died. 
 
 [[I weep for you, oh I weep for you, my son]]
 
-:: I weep for you, oh I weep for you, my son
+:: I weep for you, oh I weep for you, my son [sunset]
 Then Mother had started crying. I think it was because she missed Joseph so much, and maybe because she missed our home in Old Pine Nut Valley. 
 
-<<timed 4s transition>>[[That was Thursday|ch2_friday]]<</timed>>
+<<timed 4s transition>>[[That was Thursday|night wait]]<</timed>>
+<<set $next_passage = 'ch2_friday'>>
+
+:: test2 [sunset]
+Then Mother had started crying. I think it was because she missed Joseph so much, and maybe because she missed our home in Old Pine Nut Valley. 
+
+[[That was Thursday|night wait]]
+<<set $next_passage = 'ch2_friday'>>
+<<script>>
+	$('#sunset-overlay').show();
+	$('#night-overlay').show();
+<</script>>

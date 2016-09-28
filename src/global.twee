@@ -48,6 +48,46 @@ That's not a verb I recognize.
 	}
 <</script>>
 
+:: sunset wait [nobr]
+<div class="waiting"></div>
+<<script>>
+	var waitTime = 4000;
+	if (State.variables['next_passage']) {
+		setTimeout(function() { 
+			State.play(State.variables['next_passage']);
+		}, waitTime);	
+	}
+	var fromOpacity = Number($('#sunset-overlay').css('opacity'));
+	var toOpacity = fromOpacity + 0.2;
+	if (toOpacity > 1) {
+		toOpacity = 1;
+	}
+	$('#sunset-overlay').stop().fadeTo(waitTime, toOpacity);
+
+<</script>>
+
+:: night wait [nobr]
+<div class="waiting"></div>
+<<script>>
+	var waitTime = 18000;
+	var halfTime = waitTime / 2;
+	var sunsetOutTime = waitTime / 3;
+	var nightInTime = waitTime / 3;
+	var nightOutTime = waitTime / 3;
+	if (State.variables['next_passage']) {
+		setTimeout(function() { 
+			State.play(State.variables['next_passage']);
+		}, waitTime);	
+	}
+	$('#sunset-overlay').stop().fadeTo(sunsetOutTime, 0);
+	$('#night-overlay').stop().fadeTo(sunsetOutTime, 1);
+
+	$('#fade-out').stop().fadeTo(halfTime, 1, function() {
+		$('#night-overlay').hide();
+    	$('#fade-out').stop().fadeTo(halfTime, 0);
+  	}); 	
+<</script>>
+
 :: solo wait [nobr]
 <<set $solo_wait += 1>>
 <<if $solo_wait >= 4>>
