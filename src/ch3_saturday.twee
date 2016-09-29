@@ -264,7 +264,7 @@ I was on the rooftop then, and the soldiers had me on their shoulders. "Here is 
 		<li><<link "Think about Jubran">><<replace "#reveal">><span class="fadein">Jubran is brave and strong and not afraid of dying.</span><</replace>><</link>></li>
 	 	<li><<link "Think about Joseph">><<replace "#reveal">><span class="fadein">Joseph never complained about anything.</span><</replace>><</link>></li>
 	 	<li><<link "Yell at Farooq">><<replace "#reveal">><span class="fadein">You can't make Farooq out in the crowd below you.</span><</replace>><</link>></li>
-	 	<li><<link "Disappear">><<replace "#reveal">><span class="fadein"><span class="waiting"></span></span><</replace>><</link>></li>
+	 	<li><<link "Disappear">><<replace "#reveal">><span class="fadein">That's not a verb I recognize.</span><</replace>><</link>></li>
 	</ul>
 </td>
 </tr>
@@ -274,9 +274,7 @@ I was on the rooftop then, and the soldiers had me on their shoulders. "Here is 
 	postdisplay.passageSetup = function(passageSetup) {
 
 		$("table a").click(function() {
-			$("table").fadeTo(500, 0, function() {
-			    $("table a").hide();
-		  	});
+			$("table").fadeTo(500, 0);
 
 		  	$("table a").addClass("disabled");
 

@@ -62,7 +62,6 @@ postdisplay.sketch = function(sketch) {
 
 
 :: Play Options [nobr]
-<<script>>console.log(variables());<</script>>
 <ul id="choices">
 	<<if $can_play_tic_tac_toe>><li id="ch_play_tic_tac_toe">[[Play tic-tac-toe]]</li><</if>>
 	<<if $can_play_hopscotch>><li id="ch_play_hopscotch">[[Play hopscotch]]</li><</if>>
@@ -92,13 +91,13 @@ postdisplay.sketch = function(sketch) {
 <<set $can_play_tic_tac_toe = false>>
 <iframe id="tictactoe" src="src/tictactoe/index.html" frameBorder="0" allowtransparency="true" scrolling="no"></iframe>
 
-[[Tic-tac-toe was getting awfully old|Play Options]]
+<<timed 20s transition>>[[Tic-tac-toe is getting awfully old|Play Options]]<</timed>>
 
 :: Solo tic-tac-toe[nobr tic-tac-toe]
 <<set $solo_can_play_tic_tac_toe = false>>
 <iframe id="tictactoe" src="src/tictactoe/solo.html" frameBorder="0" allowtransparency="true" scrolling="no"></iframe>
 
-[[That was fun|Solo Play Options]]
+<<timed 20s transition>>[[That was fun|Solo Play Options]]<</timed>>
 
 :: Play kickball [nobr]
 <<set $can_play_kickball = false>>

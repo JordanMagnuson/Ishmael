@@ -396,8 +396,8 @@ body {
 }
 
 a.disabled {
-  pointer-events: none;
-  cursor: default;
+  pointer-events: none!important;
+  cursor: default!important;
 }
 
 /*********************************************************************
