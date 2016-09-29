@@ -240,7 +240,7 @@ I was on the rooftop then, and the soldiers had me on their shoulders. "Here is 
 		<li><<link "Examine self">><<replace "#reveal">><span class="fadein">You are Ishmael, son of Pine Nut Valley.</span><</replace>><</link>></li>
 	 	<li><<link "Inventory">><<replace "#reveal">><span class="fadein">You have $num_rocks rocks and a piece of string in your pocket.</span><</replace>><</link>></li>
 	 	<li><<link "Wait">><<replace "#reveal">><span class="fadein">Wait for what?</span><</replace>><</link>></li>
-	 	<li><<link "Exit">><<replace "#reveal">><span class="fadein">Where would you go?</span><</replace>><</link>></li>
+	 	<li><<link "Get down from roof">><<replace "#reveal">><span class="fadein">That's not a verb I recognize.</span><</replace>><</link>></li>
 	</ul>
 </td>
 <td>
@@ -248,7 +248,7 @@ I was on the rooftop then, and the soldiers had me on their shoulders. "Here is 
 		<li><<link "Practice hopscotch">><<replace "#reveal">><span class="fadein">How could you practice hopscotch here?</span><</replace>><</link>></li>
 	 	<li><<link "Practice ratalla">><<replace "#reveal">><span class="fadein">But the soldiers have you on their shoulders.</span><</replace>><</link>></li>
 	 	<li><<link "Look">><<replace "#reveal">><span class="fadein">You see a sea of people in an alley running north to south.</span><</replace>><</link>></li>
-	 	<li><<link "Get down from roof">><<replace "#reveal">><span class="fadein">That's not a verb I recognize.</span><</replace>><</link>></li>
+	 	<li><<link "Descend">><<replace "#reveal">><span class="fadein">That's not a verb I recognize.</span><</replace>><</link>></li>
 	</ul>
 </td>
 <td>
@@ -256,7 +256,7 @@ I was on the rooftop then, and the soldiers had me on their shoulders. "Here is 
 		<li><<link "Cheer">><<replace "#reveal">><span class="fadein">You try to raise your voice, but you can't seem to find it.</span><</replace>><</link>></li>
 		<li><<link "Ponder these things">><<replace "#reveal">><span class="fadein"><span class="waiting"></span></span><</replace>><</link>></li>
 	 	<li><<link "Remember farm">><<replace "#reveal">><span class="fadein">You can't remember it.</span><</replace>><</link>></li>
-	 	<li><<link "Examine soldiers">><<replace "#reveal">><span class="fadein">The soldiers are beneath you. All you can sea is the sea of people below.</span><</replace>><</link>></li>
+	 	<li><<link "Jump down from shoulders">><<replace "#reveal">><span class="fadein">That's not a verb I recognize.</span><</replace>><</link>></li>
 	</ul>
 </td>
 <td>
@@ -264,7 +264,7 @@ I was on the rooftop then, and the soldiers had me on their shoulders. "Here is 
 		<li><<link "Think about Jubran">><<replace "#reveal">><span class="fadein">Jubran is brave and strong and not afraid of dying.</span><</replace>><</link>></li>
 	 	<li><<link "Think about Joseph">><<replace "#reveal">><span class="fadein">Joseph never complained about anything.</span><</replace>><</link>></li>
 	 	<li><<link "Yell at Farooq">><<replace "#reveal">><span class="fadein">You can't make Farooq out in the crowd below you.</span><</replace>><</link>></li>
-	 	<li><<link "Be brave">><<replace "#reveal">><span class="fadein"><span class="waiting"></span></span><</replace>><</link>></li>
+	 	<li><<link "Disappear">><<replace "#reveal">><span class="fadein"><span class="waiting"></span></span><</replace>><</link>></li>
 	</ul>
 </td>
 </tr>
