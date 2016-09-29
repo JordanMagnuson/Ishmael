@@ -72,7 +72,7 @@ postdisplay.sketch = function(sketch) {
 	<<if $can_have_etching>><li id="ch_etching_contest">[[Etching contest]]</li><</if>>
 </ul>
 
-<<if !$can_play_tic_tac_toe && !$can_play_ratalla && !$can_play_kickball && !$can_have_etching && $hang_out_times >= 2>>
+<<if !$can_play_tic_tac_toe && !$can_play_ratalla && !$can_play_kickball && !$can_have_etching && !$can_play_hopscotch && $hang_out_times >= 2>>
 	<<display 'That was Friday'>>
 <</if>>
 
@@ -111,6 +111,7 @@ postdisplay.sketch = function(sketch) {
 <<display 'Play Options'>>
 
 :: Play ratalla [nobr]
+<<set $can_play_ratalla = false>>
 We got some rocks together and played ratalla for a while, but Josiah had decided that ratalla was the boringest game in the world, and Korah had sliced her shooting finger the day before, so she definitely couldn't play, she said. That left me and Farooq and Aleena and Banu, and the game isn't really meant for four people.  
 
 <<if $ratalla_level > 1>>

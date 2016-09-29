@@ -287,7 +287,7 @@ window.puppetImageArray = Array(
 );
 for(var i = puppetImageArray.length - 1; i >= 0; i--){
 	var preloadImage = puppetImageArray[i];
-	$('body').prepend('<div class="preload-image" id="preload-puppet-image-' + i + '" style="background-image: url(assets/photos/violence/' + preloadImage + '"></div>');
+	$('body').prepend('<div class="preload-image" id="preload-puppet-image-' + i + '" style="background-image: url(assets/puppets/' + preloadImage + '"></div>');
 }
 
 // Violent images.
