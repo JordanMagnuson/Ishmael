@@ -19,7 +19,7 @@ WARNING: contains some depictions of violence.
 
 :: title [nobr]
 /% Initialize variables.%/
-<<set $version = 'alpha 2'>>
+<<set $version = 'beta 1'>>
 
 <<set $hopscotch_level = 0>>
 <<set $ratalla_level = 0>>
@@ -149,6 +149,6 @@ That's not a verb I recognize.
 <</script>>
 
 :: credits
-Coming soon. :)
+...
 
 [[Back|title]]
