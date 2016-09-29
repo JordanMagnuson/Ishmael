@@ -225,7 +225,7 @@ window.initializeStory = function() {
 		volume: 1
 	});
 
-
+/**
 	window.sndScream = new Howl({
 		src: ['assets/sounds/HumanScream_DIGII07-25-05.mp3'],
 		loop: false,
@@ -233,7 +233,7 @@ window.initializeStory = function() {
 	});
 
 
-	/**
+	
 	window.sndHurt01 = new Howl({
 		src: ['assets/sounds/hurt01.mp3'],
 		loop: false,
@@ -436,7 +436,7 @@ window.holdGunUp = function(element) {
 		$('#gun-shadow').remove();
 		sndWar.stop();
 		window.sndBreathing.stop();
-		window.sndScream.play();
+		/*window.sndScream.play();*/
 		window.sndHeartbeat.stop();
 		window.sndCelebration.stop();
 		window.sndShouting.stop();
