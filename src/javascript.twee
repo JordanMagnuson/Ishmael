@@ -156,7 +156,7 @@ window.initializeStory = function() {
 	window.sndBackgroundChatter02 = new Howl({
 		src: ['assets/sounds/background_chatter_02_7209__corsica-s__people-sitting-by-fire.mp3'],
 		loop: true,
-		volume: 0.5
+		volume: 0.7
 	});
 
 	window.sndBackgroundChatter03 = new Howl({
@@ -170,6 +170,36 @@ window.initializeStory = function() {
 		loop: true,
 		volume: 0
 	});
+
+	window.sndYell01 = new Howl({
+		src: ['assets/sounds/yell01_17343__audiblepie-com__welcome-scream.mp3'],
+		loop: false,
+		volume: 0.7
+	});	
+
+	window.sndYell01B = new Howl({
+		src: ['assets/sounds/yell01B_17343__audiblepie-com__welcome-scream.mp3'],
+		loop: false,
+		volume: 0.5
+	});	
+
+	window.sndYell01C = new Howl({
+		src: ['assets/sounds/yell01C_17343__audiblepie-com__welcome-scream.mp3'],
+		loop: false,
+		volume: 0.5
+	});		
+
+	window.sndYell02 = new Howl({
+		src: ['assets/sounds/yell02_17343__audiblepie-com__welcome-scream.mp3'],
+		loop: false,
+		volume: 0.7
+	});	
+
+	window.sndGreetingYell = new Howl({
+		src: ['assets/sounds/greeting_yell_02_17343__audiblepie-com__welcome-scream.mp3'],
+		loop: false,
+		volume: 0.5
+	});		
 
 	window.sndBreathing = new Howl({
 		src: ['assets/sounds/54776__bevangoldswain__heavy-breathing-off-mic-loop.mp3'],
@@ -201,6 +231,8 @@ window.initializeStory = function() {
 		loop: false,
 		volume: 1
 	});
+
+
 	/**
 	window.sndHurt01 = new Howl({
 		src: ['assets/sounds/hurt01.mp3'],

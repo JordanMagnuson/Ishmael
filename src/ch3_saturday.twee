@@ -18,11 +18,19 @@ Everyone was out there. Waving and shouting and banging on drums, and holding th
 
 <ul><li>[[Look around]]</li></ul>
 
-:: Look around
+:: Look around [nobr]
+<<script>>
+	setTimeout(function() { 
+		if (!window.sndGreetingYell.playing()) {
+			window.sndGreetingYell.play();
+		} 
+	}, 2000);	
+<</script>>
+
 I looked around and noticed Josiah riding up on top of a bigger boy's shoulders, yelling and waving his flag. He saw me and let out a whoop. I smiled and waved back at him. 
-
+<br><br>
 Father came to the door then and put his hand on my shoulder. 
-
+<br><br>
 [[Ishmael, this is a great day]]
 
 :: Ishmael, this is a great day
@@ -37,13 +45,16 @@ Yes, Father said.
 
 :: ... [nobr]
 <<script>>
+
 	setTimeout(function() { 
 		if (!window.sndHollering.playing() && (State.passage == '...')) {
 			window.sndHollering.play();
 		} 
-		window.sndHollering.fade(0, 0.5, 2000);
-	}, 1000);
+		window.sndHollering.fade(0, 0.6, 2000);
 
+		window.sndGreetingYell.volume(0.4);
+		window.sndGreetingYell.play();
+	}, 1000);
 
 	setTimeout(function() { 
 		if (!window.sndMachinegunLoop.playing() && (State.passage == '...')) {
@@ -94,7 +105,7 @@ Then one of the soldiers raised his arms and declared that they had a special tr
 	} 	
 	if (!window.sndBackgroundChatter02.playing()) {
 		window.sndBackgroundChatter02.play();
-		window.sndBackgroundChatter02.fade(0.5, 0, 15000);
+		window.sndBackgroundChatter02.fade(0.7, 0, 15000);
 	} 									
 <</script>>
 
@@ -144,12 +155,10 @@ Now Ishmael, above all else, was a brave boy, and he determined that the purpose
 
 :: puppet_8 [nobr]
 <<script>>
-	$('#ground').show();
 	$('#sunset-overlay').show();
 	$("#puppetsheet").slideUp(5000);
 	$("#puppetbg-container").animate({ top: '-100%'}, 5000, function() { $(this).remove(); });
 	window.sndBackgroundMurmur.volume(0.6);
-	
 <</script>>
 
 That was the end of the puppet show.
@@ -168,6 +177,9 @@ postdisplay.passageSetup = function(passageSetup) {
 	window.sndBackgroundChatter02.stop();
 	window.sndBackgroundChatter03.stop();
 	window.sndBackgroundMurmur.fade(0.4, 0, 15000);
+
+	window.sndYell01.volume(09);
+	window.sndYell01.play();
 
 	if (!window.sndShouting.playing()) {
 		window.sndShouting.play();
@@ -388,7 +400,7 @@ TOOD: Have "could not put it down" come in with typewriter effect?
 
 
 :: put_down_story_1 [end-story put-down auto-fade]
-<span class="faketyped">Ishmael was a good boy: he loved his mother, and he was an example to his brothers and sisters.</span>
+<span class="typed">Ishmael was a good boy: he loved his mother, and he was an example to his brothers and sisters.</span>
 
 :: put_down_story_2 [end-story put-down auto-fade]
 <span class="typed">He was a loyal boy: he made friends for keeps, and he would defend them when they needed him.</span>

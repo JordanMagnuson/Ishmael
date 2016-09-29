@@ -347,7 +347,11 @@
 						//	window.sndBackgroundChatter03.play();
 						//} 						
 						$("#puppet-wire").fadeIn(3000);
-					}													
+					}			
+					if (substr.match("^travel")) {
+						window.sndYell02.play();	
+					}									
+												
 				}	
 				else if (State.passage == 'puppet_4') {					
 					if (substr.match("^disappointed")) {
@@ -387,17 +391,27 @@
 												        $("#puppet-house").animateRotate(-90);
 												    }
 												);
-					}													
+					}			
+					if (substr.match("^h the ho")) {
+						window.sndYell01.play();	
+					}																			
 				}		
 				else if (State.passage == 'puppet_6') {					
 					if (substr.match("^mother")) {
 						$("#puppet-mother").fadeOut(3000);
+						window.sndYell01B.play();
 					}	
 					if (substr.match("^house")) {
 						$("#puppet-house").fadeOut(3000);
-					}														
+					}	
+					if (substr.match("^houses")) {
+						window.sndYell01C.play();
+					}																						
 				}		
-				else if (State.passage == 'puppet_7') {					
+				else if (State.passage == 'puppet_7') {			
+					if (substr.match("^determined")) {
+						window.sndYell01C.play();
+					}						
 					if (substr.match("^threw")) {
 						$("#puppet-boy").hide();
 						$("#puppet-boy-rock").show();
@@ -411,6 +425,7 @@
 					}	
 					if (substr.match("^die")) {
 						window.sndBackgroundMurmur.fade(0.3, 0.4, 1000);
+						window.sndYell01B.play();
 				        $("#puppet-boy-rock").fadeOut(3000);
 					}																									
 				}																														
