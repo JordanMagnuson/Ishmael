@@ -31,7 +31,7 @@ He had said that many times already, but I didn't mind. He told me that the lead
 [[Were they the ones who would put on the puppet show?]]
 
 :: Were they the ones who would put on the puppet show?
-Yes, father said.
+Yes, Father said.
 
 [[...]]
 
@@ -144,6 +144,7 @@ Now Ishmael, above all else, was a brave boy, and he determined that the purpose
 
 :: puppet_8 [nobr]
 <<script>>
+	$('#ground').show();
 	$('#sunset-overlay').show();
 	$("#puppetsheet").slideUp(5000);
 	$("#puppetbg-container").animate({ top: '-100%'}, 5000, function() { $(this).remove(); });
