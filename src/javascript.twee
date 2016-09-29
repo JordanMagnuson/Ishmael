@@ -12,6 +12,18 @@
 config.ui.stowBarInitially = true; // the UI bar will start stowed (shut)
 
 /*********************************************************************
+ * FAVICON
+ *********************************************************************/
+
+(function () {
+	var favicon  = document.createElement("link");
+	favicon.type = 'image/x-icon';
+	favicon.rel  = "shortcut icon";
+	favicon.href = "favicon.png";
+	document.head.appendChild(favicon);
+}());
+
+/*********************************************************************
  * INITIALIZE STORY
  *********************************************************************/
 
