@@ -8,6 +8,7 @@ Desktop.ini
 # Twine story builds.
 /build/
 story.html
+index.html
 
 # Working directory.
 /working/

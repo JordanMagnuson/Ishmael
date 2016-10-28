@@ -19,7 +19,7 @@ WARNING: contains some depictions of violence.
 
 :: title [nobr]
 /% Initialize variables.%/
-<<set $version = 'beta 1'>>
+<<set $version = 'pre-release 1'>>
 
 <<set $hopscotch_level = 0>>
 <<set $ratalla_level = 0>>
@@ -148,7 +148,35 @@ That's not a verb I recognize.
 	}
 <</script>>
 
-:: credits
-...
+:: credits [fullscreen]
+<table class="fullscreen" id="credits-table"><tr><td valign="middle">
+<span class="heading">Story, Game Concept, and Programming</span>
+<span class="special name">Jordan Magnuson</span>
+<span class="small">( <a target="_BLANK" href="http://www.necessarygames.com/my-games">My Games</a>&nbsp;&nbsp;&nbsp;<a target="_BLANK" href="http://www.necessarygames.com/follow">Follow</a> )</span>
 
-[[Back|title]]
+<span class="heading">Puppet Illustrations</span>
+Marisa Lerin
+
+<span class="heading">Cover Photo</span>
+Andreas
+
+<span class="heading">Testing and Feedback</span>
+Simon Braunstein
+Matthew Fisher
+John Knauss
+Marisa Lerin
+Brendan Magnuson
+Thani Magnuson
+Sari Magnuson
+Florent Maurin
+Alex Snyder
+
+<span class="heading">Special Thanks</span>
+Thomas Michael Edwards and everyone at the Twinery forums
+
+<span class="heading">Additional Attribution Credits</span>
+For additional asset and library attribution credits, please see my <a target="_BLANK" href="https://github.com/JordanMagnuson/Ishmael">GitHub repository</a>
+
+<span class="small button">[[Back|title]]</span>
+
+</td></tr></table>

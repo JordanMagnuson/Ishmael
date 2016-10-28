@@ -1,7 +1,7 @@
 (dp0
 S'buildDestination'
 p1
-VC:\u005cUsers\u005cJordan\u005cGoogle Drive\u005cTwine\u005cIshmael (Forever)\u005cending.html
+VC:\u005cUsers\u005cJordan\u005cGoogle Drive\u005cTwine\u005cIshmael (Forever)\u005cstory.html
 p2
 sS'saveDestination'
 p3
@@ -37,7 +37,7 @@ p18
 (dp20
 S'text'
 p21
-V/%\u000a[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[friday_5]]\u000a[[ch3_saturday]]\u000a[[Then one of the soldiers raised his arms]]\u000a[[puppet show|younger ones]]\u000a[[puppet_7]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a[[Wait]]\u000a\u000a%/\u000a\u000a<<script>>$('#cover-image').hide();$('#ground').hide();<</script>>\u000a\u000a<<goto 'warning'>>\u000a/%\u000a<<if $game_completed>>\u000a<<goto 'title'>>\u000a<<else>>\u000a<<goto 'warning'>>\u000a<</if>>\u000a%/
+V/%\u000a[[ch1_thursday]]\u000a[[ch2_friday]]\u000a[[friday_5]]\u000a[[ch3_saturday]]\u000a[[Then one of the soldiers raised his arms]]\u000a[[puppet show|younger ones]]\u000a[[puppet_7]]\u000a[[puppet_8]]\u000a[[The Choice]]\u000a[[Wait]]\u000a\u000a\u000a<<script>>$('#cover-image').hide();$('#ground').show();<</script>>\u000a%/\u000a\u000a<<goto "warning">>\u000a/%\u000a<<if $game_completed>>\u000a<<goto 'title'>>\u000a<<else>>\u000a<<goto 'warning'>>\u000a<</if>>\u000a%/
 p22
 sS'title'
 p23
@@ -51,9 +51,9 @@ p26
 ((I2016
 I9
 I28
-I22
-I57
-I22
+I13
+I33
+I50
 I2
 I272
 I1
@@ -201,13 +201,13 @@ p73
 sg25
 g26
 ((I2016
-I9
+I10
 I28
-I16
-I40
-I38
-I2
-I272
+I11
+I46
+I27
+I4
+I302
 I1
 tp74
 (dp75
