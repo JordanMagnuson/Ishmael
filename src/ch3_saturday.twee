@@ -178,7 +178,7 @@ postdisplay.passageSetup = function(passageSetup) {
 	window.sndBackgroundChatter03.stop();
 	window.sndBackgroundMurmur.fade(0.4, 0, 15000);
 
-	window.sndYell01.volume(09);
+	window.sndYell01.volume(0.9);
 	window.sndYell01.play();
 
 	if (!window.sndShouting.playing()) {
@@ -198,7 +198,7 @@ postdisplay.passageSetup = function(passageSetup) {
 			window.sndMachinegunLoop.play();
 		} 
 	}, 5000);	
-	delete postdisplay[passageSetup]
+	delete postdisplay[passageSetup];
 }
 
 <</script>>
