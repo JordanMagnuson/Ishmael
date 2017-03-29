@@ -1,7 +1,8 @@
 :: warning [nobr]
 <div id="warning-message">
 This game takes about 15 minutes to play through.<br>
-It is recommended to play with headphones. <br><br>
+It is recommended to play with headphones.<br>
+<span style="font-size:0.8em">(Note that there is no sound in the first portion of the game.)</span><br><br>
 
 <<link "▶ Sound Check">><<script>>sndTest.stop();sndTest.play();<</script>><</link>>
 
@@ -19,7 +20,7 @@ WARNING: contains some depictions of violence.
 
 :: title [nobr]
 /% Initialize variables.%/
-<<set $version = 'pre-release 2'>>
+<<set $version = '1.00'>>
 
 <<set $hopscotch_level = 0>>
 <<set $ratalla_level = 0>>
