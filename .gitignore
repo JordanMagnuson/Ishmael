@@ -12,3 +12,6 @@ index.html
 
 # Working directory.
 /working/
+
+# Festival builds.
+/festival builds/
