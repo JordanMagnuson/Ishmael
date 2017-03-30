@@ -19,7 +19,8 @@
  * BODY
  *********************************************************************/
 
-/* Embedded typewriter font. */
+/* Embedded typewriter font. 
+ * Note: the base-64 version of this file is now embedded directly into main.tws, so that it is available immediately upon load. */
 /*
 @font-face {
     font-family: 'MyTyped';
