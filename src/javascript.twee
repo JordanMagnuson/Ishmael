@@ -24,6 +24,19 @@ config.ui.stowBarInitially = true; // the UI bar will start stowed (shut)
 }());
 
 /*********************************************************************
+ * RESTART with Ctrl + R
+ *********************************************************************/
+
+function KeyPress(e) {
+	var evtobj = window.event ? event : e;
+	if (evtobj.keyCode == 82 && evtobj.ctrlKey) {
+		Engine.restart();
+	}
+}
+
+document.onkeydown = KeyPress;
+
+/*********************************************************************
  * INITIALIZE STORY
  *********************************************************************/
 
