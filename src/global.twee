@@ -11,8 +11,8 @@ It is recommended to play with headphones.<br>
 WARNING: contains some depictions of violence.
 <br><br>
 <span class="button">
-	<<click "Continue (fullscreen)">><<script>>
-		$.when( fullscreen() ).done( state.play("title") );
+	<<click "Continue">><<script>>
+		$.when( fullscreen() ).done( state.play("ch1_thursday") );
 	<</script>><</click>>
 </span>
 
@@ -61,7 +61,7 @@ WARNING: contains some depictions of violence.
 	<div id="by-line">by Jordan Magnuson</div>
 	<div id="buttons">
 		<span class="button" id="credits-button">[[credits]]</span> .
-		<span class="button" id="begin-button">[[begin|ch1_thursday]]</span>
+		<span class="button" id="begin-button">[[begin|warning]]</span>
 	</div>	
 </div>
 
