@@ -53,6 +53,7 @@ WARNING: contains some depictions of violence.
 	initializeStory();
 	$('#cover-image').show();
 	$('#fade-out').show().fadeOut(3000);
+	$('#ground').css('opacity', '1');
 	sndTest.stop();
 <</script>>
 

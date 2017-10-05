@@ -145,6 +145,7 @@ body {
 	background-image: [img[ground]];
 	z-index: 0!important;	
 	display: block;
+	opacity: 0;
 }
 
 #blood-overlay {
