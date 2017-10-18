@@ -136,7 +136,7 @@ body {
     background-size: cover;	
     margin: 0;
     padding: 0;
-    z-index: 1000!important;
+    z-index: 10000!important;
     pointer-events: none!important;
 }
 
