@@ -20,7 +20,7 @@ WARNING: contains some depictions of violence.
 
 :: title [nobr]
 /% Initialize variables.%/
-<<set $version = '1.00'>>
+<<set $version = '1.02'>>
 
 <<set $hopscotch_level = 0>>
 <<set $ratalla_level = 0>>
