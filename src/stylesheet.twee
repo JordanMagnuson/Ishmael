@@ -136,7 +136,7 @@ body {
     background-size: cover;	
     margin: 0;
     padding: 0;
-    z-index: 1000!important;
+    z-index: 10000!important;
     pointer-events: none!important;
 }
 
@@ -145,6 +145,7 @@ body {
 	background-image: [img[ground]];
 	z-index: 0!important;	
 	display: block;
+	opacity: 0;
 }
 
 #blood-overlay {
@@ -660,7 +661,7 @@ a.disabled {
 }
 
 #passage-story-end {
-	z-index: 9000!important;	
+	z-index: 11000!important;	
 	-webkit-transition-property: none;
 	-moz-transition-property: none;
 	-o-transition-property: none;

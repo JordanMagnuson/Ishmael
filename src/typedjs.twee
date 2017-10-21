@@ -56,7 +56,7 @@
 	                    }
                     	if (tags().contains('auto-fade')) {
                     		console.log(uniqueID);
-                    		$('.' + uniqueID).fadeOut(3000); 
+                    		$('.' + uniqueID).fadeOut(1000); 
 	                    } 
 						if (callingPassage == 'Story End') {	
 							// Last line of the game has finished in Story End passage.				

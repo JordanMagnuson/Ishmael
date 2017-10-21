@@ -384,33 +384,33 @@ I put the gun down because <<textbox "$put_down_why" "" "Can't put it down" auto
 TOOD: Have "could not put it down" come in with typewriter effect?
 
 :: hold_up_story_1 [end-story auto-fade]
-<span class="typed">Here is Ishmael, son of Pine Nut Valley.</span>
+<span class="typed-speed1">Here is Ishmael, son of Pine Nut Valley.</span>
 
 :: hold_up_story_2 [end-story auto-fade]
-<span class="typed">Brave Ishmael, who will defy the enemy.</span>
+<span class="typed-speed1">Brave Ishmael, who will defy the enemy.</span>
 
 :: hold_up_story_3 [end-story auto-fade]
-<span class="typed">I felt metal against my skin, and then I saw that they had put a gun in my hands.</span>
+<span class="typed-speed1">I felt metal against my skin, and then I saw that they had put a gun in my hands.</span>
 
 :: hold_up_story_4 [end-story auto-fade]
-<span class="typed">It was a large gun, and very heavy. Too heavy for me.</span>
+<span class="typed-speed1">It was a large gun, and very heavy. Too heavy for me.</span>
 
 
 
 :: put_down_story_1 [end-story put-down auto-fade]
-<span class="typed">Ishmael was a good boy: he loved his mother, and he was an example to his brothers and sisters.</span>
+<span class="typed-speed1">Ishmael was a good boy: he loved his mother, and he was an example to his brothers and sisters.</span>
 
 :: put_down_story_2 [end-story put-down auto-fade]
-<span class="typed">He was a loyal boy: he made friends for keeps, and he would defend them when they needed him.</span>
+<span class="typed-speed1">He was a loyal boy: he made friends for keeps, and he would defend them when they needed him.</span>
 
 :: put_down_story_3 [end-story put-down auto-fade]
-<span class="typed">Now Ishmael, above all else, was a brave boy.</span>
+<span class="typed-speed1">Now Ishmael, above all else, was a brave boy.</span>
 
 :: put_down_story_4 [end-story put-down auto-fade]
-<span class="typed">He determined that the purpose of his life was to fight the enemy however he could.</span>
+<span class="typed-speed1">He determined that the purpose of his life was to fight the enemy however he could.</span>
 
 :: put_down_story_5 [end-story put-down auto-fade]
-<span class="typed">In this way he could live out his love for his family, and his loyalty to his friends.</span>
+<span class="typed-speed1">In this way he could live out his love for his family, and his loyalty to his friends.</span>
 
 
 
