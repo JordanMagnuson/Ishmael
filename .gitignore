@@ -15,3 +15,6 @@ index.html
 
 # Festival builds.
 /festival builds/
+
+# Standalone build.
+/standalone build/content/windows/nwjs-v0.34.1-win-x64/*

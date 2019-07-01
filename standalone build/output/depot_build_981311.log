@@ -1,0 +1,16 @@
+[2018-11-10 15:21:27]: Starting build for depot 981311, content path is "C:\Users\Jordan\Google Drive\Twine\Ishmael (Forever)\standalone build\content\windows\nwjs-v0.34.1-win-x64\", build flags 0x0
+[2018-11-10 15:21:27]: Building file listing for depot 981311 ...
+[2018-11-10 15:21:27]: Warning! Skipping hidden file "C:\Users\Jordan\Google Drive\Twine\Ishmael (Forever)\standalone build\content\windows\nwjs-v0.34.1-win-x64\ishmael103\assets\photos\faces\Thumbs.db"
+[2018-11-10 15:21:27]: Warning! Skipping hidden file "C:\Users\Jordan\Google Drive\Twine\Ishmael (Forever)\standalone build\content\windows\nwjs-v0.34.1-win-x64\ishmael103\assets\photos\Thumbs.db"
+[2018-11-10 15:21:27]: Warning! Skipping hidden file "C:\Users\Jordan\Google Drive\Twine\Ishmael (Forever)\standalone build\content\windows\nwjs-v0.34.1-win-x64\ishmael103\assets\Thumbs.db"
+[2018-11-10 15:21:27]: Found 304 files for mapping: C:\Users\Jordan\Google Drive\Twine\Ishmael (Forever)\standalone build\content\windows\nwjs-v0.34.1-win-x64 * -> .
+[2018-11-10 15:21:27]: Found 304 files (230 MB) for depot 981311
+[2018-11-10 15:21:28]: Building depot 981311, baseline manifest 1291256953991757032 (303 files)
+[2018-11-10 15:21:29]: Found 398 new chunks (398 old ones existed) for depot 981311, took 0 minutes, 1 seconds
+
+[2018-11-10 15:21:29]: Changes to baseline manifest:
+[2018-11-10 15:21:29]: Added  : "ishmael_readme.txt" 4 kB 
+[2018-11-10 15:21:29]: Summary: 1 files added, 0 files changed, 0 files removed
+[2018-11-10 15:21:29]: Warning! Failed to open chunk store file C:\Users\Jordan\Google Drive\Twine\Ishmael (Forever)\standalone build\output\\981311_depotcache_0.csd
+[2018-11-10 15:21:29]: Uploading new manifest to 208.64.201.182:80 (handle 13579406756726589894, 46679 bytes).
+[2018-11-10 15:21:30]: Success! New manifestID 1511116542727988074 created and 0 new chunks uploaded.
